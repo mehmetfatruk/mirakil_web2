@@ -15,13 +15,13 @@
     <meta property="og:site_name" content="MirAkıl Veri İşleme">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap&subset=latin-ext&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #2E7C01;
-            --primary-light: #45BA01;
-            --primary-dark: #1a5a00;
+            --primary: #156a8f;
+            --primary-light: #29ABE2;
+            --primary-dark: #0d5a7a;
             --teal: #709CA5;
             --teal-dark: #253437;
             --navy: #0E2A2D;
@@ -121,7 +121,7 @@
 
         /* ===== HERO SLIDER ===== */
         .hero-slider {
-            position:relative; min-height:640px; overflow:hidden; background:var(--navy);
+            position:relative; min-height:360px; overflow:hidden; background:var(--navy);
         }
         /* Animated grid pattern overlay */
         .hero-slider::before {
@@ -137,8 +137,8 @@
         .hero-slider::after {
             content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
             background:
-                radial-gradient(600px 400px at 20% 30%, rgba(69,186,1,0.18), transparent 70%),
-                radial-gradient(700px 500px at 80% 70%, rgba(46,124,1,0.22), transparent 75%);
+                radial-gradient(600px 400px at 20% 30%, rgba(41,171,226,0.18), transparent 70%),
+                radial-gradient(700px 500px at 80% 70%, rgba(30,138,184,0.22), transparent 75%);
             animation: heroGlow 14s ease-in-out infinite alternate;
         }
         @keyframes heroGlow {
@@ -150,9 +150,9 @@
 
         /* Trust badge floating in hero */
         .hero-trust-badge {
-            position:absolute; top:32px; right:32px; z-index:11;
+            position:absolute; top:16px; right:32px; z-index:11;
             display:flex; align-items:center; gap:14px;
-            padding:12px 20px 12px 16px;
+            padding:8px 14px 8px 12px;
             background:rgba(255,255,255,0.08);
             backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
             border:1px solid rgba(255,255,255,0.18);
@@ -171,11 +171,11 @@
             .hero-trust-badge { opacity:1; animation:none; }
         }
         .slider-track {
-            display:flex; width:300%; height:100%; min-height:600px;
+            display:flex; width:300%; height:100%; min-height:320px;
             transition:transform 0.7s cubic-bezier(0.45,0.05,0.55,0.95);
         }
         .slide {
-            width:calc(100%/3); min-height:600px; position:relative;
+            width:calc(100%/3); min-height:320px; position:relative;
             display:flex; align-items:center; justify-content:center;
         }
         .slide-bg {
@@ -186,18 +186,11 @@
         }
         .slide-bg::after {
             content:''; position:absolute; inset:0;
-        }
-        .slide:nth-child(1) .slide-bg::after {
-            background:linear-gradient(135deg, rgba(37,52,55,0.9), rgba(46,124,1,0.7));
-        }
-        .slide:nth-child(2) .slide-bg::after {
-            background:linear-gradient(135deg, rgba(30,60,30,0.9), rgba(69,186,1,0.65));
-        }
-        .slide:nth-child(3) .slide-bg::after {
-            background:linear-gradient(135deg, rgba(20,40,50,0.9), rgba(112,156,165,0.7));
+            z-index:1;
+            background: rgba(0,0,0,0.25);
         }
         .slide-content {
-            position:relative; z-index:2; text-align:center; padding:60px 30px;
+            position:relative; z-index:2; text-align:center; padding:36px 30px;
             max-width:900px; margin:0 auto;
             opacity:0; transform:translateY(30px);
             transition:opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
@@ -206,14 +199,14 @@
             opacity:1; transform:translateY(0);
         }
         .slide-content h2 {
-            font-size:2.8rem; font-weight:800; color:#fff; margin-bottom:12px; letter-spacing:-1px;
+            font-size:2.2rem; font-weight:800; color:#fff; margin-bottom:12px; letter-spacing:-1px;
         }
         .slide-divider {
             width:80px; height:3px; background:var(--primary-light); margin:16px auto 20px; border-radius:2px;
         }
         .slide-content p {
-            font-size:1.1rem; color:rgba(255,255,255,0.9); max-width:680px;
-            margin:0 auto 32px; font-weight:300; line-height:1.8;
+            font-size:1rem; color:rgba(255,255,255,0.9); max-width:680px;
+            margin:0 auto 24px; font-weight:300; line-height:1.7;
         }
         .slide-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
 
@@ -233,7 +226,7 @@
 
         /* Slider dots */
         .slider-dots {
-            position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+            position:absolute; bottom:14px; left:50%; transform:translateX(-50%);
             z-index:10; display:flex; gap:10px;
         }
         .slider-dot {
@@ -247,7 +240,7 @@
 
         /* Hero product logos bar */
         .hero-logos-bar {
-            position:absolute; bottom:70px; left:50%; transform:translateX(-50%);
+            position:absolute; bottom:44px; left:50%; transform:translateX(-50%);
             z-index:10; display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
         }
         .hero-logo-item {
@@ -286,8 +279,8 @@
         .standards::before {
             content:''; position:absolute; inset:0;
             background:
-                radial-gradient(500px 200px at 20% 0%, rgba(69,186,1,0.12), transparent 70%),
-                radial-gradient(500px 200px at 80% 100%, rgba(69,186,1,0.10), transparent 70%);
+                radial-gradient(500px 200px at 20% 0%, rgba(41,171,226,0.12), transparent 70%),
+                radial-gradient(500px 200px at 80% 100%, rgba(41,171,226,0.10), transparent 70%);
             pointer-events:none;
         }
         .standards .container { position:relative; z-index:1; }
@@ -298,7 +291,7 @@
             display:inline-block; font-family:'Archivo',sans-serif; font-weight:700;
             font-size:0.72rem; text-transform:uppercase; letter-spacing:2px;
             color:var(--primary-light); padding:6px 14px;
-            border:1px solid rgba(69,186,1,0.4); border-radius:999px;
+            border:1px solid rgba(41,171,226,0.4); border-radius:999px;
             margin-bottom:18px;
         }
         .standards-header h2 {
@@ -333,7 +326,7 @@
             color:var(--primary-light); font-size:0.78rem;
         }
         .marquee-chip:hover {
-            background:rgba(69,186,1,0.12); border-color:rgba(69,186,1,0.45);
+            background:rgba(41,171,226,0.12); border-color:rgba(41,171,226,0.45);
         }
         @keyframes marqueeScroll {
             from { transform:translateX(0); }
@@ -564,7 +557,7 @@
         .form-submit:hover { background:var(--primary); }
         .form-submit:disabled { opacity:0.6; cursor:not-allowed; }
         .form-alert { padding:12px 16px; border-radius:10px; margin-bottom:16px; font-size:0.9rem; display:none; }
-        .form-alert.success { background:rgba(69,186,1,0.2); border:1px solid rgba(69,186,1,0.4); }
+        .form-alert.success { background:rgba(41,171,226,0.2); border:1px solid rgba(41,171,226,0.4); }
         .form-alert.error { background:rgba(220,53,69,0.2); border:1px solid rgba(220,53,69,0.4); }
 
         /* ===== WHATSAPP FLOAT ===== */
@@ -635,14 +628,14 @@
             .nav-dropdown { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; }
             .mobile-toggle { display:block; }
             .main-nav .container { justify-content:flex-end; }
-            .hero-slider { min-height:480px; }
-            .slider-track, .slide { min-height:480px; }
+            .hero-slider { min-height:280px; }
+            .slider-track, .slide { min-height:280px; }
             .slide-content h2 { font-size:1.8rem; }
             .slide-content p { font-size:0.95rem; }
             .slider-arrow { width:40px; height:40px; font-size:1rem; }
             .slider-prev { left:12px; }
             .slider-next { right:12px; }
-            .hero-logos-bar { bottom:60px; gap:8px; }
+            .hero-logos-bar { bottom:48px; gap:8px; }
             .hero-logo-item { width:44px; height:44px; font-size:0.55rem; border-radius:10px; }
             .hero-logo-item i { font-size:0.9rem; }
             .section-header h2 { font-size:1.8rem; }
@@ -683,7 +676,8 @@
                         <li><a href="dspace.html"><span class="dd-dot" style="background:#92c644;"></span> DSpace</a></li>
                         <li><a href="omeka.html"><span class="dd-dot" style="background:#541D1D;"></span> Omeka</a></li>
                         <li><a href="moodle.html"><span class="dd-dot" style="background:#F98012;"></span> Moodle</a></li>
-                        <li><a href="collectiveaccess.html"><span class="dd-dot" style="background:#5b7e3d;"></span> CollectiveAccess</a></li>
+                        <li><a href="rfid.html"><span class="dd-dot" style="background:#8B5CF6;"></span> RFID</a></li>
+                        <li><a href="metamarc.html"><span class="dd-dot" style="background:#10B981;"></span> MetaMarc AI</a></li>
                         <li><a href="ojs.html"><span class="dd-dot" style="background:#002B5C;"></span> OJS</a></li>
                         <li><a href="indico.html"><span class="dd-dot" style="background:#29ABE2;"></span> Indico</a></li>
                     </ul>
@@ -713,9 +707,11 @@
             <span><span class="badge-num">8</span> Platform</span>
         </div>
 
-        <div class="slider-track" id="sliderTrack">
+        <canvas id="particleCanvas" style="position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
+
+        <div class="slider-track" id="sliderTrack" style="height: 460px; transform: translateX(-33.3333%);">
             <!-- Slide 1 -->
-            <div class="slide active">
+            <div class="slide">
                 <div class="slide-bg">
                     <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1400&q=80" alt="Kütüphane">
                 </div>
@@ -730,7 +726,7 @@
                 </div>
             </div>
             <!-- Slide 2 -->
-            <div class="slide">
+            <div class="slide active">
                 <div class="slide-bg">
                     <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1400&q=80" alt="Kitaplar">
                 </div>
@@ -771,8 +767,8 @@
 
         <!-- Dots -->
         <div class="slider-dots">
-            <button class="slider-dot active" onclick="goToSlide(0)" aria-label="Slayt 1"></button>
-            <button class="slider-dot" onclick="goToSlide(1)" aria-label="Slayt 2"></button>
+            <button class="slider-dot" onclick="goToSlide(0)" aria-label="Slayt 1"></button>
+            <button class="slider-dot active" onclick="goToSlide(1)" aria-label="Slayt 2"></button>
             <button class="slider-dot" onclick="goToSlide(2)" aria-label="Slayt 3"></button>
         </div>
 
@@ -872,16 +868,6 @@
                     <p>Uzaktan eğitim ve e-öğrenme için açık kaynaklı bir öğrenme yönetim sistemidir.</p>
                     <span class="product-link" style="color:#F98012;">Detaylı İncele <i class="fas fa-arrow-right"></i></span>
                 </a>
-                <!-- CollectiveAccess -->
-                <a href="collectiveaccess.html" class="product-card" style="--card-color:#5b7e3d;">
-                    <div class="product-logo" style="background:#eef2e9; color:#5b7e3d;">
-                        <i class="fas fa-archive"></i>
-                    </div>
-                    <h3>CollectiveAccess</h3>
-                    <div class="product-sub" style="color:#5b7e3d;">Müze ve Arşiv Yönetimi</div>
-                    <p>Müze ve arşiv koleksiyonlarının yönetimi için esnek bir platformdur.</p>
-                    <span class="product-link" style="color:#5b7e3d;">Detaylı İncele <i class="fas fa-arrow-right"></i></span>
-                </a>
                 <!-- OJS -->
                 <a href="ojs.html" class="product-card" style="--card-color:#002B5C;">
                     <div class="product-logo" style="background:#e6ecf3; color:#002B5C;">
@@ -901,6 +887,16 @@
                     <div class="product-sub" style="color:#29ABE2;">Konferans Yönetim Sistemi</div>
                     <p>Akademik konferansların yönetimi ve organizasyonu için kullanılır.</p>
                     <span class="product-link" style="color:#29ABE2;">Detaylı İncele <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <!-- RFID -->
+                <a href="rfid.html" class="product-card" style="--card-color:#8B5CF6;">
+                    <div class="product-logo" style="background:#f3f0fd; color:#8B5CF6;">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>RFID</h3>
+                    <div class="product-sub" style="color:#8B5CF6;">Kütüphane Otomasyonu</div>
+                    <p>Kitap ve materyallerin hızlı takibi için RFID tabanlı otomasyon çözümüdür.</p>
+                    <span class="product-link" style="color:#8B5CF6;">Detaylı İncele <i class="fas fa-arrow-right"></i></span>
                 </a>
             </div>
         </div>
@@ -983,30 +979,29 @@
     </section>
 
     <!-- STANDARDS MARQUEE -->
-    <section class="standards" aria-label="Desteklenen kütüphane standartları">
+    <!-- REFERANSLAR MARQUEE -->
+    <section class="standards" aria-label="Referans kurumlar" style="padding:48px 0;">
         <div class="container">
             <div class="standards-header reveal">
-                <span class="standards-eyebrow">Uluslararası Uyum</span>
-                <h2>Kütüphane &amp; Arşiv Standartlarına Tam Uyum</h2>
-                <p>Verilerinizin uluslararası katalog ve arşiv standartlarıyla kesintisiz çalışmasını sağlıyoruz.</p>
+                <span class="standards-eyebrow">Güvenilen Kurumlar</span>
+                <h2>50+ Kurum Bize Güveniyor</h2>
+                <p>Türkiye'nin önde gelen üniversite, kütüphane, arşiv ve müzeleri MirAkıl çözümlerini tercih ediyor.</p>
             </div>
         </div>
         <div class="marquee" aria-hidden="true">
             <div class="marquee-track" id="marqueeTrack">
-                <span class="marquee-chip"><i class="fas fa-check"></i> MARC21</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> MARCXML</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> Dublin Core</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> OAI-PMH</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> Z39.50</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> SRU/SRW</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> RDA</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> BIBFRAME</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> MODS</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> METS</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> EAD</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> ISO 2709</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> ISBD</span>
-                <span class="marquee-chip"><i class="fas fa-check"></i> RDF / Linked Data</span>
+                <span class="marquee-chip"><i class="fas fa-university"></i> Ankara Üniversitesi</span>
+                <span class="marquee-chip"><i class="fas fa-landmark"></i> TBMM Milli Kütüphane</span>
+                <span class="marquee-chip"><i class="fas fa-book-open"></i> İstanbul Üniversitesi</span>
+                <span class="marquee-chip"><i class="fas fa-university"></i> Hacettepe Üniversitesi</span>
+                <span class="marquee-chip"><i class="fas fa-building"></i> TÜBİTAK</span>
+                <span class="marquee-chip"><i class="fas fa-landmark"></i> Dil ve Tarih Kurumu</span>
+                <span class="marquee-chip"><i class="fas fa-university"></i> Gazi Üniversitesi</span>
+                <span class="marquee-chip"><i class="fas fa-book-open"></i> Milli Kütüphane</span>
+                <span class="marquee-chip"><i class="fas fa-mosque"></i> Diyanet İşleri Başkanlığı</span>
+                <span class="marquee-chip"><i class="fas fa-university"></i> Ege Üniversitesi</span>
+                <span class="marquee-chip"><i class="fas fa-building"></i> Atatürk Kültür Merkezi</span>
+                <span class="marquee-chip"><i class="fas fa-landmark"></i> Devlet Arşivleri</span>
             </div>
         </div>
     </section>
@@ -1149,7 +1144,8 @@
                         <li><a href="dspace.html">DSpace</a></li>
                         <li><a href="omeka.html">Omeka</a></li>
                         <li><a href="moodle.html">Moodle</a></li>
-                        <li><a href="collectiveaccess.html">CollectiveAccess</a></li>
+                        <li><a href="rfid.html">RFID</a></li>
+                        <li><a href="metamarc.html">MetaMarc AI</a></li>
                         <li><a href="ojs.html">OJS</a></li>
                         <li><a href="indico.html">Indico</a></li>
                     </ul>
@@ -1183,6 +1179,122 @@
     </footer>
 
     <script>
+    /* === PARTICLE NETWORK ANIMATION === */
+    (function() {
+        const canvas = document.getElementById('particleCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let particles = [];
+        const particleCount = 55;
+        const connectionDistance = 120;
+        const mouseDistance = 150;
+
+        const colors = [
+            'rgba(41, 171, 226, ',
+            'rgba(30, 138, 184, ',
+            'rgba(112, 156, 165, ',
+            'rgba(255, 255, 255, '
+        ];
+
+        let mouse = { x: null, y: null };
+
+        function resize() {
+            width = canvas.width = canvas.offsetWidth;
+            height = canvas.height = canvas.offsetHeight;
+        }
+
+        function createParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    radius: Math.random() * 2 + 1,
+                    color: colors[Math.floor(Math.random() * colors.length)]
+                });
+            }
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+
+                // Move
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Bounce
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                // Draw particle
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color + '0.7)';
+                ctx.fill();
+
+                // Connect to mouse
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - p.x;
+                    const dy = mouse.y - p.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < mouseDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = p.color + (1 - dist / mouseDistance) * 0.4 + ')';
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+
+                // Connect to nearby particles
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p2.x - p.x;
+                    const dy = p2.y - p.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = 'rgba(41, 171, 226, ' + (1 - dist / connectionDistance) * 0.25 + ')';
+                        ctx.lineWidth = 0.6;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(drawParticles);
+        }
+
+        window.addEventListener('resize', function() {
+            resize();
+            createParticles();
+        });
+
+        canvas.parentElement.addEventListener('mousemove', function(e) {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        canvas.parentElement.addEventListener('mouseleave', function() {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        resize();
+        createParticles();
+        drawParticles();
+    })();
+
     /* === SCROLL REVEAL === */
     (function() {
         if (!('IntersectionObserver' in window)) {
@@ -1242,7 +1354,7 @@
     })();
 
     /* === SLIDER === */
-    let currentSlide = 0;
+    let currentSlide = 1;
     const totalSlides = 3;
     let autoSlideTimer;
 

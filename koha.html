@@ -68,14 +68,14 @@
         .header-top {
             background: #fff;
             padding: 0;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid var(--border);
         }
         .header-top .container {
             display:flex; justify-content:space-between; align-items:center; min-height:70px;
         }
-        .header-logo { display:flex; align-items:center; gap:14px; }
+        .header-logo { display:flex; align-items:center; }
         .header-logo img {
-            height: 50px; width: auto;
+            height: 50px;
         }
         .header-logo-text {
             color:#fff; font-family:'Archivo',sans-serif; font-weight:700; font-size:1.6rem;
@@ -83,10 +83,10 @@
         .header-logo-sub {
             color: rgba(255,255,255,0.7); font-size:0.7rem; text-transform:uppercase; letter-spacing:1.5px;
         }
-        .header-contact { display:flex; align-items:center; gap:28px; color:#333; font-size:0.9rem; }
-        .header-contact a { color:#333; display:flex; align-items:center; gap:8px; transition:opacity 0.2s; }
-        .header-contact a:hover { color:#2E7C01; }
-        .header-contact i { color:#2E7C01; }
+        .header-contact { display:flex; align-items:center; gap:28px; color:var(--text); font-size:0.88rem; }
+        .header-contact a { color:var(--text); display:flex; align-items:center; gap:8px; transition:color 0.2s; }
+        .header-contact a:hover { color:var(--primary); }
+        .header-contact i { color:var(--primary); }
 
         /* NAV */
         .main-nav {
@@ -128,7 +128,7 @@
 
         /* ===== PRODUCT HERO ===== */
         .product-hero {
-            position:relative; min-height:788px; display:flex; align-items:flex-start;
+            position:relative; min-height:620px; display:flex; align-items:center;
             background: linear-gradient(135deg, var(--product-dark), var(--product), #5cb83c);
             overflow:hidden;
         }
@@ -150,28 +150,28 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         .product-hero .container {
-            position:relative; z-index:2; text-align:center; padding:80px 30px;
+            position:relative; z-index:2; text-align:center; padding:40px 30px;
         }
         .product-hero-icon {
-            width:100px; height:100px; border-radius:24px;
+            width:72px; height:72px; border-radius:18px;
             background:rgba(255,255,255,0.15); backdrop-filter:blur(8px);
             border:2px solid rgba(255,255,255,0.25);
             display:flex; align-items:center; justify-content:center;
-            margin:0 auto 28px; font-size:2.8rem; color:#fff;
+            margin:0 auto 16px; font-size:2rem; color:#fff;
         }
         .product-hero h1 {
-            font-size:3.2rem; font-weight:800; color:#fff; margin-bottom:12px; letter-spacing:-1px;
+            font-size:2.4rem; font-weight:800; color:#fff; margin-bottom:10px; letter-spacing:-1px;
         }
         .product-hero-subtitle {
-            font-size:1.2rem; color:rgba(255,255,255,0.9); font-weight:400;
-            letter-spacing:0.5px; margin-bottom:20px;
+            font-size:1rem; color:rgba(255,255,255,0.9); font-weight:400;
+            letter-spacing:0.5px; margin-bottom:14px;
         }
         .product-hero-divider {
             width:80px; height:3px; background:rgba(255,255,255,0.5); margin:0 auto 24px; border-radius:2px;
         }
         .product-hero p {
-            font-size:1.1rem; color:rgba(255,255,255,0.85); max-width:640px;
-            margin:0 auto; font-weight:300; line-height:1.8;
+            font-size:0.95rem; color:rgba(255,255,255,0.85); max-width:640px;
+            margin:0 auto; font-weight:300; line-height:1.65;
         }
         .product-hero-breadcrumb {
             position:absolute; top:24px; left:30px; display:flex; align-items:center; gap:8px;
@@ -201,12 +201,21 @@
         .section-header { text-align:center; margin-bottom:56px; }
         .section-header h2 { font-size:2.4rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
         .section-divider { width:60px; height:3px; background:var(--product); margin:16px auto 20px; border-radius:2px; }
+        @keyframes dividerGrow { from { width:0; } to { width:60px; } }
+        @supports (animation-timeline: view()) {
+            .section-divider {
+                animation: dividerGrow 0.9s cubic-bezier(0.22,0.61,0.36,1) both;
+                animation-timeline: view();
+                animation-range: entry 5% entry 60%;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) { .section-divider { animation:none; } }
         .section-header p { color:var(--text-light); font-size:1.05rem; max-width:640px; margin:0 auto; }
 
         /* ===== HERO CTA BUTTONS ===== */
         .product-hero-cta {
             display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
-            margin-top:32px;
+            margin-top:24px;
         }
         .product-hero-cta .btn {
             padding:13px 26px; font-size:0.92rem;
@@ -228,51 +237,51 @@
             transform:translateY(-2px);
         }
 
-        /* ===== STATS SECTION (separate, animated) ===== */
-        .product-stats {
-            background:#fff; padding:64px 0;
-            border-bottom:1px solid var(--border);
+        /* ===== STATS STRIP ===== */
+        .stats-strip {
+            background:#fff; border-bottom:1px solid var(--border);
+            padding:48px 0;
         }
-        .product-stats-grid {
+        .stats-grid {
             display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;
             max-width:1100px; margin:0 auto;
         }
-        .pstat {
+        .stat-cell {
             text-align:center; padding:8px 16px;
             position:relative;
         }
-        .pstat + .pstat::before {
+        .stat-cell + .stat-cell::before {
             content:''; position:absolute; left:0; top:18%; bottom:18%;
             width:1px; background:var(--border);
         }
-        .pstat-num {
+        .stat-num {
             display:block;
             font-family:'Archivo',sans-serif; font-weight:800;
             font-size:2.8rem; line-height:1; color:var(--dark);
             letter-spacing:-1.5px;
         }
-        .pstat-num .pstat-suffix,
-        .pstat-num .pstat-prefix {
+        .stat-num .stat-suffix,
+        .stat-num .stat-prefix {
             color:var(--product); font-size:1.8rem; margin:0 2px;
             display:inline-block; vertical-align:top;
         }
-        .pstat-num .pstat-text {
+        .stat-num .stat-text {
             color:var(--product); font-size:2.2rem;
         }
-        .pstat-label {
+        .stat-label {
             display:block; margin-top:10px;
             font-family:'Archivo',sans-serif; font-weight:600;
             font-size:0.78rem; text-transform:uppercase; letter-spacing:1.4px;
             color:var(--text-light);
         }
         @media(max-width:768px) {
-            .product-stats { padding:44px 0; }
-            .product-stats-grid { grid-template-columns:repeat(2, 1fr); gap:32px 8px; }
-            .pstat-num { font-size:2.2rem; }
-            .pstat-num .pstat-suffix, .pstat-num .pstat-prefix { font-size:1.5rem; }
-            .pstat-num .pstat-text { font-size:1.7rem; }
-            .pstat + .pstat::before { display:none; }
-            .pstat:nth-child(odd) + .pstat::before {
+            .stats-strip { padding:44px 0; }
+            .stats-grid { grid-template-columns:repeat(2, 1fr); gap:32px 8px; }
+            .stat-num { font-size:2.2rem; }
+            .stat-num .stat-suffix, .stat-num .stat-prefix { font-size:1.5rem; }
+            .stat-num .stat-text { font-size:1.7rem; }
+            .stat-cell + .stat-cell::before { display:none; }
+            .stat-cell:nth-child(odd) + .stat-cell::before {
                 display:block; top:18%; bottom:18%;
             }
         }
@@ -340,7 +349,8 @@
             display:flex; align-items:center; justify-content:center;
             font-size:1.5rem; transition:var(--transition);
         }
-        .feature-card:hover .feature-icon { transform:scale(1.1); }
+        .feature-card:hover .feature-icon { transform:scale(1.08) rotate(-6deg); }
+        @media (prefers-reduced-motion: reduce) { .feature-card:hover .feature-icon { transform:none; } }
         .feature-card h3 { font-size:1.05rem; margin-bottom:10px; color:var(--dark); }
         .feature-card p { color:var(--text-light); font-size:0.88rem; line-height:1.6; }
 
@@ -359,8 +369,10 @@
             width:64px; height:64px; border-radius:50%; flex-shrink:0;
             background:var(--product); color:#fff;
             display:flex; align-items:center; justify-content:center;
-            font-size:1.4rem;
+            font-size:1.4rem; transition:transform 0.35s var(--ease-out);
         }
+        .why-product-card:hover .why-product-icon { transform:rotate(10deg) scale(1.06); }
+        @media (prefers-reduced-motion: reduce) { .why-product-card:hover .why-product-icon { transform:none; } }
         .why-product-card h3 { font-size:1.15rem; margin-bottom:10px; color:var(--dark); }
         .why-product-card p { color:var(--text-light); font-size:0.92rem; line-height:1.7; }
 
@@ -368,12 +380,156 @@
         .cta-section {
             background: linear-gradient(135deg, var(--teal-dark), var(--product-dark));
             color:#fff; text-align:center; padding:80px 0;
+            position:relative; overflow:hidden;
         }
+        .cta-section::before {
+            content:''; position:absolute; inset:-10%; pointer-events:none;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.10) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(69,186,1,0.10) 0%, transparent 55%);
+            animation: ctaBreath 12s ease-in-out infinite alternate;
+        }
+        @keyframes ctaBreath {
+            0%   { transform:scale(1) translate(0,0); opacity:0.85; }
+            100% { transform:scale(1.06) translate(2%,-2%); opacity:1; }
+        }
+        @media (prefers-reduced-motion: reduce) { .cta-section::before { animation:none; } }
+        .cta-section .container { position:relative; z-index:1; }
         .cta-section h2 { font-size:2.2rem; margin-bottom:16px; }
         .cta-section p { font-size:1.1rem; opacity:0.9; max-width:600px; margin:0 auto 36px; }
         .cta-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
         .cta-section .btn-green { background:#fff; color:var(--product); border-color:#fff; }
         .cta-section .btn-green:hover { background:transparent; color:#fff; border-color:#fff; }
+
+        /* ===== MODULES SHOWCASE ===== */
+        .modules-showcase { background:#fff; }
+        .modules-layout {
+            display:grid; grid-template-columns:300px 1fr; gap:28px;
+            background:var(--bg-light); border:1px solid var(--border);
+            border-radius:var(--radius); padding:24px;
+        }
+        .modules-tabs {
+            display:flex; flex-direction:column; gap:6px;
+        }
+        .modules-tab {
+            display:flex; align-items:center; gap:14px; padding:14px 16px;
+            background:transparent; border:1px solid transparent; border-radius:12px;
+            cursor:pointer; text-align:left; width:100%; color:var(--text);
+            font-family:'Archivo',sans-serif; font-weight:600; font-size:0.92rem;
+            transition:all 0.25s var(--ease-out); position:relative;
+        }
+        .modules-tab .mt-icon {
+            width:36px; height:36px; border-radius:10px; flex-shrink:0;
+            background:#fff; color:var(--product); border:1px solid var(--border);
+            display:flex; align-items:center; justify-content:center; font-size:1rem;
+            transition:all 0.25s var(--ease-out);
+        }
+        .modules-tab:hover { background:#fff; border-color:var(--border); }
+        .modules-tab.active {
+            background:#fff; border-color:var(--product); color:var(--product);
+            box-shadow:0 4px 14px rgba(64,133,64,0.10);
+        }
+        .modules-tab.active .mt-icon { background:var(--product); color:#fff; border-color:var(--product); }
+        .modules-tab .mt-progress {
+            position:absolute; left:14px; right:14px; bottom:5px; height:2px;
+            background:rgba(64,133,64,0.12); border-radius:1px; overflow:hidden;
+            opacity:0;
+        }
+        .modules-tab.active .mt-progress { opacity:1; }
+        .modules-tab .mt-progress::after {
+            content:''; display:block; height:100%; width:0%;
+            background:var(--product); border-radius:1px;
+        }
+        .modules-tab.active.is-rotating .mt-progress::after {
+            animation: tabProgress 6s linear forwards;
+        }
+        @keyframes tabProgress { to { width:100%; } }
+        @media (prefers-reduced-motion: reduce) {
+            .modules-tab.active.is-rotating .mt-progress::after { animation:none; width:100%; }
+        }
+
+        .modules-panel {
+            background:#fff; border-radius:14px; padding:28px;
+            display:grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+            gap:32px; align-items:center;
+            border:1px solid var(--border); position:relative; overflow:hidden;
+            transition:opacity 0.32s var(--ease-out), transform 0.32s var(--ease-out);
+            min-height:340px;
+        }
+        .modules-panel.is-fading { opacity:0; transform:translateY(8px); }
+        .modules-panel-visual {
+            border-radius:10px; overflow:hidden;
+            border:1px solid var(--border);
+            box-shadow:0 18px 40px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.05);
+            background:#fff;
+            display:flex; flex-direction:column;
+            aspect-ratio: 16 / 10;
+            position:relative;
+        }
+        .modules-panel-visual .browser-bar {
+            height:30px; background:#f3f4f3; border-bottom:1px solid var(--border);
+            display:flex; align-items:center; padding:0 12px; gap:6px; flex-shrink:0;
+        }
+        .modules-panel-visual .browser-dot {
+            width:10px; height:10px; border-radius:50%; background:#d4d4d4;
+        }
+        .modules-panel-visual .browser-dot.r { background:#ff5f57; }
+        .modules-panel-visual .browser-dot.y { background:#ffbd2e; }
+        .modules-panel-visual .browser-dot.g { background:#28c940; }
+        .modules-panel-visual .browser-url {
+            flex:1; background:#fff; border:1px solid var(--border); border-radius:6px;
+            margin-left:12px; padding:3px 12px;
+            font-size:0.7rem; color:var(--text-light);
+            font-family:'Lato',monospace;
+            overflow:hidden; white-space:nowrap; text-overflow:ellipsis; min-width:0;
+        }
+        .modules-panel-visual .browser-screen {
+            flex:1; min-height:0; overflow:hidden; background:#fafafa;
+            position:relative;
+        }
+        .modules-panel-visual img {
+            width:100%; height:100%;
+            object-fit:cover; object-position:top center;
+            display:block;
+            transition: transform 6s ease-out;
+        }
+        .modules-panel-visual:hover img { transform: translateY(-30%); }
+        @media (prefers-reduced-motion: reduce) {
+            .modules-panel-visual:hover img { transform:none; }
+            .modules-panel-visual img { transition:none; }
+        }
+        .modules-panel-content { flex:1; min-width:0; }
+        .modules-panel-eyebrow {
+            display:inline-block; font-family:'Archivo',sans-serif; font-weight:700;
+            font-size:0.7rem; text-transform:uppercase; letter-spacing:1.5px;
+            color:var(--product); padding:5px 12px;
+            background:var(--product-light); border-radius:999px; margin-bottom:14px;
+        }
+        .modules-panel h3 {
+            font-size:1.5rem; font-weight:700; color:var(--dark); margin-bottom:10px;
+        }
+        .modules-panel-desc {
+            color:var(--text-light); font-size:0.95rem; line-height:1.7; margin-bottom:18px;
+        }
+        .modules-panel-features {
+            list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 24px;
+        }
+        .modules-panel-features li {
+            font-size:0.88rem; color:var(--text); line-height:1.5;
+            display:flex; align-items:flex-start; gap:10px;
+        }
+        .modules-panel-features li i {
+            color:var(--product); font-size:0.8rem; margin-top:5px; flex-shrink:0;
+        }
+        @media(max-width:900px) {
+            .modules-layout { grid-template-columns:1fr; padding:16px; gap:18px; }
+            .modules-tabs { flex-direction:row; overflow-x:auto; gap:8px; padding-bottom:6px; }
+            .modules-tab { flex:0 0 auto; padding:10px 14px; font-size:0.85rem; }
+            .modules-tab .mt-icon { width:28px; height:28px; font-size:0.8rem; }
+            .modules-tab .mt-progress { display:none; }
+            .modules-panel { grid-template-columns:1fr; padding:18px; gap:20px; min-height:auto; }
+            .modules-panel-visual { width:100%; aspect-ratio:16/10; }
+            .modules-panel-features { grid-template-columns:1fr; }
+        }
 
         /* ===== FOOTER ===== */
         footer { background:#111; color:#ccc; padding:60px 0 0; }
@@ -517,6 +673,73 @@
         </div>
     </section>
 
+    <!-- İSTATİSTİKLER -->
+    <section class="stats-strip" aria-label="Koha istatistikleri">
+        <div class="container">
+            <div class="stats-grid reveal-stagger">
+                <div class="stat-cell">
+                    <span class="stat-num" data-target="20000"><span class="stat-value">0</span><span class="stat-suffix">+</span></span>
+                    <span class="stat-label">Dünya Genelinde Kütüphane</span>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-num" data-target="25"><span class="stat-value">0</span><span class="stat-suffix">+</span></span>
+                    <span class="stat-label">Yıllık Geliştirme Deneyimi</span>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-num" data-target="100"><span class="stat-value">0</span><span class="stat-suffix">+</span></span>
+                    <span class="stat-label">Desteklenen Dil</span>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-num"><span class="stat-text">GPL</span></span>
+                    <span class="stat-label">Açık Kaynak Lisansı</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODÜLLER (Interactive Showcase) -->
+    <section class="modules-showcase" id="modules">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Modüller Bir Bakışta</h2>
+                <div class="section-divider"></div>
+                <p>Koha'nın temel modüllerini keşfedin. Her modül, kütüphanenizin farklı bir alanında günlük operasyonu kolaylaştırmak için tasarlandı.</p>
+            </div>
+
+            <div class="modules-layout reveal" id="modulesLayout">
+                <div class="modules-tabs" role="tablist" aria-label="Koha modülleri">
+                    <button type="button" class="modules-tab active" data-target="mod-1" role="tab" aria-selected="true">
+                        <span class="mt-icon"><i class="fas fa-book"></i></span>
+                        Bibliyografik İşlemler
+                        <span class="mt-progress"></span>
+                    </button>
+                    <button type="button" class="modules-tab" data-target="mod-2" role="tab" aria-selected="false">
+                        <span class="mt-icon"><i class="fas fa-exchange-alt"></i></span>
+                        Dolaşım &amp; Üye
+                        <span class="mt-progress"></span>
+                    </button>
+                    <button type="button" class="modules-tab" data-target="mod-3" role="tab" aria-selected="false">
+                        <span class="mt-icon"><i class="fas fa-search"></i></span>
+                        OPAC &amp; Halk Erişimi
+                        <span class="mt-progress"></span>
+                    </button>
+                    <button type="button" class="modules-tab" data-target="mod-4" role="tab" aria-selected="false">
+                        <span class="mt-icon"><i class="fas fa-shopping-cart"></i></span>
+                        Süreli Yayın &amp; Edinme
+                        <span class="mt-progress"></span>
+                    </button>
+                    <button type="button" class="modules-tab" data-target="mod-5" role="tab" aria-selected="false">
+                        <span class="mt-icon"><i class="fas fa-chart-line"></i></span>
+                        Yönetim &amp; Raporlama
+                        <span class="mt-progress"></span>
+                    </button>
+                </div>
+
+                <div class="modules-panel" id="modulesPanel" role="tabpanel" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- GENEL BAKIŞ -->
     <section class="overview" id="overview">
         <div class="container">
@@ -556,30 +779,6 @@
                             <p>Z39.50, SRU/SRW, OAI-PMH ve REST API ile diğer sistemlerle entegre olur.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- İSTATİSTİKLER -->
-    <section class="product-stats" aria-label="Koha istatistikleri">
-        <div class="container">
-            <div class="product-stats-grid reveal-stagger">
-                <div class="pstat">
-                    <span class="pstat-num" data-target="20000"><span class="pstat-value">0</span><span class="pstat-suffix">+</span></span>
-                    <span class="pstat-label">Dünya Genelinde Kütüphane</span>
-                </div>
-                <div class="pstat">
-                    <span class="pstat-num" data-target="25"><span class="pstat-value">0</span><span class="pstat-suffix">+</span></span>
-                    <span class="pstat-label">Yıllık Geliştirme Deneyimi</span>
-                </div>
-                <div class="pstat">
-                    <span class="pstat-num" data-target="100"><span class="pstat-value">0</span><span class="pstat-suffix">+</span></span>
-                    <span class="pstat-label">Desteklenen Dil</span>
-                </div>
-                <div class="pstat">
-                    <span class="pstat-num"><span class="pstat-text">GPL</span></span>
-                    <span class="pstat-label">Açık Kaynak Lisansı</span>
                 </div>
             </div>
         </div>
@@ -710,7 +909,8 @@
                         <li><a href="dspace.html">DSpace</a></li>
                         <li><a href="omeka.html">Omeka</a></li>
                         <li><a href="moodle.html">Moodle</a></li>
-                        <li><a href="collectiveaccess.html">CollectiveAccess</a></li>
+                        <li><a href="rfid.html">RFID</a></li>
+                        <li><a href="metamarc.html">MetaMarc AI</a></li>
                         <li><a href="ojs.html">OJS</a></li>
                         <li><a href="indico.html">Indico</a></li>
                     </ul>
@@ -794,8 +994,8 @@
             requestAnimationFrame(tick);
         }
         if (!('IntersectionObserver' in window)) {
-            document.querySelectorAll('.pstat-num[data-target]').forEach(function(n){
-                n.querySelector('.pstat-value').textContent = fmt(parseInt(n.getAttribute('data-target'),10));
+            document.querySelectorAll('.stat-num[data-target]').forEach(function(n){
+                n.querySelector('.stat-value').textContent = fmt(parseInt(n.getAttribute('data-target'),10));
             });
             return;
         }
@@ -804,11 +1004,196 @@
                 if (!entry.isIntersecting) return;
                 var num = entry.target;
                 var t = parseInt(num.getAttribute('data-target'), 10);
-                animateCount(num.querySelector('.pstat-value'), t);
+                animateCount(num.querySelector('.stat-value'), t);
                 co.unobserve(num);
             });
         }, { threshold: 0.5 });
-        document.querySelectorAll('.pstat-num[data-target]').forEach(function(n){ co.observe(n); });
+        document.querySelectorAll('.stat-num[data-target]').forEach(function(n){ co.observe(n); });
+    })();
+
+    /* === MODULES TAB SHOWCASE === */
+    (function() {
+        var data = {
+            'mod-1': {
+                image: 'assets/koha-modules/cataloging.png',
+                url: 'koha.local/cgi-bin/koha/cataloguing/addbooks.pl',
+                eyebrow: 'Katalogcu için',
+                title: 'Bibliyografik İşlemler',
+                desc: 'MARC21 ve UNIMARC standartlarında tam uyumlu kataloglama. Şablon, otorite kayıtları ve toplu içe aktarım ile hızlı, tutarlı bibliyografik üretim.',
+                features: [
+                    { i: 'fa-tags', t: 'MARC21 / UNIMARC kataloglama' },
+                    { i: 'fa-clone', t: 'Z39.50 ile kopya kataloglama' },
+                    { i: 'fa-id-card', t: 'Otorite kayıt yönetimi' },
+                    { i: 'fa-file-import', t: 'Toplu MARC içe aktarım' }
+                ]
+            },
+            'mod-2': {
+                image: 'assets/koha-modules/circulation.png',
+                url: 'koha.local/cgi-bin/koha/circ/circulation-home.pl',
+                eyebrow: 'Dolaşım personeli için',
+                title: 'Dolaşım & Üye Yönetimi',
+                desc: 'Ödünç verme, iade, yenileme ve rezervasyon işlemleri tek ekranda. Esnek kurallar ve otomatik bildirimler ile dolaşım operasyonu sorunsuz akar.',
+                features: [
+                    { i: 'fa-right-left', t: 'Hızlı ödünç / iade akışı' },
+                    { i: 'fa-user-plus', t: 'Üye kayıt ve kategoriler' },
+                    { i: 'fa-calendar-check', t: 'Rezervasyon ve süre uzatma' },
+                    { i: 'fa-bell', t: 'Otomatik gecikme bildirimi' }
+                ]
+            },
+            'mod-3': {
+                image: 'assets/koha-modules/opac.png',
+                url: 'opac.koha.local',
+                eyebrow: 'Son kullanıcı için',
+                title: 'OPAC & Halk Erişimi',
+                desc: 'Modern, mobil uyumlu çevrimiçi katalog. Gelişmiş arama, facet filtreleme, kullanıcı hesabı ve self-servis işlemler ile zengin kullanıcı deneyimi.',
+                features: [
+                    { i: 'fa-magnifying-glass', t: 'Gelişmiş arama + facet filtre' },
+                    { i: 'fa-mobile-screen', t: 'Responsive mobil arayüz' },
+                    { i: 'fa-user', t: 'Kişisel hesap ve geçmiş' },
+                    { i: 'fa-bookmark', t: 'Liste ve favori yönetimi' }
+                ]
+            },
+            'mod-4': {
+                image: 'assets/koha-modules/acquisitions.png',
+                url: 'koha.local/cgi-bin/koha/acqui/acqui-home.pl',
+                eyebrow: 'Edinme bölümü için',
+                title: 'Süreli Yayın & Edinme',
+                desc: 'Dergi abonelikleri, sayı takibi ve kitap satınalma süreçlerinin uçtan uca yönetimi. Bütçe takibi, sipariş ve fatura entegrasyonu ile şeffaf operasyon.',
+                features: [
+                    { i: 'fa-newspaper', t: 'Süreli yayın aboneliği' },
+                    { i: 'fa-truck', t: 'Sipariş ve teslimat takibi' },
+                    { i: 'fa-file-invoice', t: 'Fatura ve EDIFACT desteği' },
+                    { i: 'fa-coins', t: 'Bütçe ve fon yönetimi' }
+                ]
+            },
+            'mod-5': {
+                image: 'assets/koha-modules/reports.png',
+                url: 'koha.local/cgi-bin/koha/reports/reports-home.pl',
+                eyebrow: 'Yönetici için',
+                title: 'Yönetim & Raporlama',
+                desc: 'Özelleştirilebilir SQL raporları, gerçek zamanlı KPI panosu ve detaylı kullanım istatistikleri ile kütüphane performansını veri odaklı yönetin.',
+                features: [
+                    { i: 'fa-gauge-high', t: 'KPI ve performans panosu' },
+                    { i: 'fa-database', t: 'Özel SQL rapor üreteci' },
+                    { i: 'fa-users', t: 'Kullanıcı / koleksiyon istatistiği' },
+                    { i: 'fa-shield-halved', t: 'Yetkilendirme ve denetim' }
+                ]
+            }
+        };
+
+        var panel = document.getElementById('modulesPanel');
+        var layout = document.getElementById('modulesLayout');
+        if (!panel || !layout) return;
+        var tabs = layout.querySelectorAll('.modules-tab');
+        var rotateMs = 6000;
+        var timer = null;
+        var paused = false;
+        var current = 0;
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function escapeHTML(s) {
+            return String(s).replace(/[&<>"']/g, function(c) {
+                return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+            });
+        }
+        function render(key) {
+            var d = data[key];
+            if (!d) return;
+            var html =
+                '<div class="modules-panel-visual">' +
+                    '<div class="browser-bar">' +
+                        '<span class="browser-dot r"></span>' +
+                        '<span class="browser-dot y"></span>' +
+                        '<span class="browser-dot g"></span>' +
+                        '<span class="browser-url">' + escapeHTML(d.url) + '</span>' +
+                    '</div>' +
+                    '<div class="browser-screen">' +
+                        '<img src="' + escapeHTML(d.image) + '" alt="Koha ' + escapeHTML(d.title) + ' ekranı" loading="lazy">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="modules-panel-content">' +
+                    '<span class="modules-panel-eyebrow">' + escapeHTML(d.eyebrow) + '</span>' +
+                    '<h3>' + escapeHTML(d.title) + '</h3>' +
+                    '<p class="modules-panel-desc">' + escapeHTML(d.desc) + '</p>' +
+                    '<ul class="modules-panel-features">' +
+                        d.features.map(function(f){
+                            return '<li><i class="fas ' + escapeHTML(f.i) + '"></i><span>' + escapeHTML(f.t) + '</span></li>';
+                        }).join('') +
+                    '</ul>' +
+                '</div>';
+            if (prefersReduced) { panel.innerHTML = html; return; }
+            panel.classList.add('is-fading');
+            setTimeout(function() {
+                panel.innerHTML = html;
+                panel.classList.remove('is-fading');
+            }, 220);
+        }
+        function applyProgress(idx) {
+            tabs.forEach(function(t, i) {
+                t.classList.remove('is-rotating');
+                if (i === idx && !paused) {
+                    /* restart CSS animation */
+                    void t.offsetWidth;
+                    t.classList.add('is-rotating');
+                }
+            });
+        }
+        function setActive(idx) {
+            tabs.forEach(function(t, i) {
+                t.classList.toggle('active', i === idx);
+                t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+            });
+            current = idx;
+            render(tabs[idx].getAttribute('data-target'));
+            applyProgress(idx);
+        }
+        function next() {
+            if (paused) return;
+            setActive((current + 1) % tabs.length);
+        }
+        function startTimer() {
+            if (timer) clearInterval(timer);
+            timer = setInterval(next, rotateMs);
+            applyProgress(current);
+        }
+        function stopTimer() {
+            if (timer) { clearInterval(timer); timer = null; }
+            tabs.forEach(function(t){ t.classList.remove('is-rotating'); });
+        }
+
+        tabs.forEach(function(t, i) {
+            t.addEventListener('click', function() {
+                paused = true;
+                setActive(i);
+                stopTimer();
+            });
+        });
+        layout.addEventListener('mouseenter', function() {
+            tabs.forEach(function(t){ t.classList.remove('is-rotating'); });
+        });
+        layout.addEventListener('mouseleave', function() {
+            if (paused) return;
+            applyProgress(current);
+        });
+
+        /* initial paint without auto-rotate; start when scrolled into view */
+        setActive(0);
+        stopTimer();
+
+        if (prefersReduced) return;
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting && !timer && !paused) {
+                        startTimer();
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            io.observe(layout);
+        } else {
+            startTimer();
+        }
     })();
     </script>
 </body>
