@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 - Eti Maden</title>
+    <meta name="description" content="404 - Eti Maden">
+    <link rel="shortcut icon" type="image/png" href="https://www.etimaden.gov.tr/images/favicon.png" />
+    <!-- jQuery layouts.default -->
+    <script type="text/javascript" src="https://www.etimaden.gov.tr/js/jquery.min.js"></script>
+    <!-- General -->
+    <link type="text/css" rel="stylesheet" href="https://www.etimaden.gov.tr/plugins/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.etimaden.gov.tr/plugins/bootstrap-icons/bootstrap-icons.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.etimaden.gov.tr/plugins/magnificpopup/magnific-popup.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.etimaden.gov.tr/plugins/fancybox/fancybox.css"/>
+    <link rel="preload" as="style" href="https://www.etimaden.gov.tr/build/assets/app-Dt1Uih74.css" /><link rel="stylesheet" href="https://www.etimaden.gov.tr/build/assets/app-Dt1Uih74.css" data-navigate-track="reload" />    <!-- Open Graph -->
+    <meta property="og:site_name" content="Eti Maden" />
+    <meta property="og:title" content="404" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.etimaden.gov.tr" />
+    <meta property="og:image" content="https://www.etimaden.gov.tr/images/apple-touch-icon.png" />
+    <meta property="og:description" content="404" />
+            <!-- Google Analytics (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7GNNYYSFS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-Y7GNNYYSFS');
+        </script>
+    </head>
+<body>
+<div class="slider">
+    <div class="header">
+        <div class="container">
+            <div class="header-wrapper">
+            <div class="row row-no-gutters">
+                <div class="col-lg-3 col-md-3 hidden-xs hidden-sm">
+                    <div class="logo"><a href="https://www.etimaden.gov.tr" title=""><img src="https://www.etimaden.gov.tr/images/etimaden-ic-logo.png" alt="" class="img-responsive"/></a></div>
+                </div>
+                <div class="visible-xs col-xs-4">
+                    <div class="logo"><a href="https://www.etimaden.gov.tr" title=""><img src="https://www.etimaden.gov.tr/images/etimaden-logo-dikey.png" alt="" class="img-responsive"/></a></div>
+                </div>
+                <div class="visible-sm col-sm-4 col-sm-offset-4">
+                    <div class="logo"><a href="https://www.etimaden.gov.tr" title=""><img src="https://www.etimaden.gov.tr/images/etimaden-logo-yatay.png" alt="" class="img-responsive"/></a></div>
+                </div>
+                <div class="visible-xs col-xs-8">
+                                            <div class="lang hidden-lg hidden-md"><a href="https://www.etimaden.gov.tr/en">English</a></div>
+                                        <div class="search hidden-sm" style="margin-top:15px;">
+                        <form role="search" method="get" class="search-form" action="https://www.etimaden.gov.tr/arama">
+                            <span class="bi-search"></span>
+                            <input class="form-control" name="keywords" placeholder="Ara..">
+                        <input type="hidden" name="as_fid" value="92dba16c4d7fffa50ecdc871a81df32162f60493" /></form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="navbar-header navbar-header-edit" style="margin-top:15px;">
+                        <button type="button" class="navbar-toggle navbar-toggle-edit collapsed" data-toggle="collapse" data-target="#mainmenu-navbar-collapse">MENÜ</button>
+                    </div>
+                    <br/>
+                </div>
+                <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12">
+                    <div class="header-nav">
+                        <div class="header-navbar">
+                            <div class="navbar-links collapse navbar-collapse navbar-collapse-edit" id="mainmenu-navbar-collapse">
+                                                                    <ul >
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>KURUMSAL</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="dropdown">
+        <a href="#" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>HAKKIMIZDA</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/eti-maden" target="_self" style="" >
+            
+            <span>Eti Maden</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/tarihce" target="_self" style="" >
+            
+            <span>Tarihçe</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/misyon-vizyon-ve-degerler" target="_self" style="" >
+            
+            <span>Misyon, Vizyon ve Değerler</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/kalite-eys" target="_self" style="" >
+            
+            <span>Politikalar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/dokumanlar" target="_self" style="" >
+            
+            <span>Dökümanlar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/eys-sertifikalar" target="_self" style="" >
+            
+            <span>Sertifikalar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/etik-komisyon" target="_self" style="" >
+            
+            <span>Etik Komisyon</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/egitim-planlari" target="_self" style="" >
+            
+            <span>Eğitim Planları</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/stratejik-plan" target="_blank" style="" >
+            
+            <span>Stratejik Plan</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr/yonetim-kurulu" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>YÖNETİM</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/organizasyon-semasi" target="_self" style="" >
+            
+            <span>Organizasyon Şeması</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yonetim-kurulu" target="_self" style="" >
+            
+            <span>Yönetim Kurulu</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/genel-mudur-yardimcilari" target="_self" style="" >
+            
+            <span>Genel Müdür Yardımcıları</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/daire-baskanlari" target="_self" style="" >
+            
+            <span>Daire Başkanları</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/isletme-mudurleri" target="_self" style="" >
+            
+            <span>İşletme Müdürleri</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/vergi-dairesi-ve-numarasi" target="_self" style="" >
+            
+            <span>VERGİ DAİRESİ VE NUMARASI</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/mevzuat" target="_self" style="" >
+            
+            <span>MEVZUAT</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/kurumsal-kimlik" target="_self" style="" >
+            
+            <span>KURUMSAL KİMLİK</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>SÜRDÜRÜLEBİLİRLİK</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/surdurulebilirlik-raporlari" target="_self" style="" >
+            
+            <span>Raporlar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/politikalar" target="_self" style="" >
+            
+            <span>Politikalar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/davranis-kurallari" target="_self" style="" >
+            
+            <span>Davranış Kuralları</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/galeri" target="_self" style="" >
+            
+            <span>Galeri</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>BOR</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bor-elementi" target="_self" style="" >
+            
+            <span>BOR ELEMENTİ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bor-mineralleri" target="_self" style="" >
+            
+            <span>BOR MİNERALLERİ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="#" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>BOR TÜRLERİ</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/kolemanit" target="_self" style="" >
+            
+            <span>KOLEMANİT</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/tinkal" target="_self" style="" >
+            
+            <span>TİNKAL</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/uleksit" target="_self" style="" >
+            
+            <span>ÜLEKSİT</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>KULLANIM ALANLARI</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://tarim.etimaden.gov.tr/" target="_self" style="" >
+            
+            <span>Tarım</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/temizlik" target="_self" style="" >
+            
+            <span>Temizlik</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/metalurji" target="_self" style="" >
+            
+            <span>Metalurji</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/seramik" target="_self" style="" >
+            
+            <span>Seramik</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ahsap-koruma" target="_self" style="" >
+            
+            <span>Ahşap Koruma</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/cam" target="_self" style="" >
+            
+            <span>Cam</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yalitim" target="_self" style="" >
+            
+            <span>Yalıtım</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/tekstil-tipi-fiberglass" target="_self" style="" >
+            
+            <span>Teksil Tipi Fiberglass</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/saglik" target="_self" style="" >
+            
+            <span>Sağlık</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/enerji" target="_self" style="" >
+            
+            <span>Enerji</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/diger" target="_self" style="" >
+            
+            <span>Diğer</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/turkiyede-bor" target="_self" style="" >
+            
+            <span>TÜRKİYE&#039;DE BOR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/dunyada-bor" target="_self" style="" >
+            
+            <span>DÜNYADA BOR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>AR-GE</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ar-ge-calismalari" target="_self" style="" >
+            
+            <span>AR-GE Çalışmaları</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/laboratuvarlar" target="_self" style="" >
+            
+            <span>Laboratuvarlar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/projeler" target="_self" style="" >
+            
+            <span>Projeler</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/fikir-platformu" target="_self" style="" >
+            
+            <span>Fikir Platformu</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>GLOBAL</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>TÜRKİYE</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/kirka" target="_self" style="" >
+            
+            <span>Kırka</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/emet" target="_self" style="" >
+            
+            <span>Emet</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bandirma" target="_self" style="" >
+            
+            <span>Bandırma</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bigadic" target="_self" style="" >
+            
+            <span>Bigadiç</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yurt-ici-istirakler" target="_self" style="" >
+            
+            <span>Yurt İçi İştirakler</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>DÜNYA</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yurt-disi-istirakler" target="_self" style="" >
+            
+            <span>Yurt Dışı İştirakler</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>ÜRÜNLER</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/rafine-urunler" target="_self" style="" >
+            
+            <span>RAFİNE ÜRÜNLER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr" target="_self" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>NİHAİ ÜRÜNLER</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/etidot-67" target="_self" style="" >
+            
+            <span>Etidot-67</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/cinko-borat" target="_self" style="" >
+            
+            <span>Çinko Borat</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/boron" target="_self" style="" >
+            
+            <span>Boron</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/borel" target="_self" style="" >
+            
+            <span>Borel</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bortam" target="_self" style="" >
+            
+            <span>Bortam</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+    
+    <li class="dropdown">
+        <a href="https://www.etimaden.gov.tr/ki-myasal-deklarasyonlar" target="_blank" style="" class="dropdown-toggle" data-toggle="dropdown">
+            
+            <span>KİMYASAL REGÜLASYONLARA UYUM</span>
+            <span class="caret"></span>
+        </a>
+                <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/deklarasyonlar" target="_self" style="" >
+            
+            <span>Deklarasyonlar</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/guvenlik-bilgi-formu" target="_self" style="" >
+            
+            <span>Güvenlik Bilgi Formu - GBF</span>
+            
+        </a>
+            </li>
+
+</ul>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>İHALE</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=aktif" target="_self" style="" >
+            
+            <span>AKTİF İHALELER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=sonuclanan" target="_self" style="" >
+            
+            <span>SONUÇLANAN İHALELER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=degerlendirme" target="_self" style="" >
+            
+            <span>DEĞERLENDİRMEDEKİ İHALELER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=iptal" target="_self" style="" >
+            
+            <span>İPTAL EDİLEN İHALELER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/konteyner-gemi" target="_self" style="" >
+            
+            <span>KONTEYNER VE GEMİ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/dogrudan-temin" target="_self" style="" >
+            
+            <span>DOĞRUDAN TEMİN</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>SATIŞ</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yurt-ici-satis" target="_self" style="" >
+            
+            <span>YURT İÇİ SATIŞ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/online-siparis" target="_self" style="" >
+            
+            <span>ONLİNE SİPARİŞ (Kayıtlı Müşteri)</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>MEDYA</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/haberler" target="_self" style="" >
+            
+            <span>HABERLER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/fotograflar" target="_self" style="" >
+            
+            <span>FOTOĞRAFLAR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/videolar" target="_self" style="" >
+            
+            <span>VİDEOLAR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/yayinlar" target="_self" style="" >
+            
+            <span>YAYINLAR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/maden-terimleri-sozlugu/a-harfi-ile-baslayanlar" target="_self" style="" >
+            
+            <span>MADEN TERİMLERİ SÖZLÜĞÜ</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+                    <li class="dropdown">
+            <a href="#" target="_self" style="text-transform: uppercase " class="dropdown-toggle" data-toggle="dropdown">
+                
+                <span>İLETİŞİM</span>
+                
+            </a>
+                            <ul class="dropdown-menu">
+
+
+
+    
+    <li class="">
+        <a href="https://bulut.enerji.gov.tr/" target="_blank" style="" >
+            
+            <span>E-BULUT</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/kurulum-dosyalari" target="_self" style="" >
+            
+            <span>VERİ MERKEZİ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/analiz-ucretleri" target="_self" style="" >
+            
+            <span>ANALİZ HİZMETLERİ</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/duyurular" target="_self" style="" >
+            
+            <span>PERSONEL ALIM</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/duyurular" target="_self" style="" >
+            
+            <span>DUYURULAR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/adresler" target="_self" style="" >
+            
+            <span>ADRESLER</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/iletisim-formu" target="_self" style="" >
+            
+            <span>İLETİŞİM VE GÖRÜŞLERİNİZ FORMU</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://eptas.etimaden.gov.tr/User/Login" target="_blank" style="" >
+            
+            <span>AR-GE PROJE TEKLİF BAŞVURUSU (EPTAS)</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.cimer.gov.tr/" target="_blank" style="" >
+            
+            <span>CİMER Başvurusu</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/bilgi-edinme-kapsamina-girmeyen-konular" target="_self" style="" >
+            
+            <span>BİLGİ EDİNME</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/sik-sorulan-sorular" target="_self" style="" >
+            
+            <span>SIK SORULAN SORULAR</span>
+            
+        </a>
+            </li>
+
+    
+    <li class="">
+        <a href="https://www.etimaden.gov.tr/arabuluculuk" target="_self" style="" >
+            
+            <span>ARABULUCULUK(arabuluculuk@etimaden.gov.tr)</span>
+            
+        </a>
+            </li>
+
+</ul>
+                    </li>
+    </ul>
+
+                                                            </div>
+                        </div>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
+                    <div class="search hidden-xs">
+                        <form role="search" method="get" class="search-form" action="https://www.etimaden.gov.tr/arama">
+                            <span class="bi-search"></span>
+                            <input class="form-control" name="keywords" placeholder="Ara.."/>
+                        <input type="hidden" name="as_fid" value="92dba16c4d7fffa50ecdc871a81df32162f60493" /></form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                                            <div class="lang hidden-sm hidden-xs">
+                            <a href="https://www.etimaden.gov.tr/en">English</a>
+                            <a href="https://etimadenapac.com/cn/">中国</a>
+                        </div>
+                                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="headerbg" style="background:url('https://www.etimaden.gov.tr/storage/uploads/2017/12/haberler.jpg') center #ced9e3;"></div>
+
+<div class="clearfix"></div>
+
+<div class="headertitle">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="bread">
+            <span property="itemListElement" typeof="ListItem">
+                            <span property="name">Anasayfa</span>
+                            <meta property="position" content="1">
+        </span>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mobilYan">
+    <div class="container">
+        <div class="row">
+            <div class="visible-xs visible-sm col-sm-12 col-xs-12 hidden-lg hidden-md">
+                <div class="yanmenuAc">Yan Menü</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- .Page -->
+<div class="page">
+    <div class="container">
+        <div class="row">
+                                <div class="vspace-5"></div>
+
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell small-12">
+                <h2 class="text-center">Üzgünüz, aradığınız sayfa bulunamadı.</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="vspace-5"></div>
+                    </div>
+    </div>
+</div>
+<!-- ./Page -->
+
+<script src="https://cdn.plyr.io/2.0.16/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/2.0.16/plyr.css">
+<script>plyr.setup();</script>
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="column col-md-3 col-sm-6 col-xs-12">
+                                            <div class="title">Genel Müdürlük</div>
+                        <div class="clearfix"></div>
+                        Kızılırmak Mahallesi 1443. Cadde No:5 06530 Çukurambar-Çankaya/ANKARA
+                                    </div>
+                                    <div class="column col-md-2 col-sm-6 col-xs-12">
+                        <div class="title">Telefon</div>
+                        <div class="clearfix"></div>
+                        +90 (312) 294 20 00<br/>
+                        +90 (312) 230 71 84
+                    </div>
+                    <div class="column col-md-2 col-sm-6 col-xs-12">
+                        <div class="title">KEP Adresi</div>
+                        <div class="clearfix"></div>
+                        etimaden@hs01.kep.tr
+                    </div>
+                                <div class="column col-md-2 col-sm-6 col-xs-12">
+                    <div class="title"><a href="/arabuluculuk" style="color:#fff;">Arabuluculuk</a></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="column col-md-3 col-sm-6 col-xs-12">
+                    <ul class="sosyalmedya">
+                                                    <li>
+        <a href="https://www.facebook.com/etimadenkurumsal">
+            <i class="bi-facebook"></i>
+        </a>
+    </li>
+    <li>
+        <a href="https://twitter.com/etimaden">
+            <i class="bi-twitter-x"></i>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/company/etimaden/">
+            <i class="bi-linkedin"></i>
+        </a>
+    </li>
+
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-middle hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 hidden-sm">
+                    <a href="https://www.etimaden.gov.tr" title=""><img src="https://www.etimaden.gov.tr/images/etimaden-logo-dikey.png" alt="Etimaden Logo" class="img-responsive"/></a>
+                </div>
+                                    <div class="col-md-2 col-sm-3">
+                        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> HAKKIMIZDA</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/eti-maden" target="_self">Eti Maden</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/tarihce" target="_self">Tarihçe</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/misyon-vizyon-ve-degerler" target="_self">Misyon, Vizyon ve Değerler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/dokumanlar" target="_self">Dökümanlar</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/finansal-veriler" target="_self">Finansal Veriler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/mevzuat" target="_self">Mevzuat</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> POLİTİKALAR</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/cevre" target="_self">Çevre</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/kalite-eys" target="_self">Kalite (EYS)</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/insan-kaynaklari" target="_self">İnsan Kaynakları</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/is-sagligi-ve-guvenligi" target="_self">İş Sağlığı ve Güvenliği</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/kisisel-verilerin-korunmasi-kanunu" target="_self">KVKK</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> BOR</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/bor-elementi" target="_self">Bor Elementi</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/bor-mineralleri" target="_self">Bor Mineralleri</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/turkiyede-bor" target="_self">Türkiye&#039;de Bor</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/dunyada-bor" target="_self">Dünyada Bor</a></li>
+                    </ul>
+    
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> AR-GE</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/ar-ge-calismalari" target="_self">AR-GE Çalışmaları</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/laboratuvarlar" target="_self">Laboratuvarlar</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/projeler" target="_self">Projeler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/fikir-platformu" target="_self">Fikir Platformu</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> GLOBAL</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/yurt-disi-istirakler" target="_self">Yurt Dışı İştirakler</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> TESİSLER</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/kirka" target="_self">Kırka</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/emet" target="_self">Emet</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/bandirma" target="_self">Bandırma</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/bigadic" target="_self">Bigadiç</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> ÜRÜNLER</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/rafine-urunler" target="_self">Rafine Ürünler</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> NİHAİ ÜRÜNLER</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/etidot-67" target="_self">Etidot-67</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/cinko-borat" target="_self">Çinko Borat</a></li>
+                    </ul>
+    
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> BİLGİ EDİNME</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/bilgi-edinme-kapsamina-girmeyen-konular" target="_self">Bilgi Edinme Kapsamına Girmeyen Konular</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/4982-sayili-bilgi-edinme-hakki-kanunu" target="_self">4982 Sayılı Bilgi Edinme Hakkı Kanunu</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/4982-sayili-bilgi-edinme-hakki-kanununun-yonetmeligi" target="_self">4982 Sayılı Bilgi Edinme Hakkı Kanununun Yönetmeliği</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/bilgi-edinme-degerlendirme-kurulunun-calisma-usul-ve-esaslari-hakkinda-yonetmelik" target="_self">Bilgi Edinme Değerlendirme Kurulunun Çalışma Usül ve Esasları Hakkında Yönetmelik</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/bilgi-edinme-formu" target="_self">Bilgi Edinme Formu</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/faks-ile-bilgi-edinme" target="_self">Faks İle Bilgi Edinme</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/ik-politikasi-ve-temel-ilkeler" target="_self">İK Politikası ve Temel İlkeler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/ise-alma-prosedurleri" target="_self">İşe Alma Prosedürleri</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/kpss-atama-belgeler" target="_self">KPSS Atama-Belgeler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/mali-ve-sosyal-haklarimiz" target="_self">Mali ve Sosyal Haklarımız</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/staj" target="_self">Staj</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/sendikal-faaliyetler" target="_self">Sendikal Faaliyetler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/analiz-ucretleri" target="_self">Analiz Ücretleri</a></li>
+                    </ul>
+    
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> İHALELER</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=aktif" target="_self">Aktif İhaleler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=sonuclanan" target="_self">Sonuçlanan İhaleler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/ihale-yonetim-sistemi?durum=iptal" target="_self">İptal Edilen İhaleler</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> SATIŞ</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/yurt-ici-satis" target="_self">Yurt içi Satış</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/online-siparis" target="_self">Online Sipariş</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> MEDYA</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/haberler" target="_self">Haberler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/kurumsal-kimlik" target="_self">Kurumsal Kimlik</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/fotograflar" target="_self">Fotoğraflar</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/videolar" target="_self">Videolar</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/yayinlar" target="_self">Yayınlar</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/maden-terimleri-sozlugu" target="_self">Maden Terimleri Sözlüğü</a></li>
+                    </ul>
+        <b><i class="bi-caret-down-fill" aria-hidden="true"></i> İLETİŞİM</b>
+            <ul class="footer-menu">
+                            <li><a href="https://www.etimaden.gov.tr/adresler" target="_self">Adresler</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/iletisim-formu" target="_self">İletişim Formu</a></li>
+                            <li><a href="https://www.etimaden.gov.tr/sik-sorulan-sorular" target="_self">Sık Sorulan Sorular</a></li>
+                    </ul>
+    
+                    </div>
+                                <div class="col-md-3 hidden-sm">
+                                            <a class="twitter-timeline" data-height="415" href="https://twitter.com/Etimaden?ref_src=twsrc%5Etfw">Etimaden</a>
+                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">&copy; 2026 Eti Maden</div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                    <a href="/cerez-politikasi">Çerez Politikası</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="https://www.etimaden.gov.tr/js/jquery-migrate-3.0.0.min.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/js/js.cookie.min.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/plugins/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/plugins/magnificpopup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/plugins/fancybox/fancybox.umd.js"></script>
+<script type="text/javascript" src="https://www.etimaden.gov.tr/js/acctoolbar.min.js"></script>
+<link rel="preload" as="style" href="https://www.etimaden.gov.tr/build/assets/app-91R_nyR3.css" /><link rel="modulepreload" href="https://www.etimaden.gov.tr/build/assets/app-C8Cmhtl4.js" /><link rel="stylesheet" href="https://www.etimaden.gov.tr/build/assets/app-91R_nyR3.css" data-navigate-track="reload" /><script type="module" src="https://www.etimaden.gov.tr/build/assets/app-C8Cmhtl4.js" data-navigate-track="reload"></script>
+</body>
+</html>

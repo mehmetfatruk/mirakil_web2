@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referanslar - Güvenilen Kurumlar | MirAkıl</title>
+    <meta name="description" content="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler. Türkiye'nin önde gelen kurumları MirAkıl çözümlerini tercih ediyor.">
+    <link rel="canonical" href="https://mehmetfatruk.github.io/mirakil_web/referanslar.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Referanslar - Güvenilen Kurumlar | MirAkıl">
+    <meta property="og:description" content="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler.">
+    <meta property="og:url" content="https://mehmetfatruk.github.io/mirakil_web/referanslar.html">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="MirAkıl Veri İşleme">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2E7C01;
+            --primary-light: #45BA01;
+            --primary-dark: #1a5a00;
+            --teal: #709CA5;
+            --teal-dark: #253437;
+            --dark: #1a1a1a;
+            --text: #333;
+            --text-light: #666;
+            --bg: #fff;
+            --bg-light: #f7f8f6;
+            --border: #e0e0e0;
+            --radius: 20px;
+            --shadow: 0 5px 20px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+            --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'Lato',sans-serif; color:var(--text); line-height:1.7; background:var(--bg); }
+        h1,h2,h3,h4,h5 { font-family:'Archivo',sans-serif; line-height:1.3; }
+        a { text-decoration:none; color:inherit; }
+        .container { max-width:1200px; margin:0 auto; padding:0 30px; }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+        .reveal.in { opacity:1; transform:translateY(0); }
+        .reveal-stagger > * { opacity:0; transform:translateY(20px); transition:opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); }
+        .reveal-stagger.in > * { opacity:1; transform:translateY(0); }
+        .reveal-stagger.in > *:nth-child(1) { transition-delay:0.05s; }
+        .reveal-stagger.in > *:nth-child(2) { transition-delay:0.10s; }
+        .reveal-stagger.in > *:nth-child(3) { transition-delay:0.15s; }
+        .reveal-stagger.in > *:nth-child(4) { transition-delay:0.20s; }
+        .reveal-stagger.in > *:nth-child(5) { transition-delay:0.25s; }
+        .reveal-stagger.in > *:nth-child(6) { transition-delay:0.30s; }
+        .reveal-stagger.in > *:nth-child(7) { transition-delay:0.35s; }
+        .reveal-stagger.in > *:nth-child(8) { transition-delay:0.40s; }
+        .reveal-stagger.in > *:nth-child(9) { transition-delay:0.45s; }
+        .reveal-stagger.in > *:nth-child(10) { transition-delay:0.50s; }
+        .reveal-stagger.in > *:nth-child(11) { transition-delay:0.55s; }
+        .reveal-stagger.in > *:nth-child(12) { transition-delay:0.60s; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal-stagger > * { opacity:1; transform:none; transition:none; }
+        }
+
+        /* ===== HEADER ===== */
+        .header-top {
+            background: #fff;
+            padding: 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-top .container {
+            display:flex; justify-content:space-between; align-items:center; min-height:70px;
+        }
+        .header-logo { display:flex; align-items:center; }
+        .header-logo img {
+            height: 50px;
+        }
+        .header-contact { display:flex; align-items:center; gap:28px; color:var(--text); font-size:0.88rem; }
+        .header-contact a { color:var(--text); display:flex; align-items:center; gap:8px; transition:color 0.2s; }
+        .header-contact a:hover { color:var(--primary); }
+        .header-contact i { color:var(--primary); }
+
+        /* NAV */
+        .main-nav {
+            background:#fff; border-bottom:1px solid var(--border);
+            position:sticky; top:0; z-index:1000;
+            box-shadow:0 2px 8px rgba(0,0,0,0.06);
+        }
+        .main-nav .container { display:flex; justify-content:center; align-items:center; }
+        .nav-menu { display:flex; list-style:none; }
+        .nav-menu li { position:relative; }
+        .nav-menu > li > a {
+            display:block; padding:18px 22px;
+            font-family:'Archivo',sans-serif; font-weight:600; font-size:0.9rem;
+            color:var(--text); text-transform:uppercase; letter-spacing:0.5px;
+            transition:var(--transition); border-bottom:3px solid transparent;
+        }
+        .nav-menu > li > a:hover, .nav-menu > li > a.active {
+            color:var(--primary); border-bottom-color:var(--primary);
+        }
+        .nav-dropdown {
+            position:absolute; top:100%; left:0; background:#fff;
+            min-width:240px; box-shadow:0 8px 24px rgba(0,0,0,0.12);
+            border-radius:0 0 12px 12px; opacity:0; visibility:hidden;
+            transform:translateY(-8px); transition:var(--transition); z-index:100; list-style:none;
+        }
+        .nav-menu li:hover .nav-dropdown { opacity:1; visibility:visible; transform:translateY(0); }
+        .nav-dropdown li a {
+            display:flex; align-items:center; gap:10px;
+            padding:12px 20px; font-size:0.88rem; color:var(--text); transition:var(--transition);
+        }
+        .nav-dropdown li a:hover { background:var(--bg-light); color:var(--primary); padding-left:28px; }
+        .nav-dropdown .dd-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+        .mobile-toggle { display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; padding:16px; color:var(--text); }
+
+        /* BTN */
+        .btn {
+            display:inline-flex; align-items:center; gap:10px;
+            padding:14px 32px; border-radius:10px;
+            font-family:'Archivo',sans-serif; font-weight:600; font-size:0.95rem;
+            transition:var(--transition); border:2px solid transparent; cursor:pointer;
+        }
+        .btn-green { background:var(--primary-light); color:#fff; border-color:var(--primary-light); }
+        .btn-green:hover { background:var(--primary-dark); border-color:var(--primary-dark); }
+        .btn-outline-green { background:transparent; color:var(--primary); border-color:var(--primary); }
+        .btn-outline-green:hover { background:var(--primary); color:#fff; }
+        .btn-white { background:#fff; color:var(--primary); border-color:#fff; }
+        .btn-white:hover { background:transparent; color:#fff; border-color:#fff; }
+
+        /* ===== PAGE HERO (Koha tarzi yuksek) ===== */
+        .page-hero {
+            position:relative; min-height:620px; display:flex; align-items:center;
+            background: linear-gradient(135deg, var(--teal-dark) 0%, var(--primary-dark) 60%, var(--primary) 130%);
+            overflow:hidden;
+        }
+        .page-hero .container { width:100%; position:relative; z-index:2; text-align:center; padding:40px 30px; }
+        .page-hero::before {
+            content:''; position:absolute; inset:0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.14) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 50%);
+            animation: heroGlowProduct 16s ease-in-out infinite alternate;
+        }
+        @keyframes heroGlowProduct {
+            0%   { transform:translate(0,0) scale(1); opacity:0.9; }
+            50%  { transform:translate(-2%,2%) scale(1.05); opacity:1; }
+            100% { transform:translate(2%,-2%) scale(1.02); opacity:0.92; }
+        }
+        @media (prefers-reduced-motion: reduce) { .page-hero::before { animation:none; } }
+        .page-hero-pattern {
+            position:absolute; inset:0; opacity:0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .page-hero-content { position:relative; z-index:2; }
+        .page-hero-icon {
+            width:72px; height:72px; border-radius:18px;
+            background:rgba(255,255,255,0.15); backdrop-filter:blur(8px);
+            border:2px solid rgba(255,255,255,0.25);
+            display:flex; align-items:center; justify-content:center;
+            margin:0 auto 16px; font-size:2rem; color:#fff;
+        }
+        .page-hero h1 {
+            font-size:2.4rem; font-weight:800; color:#fff; margin-bottom:10px; letter-spacing:-1px;
+        }
+        .page-hero-subtitle {
+            font-size:1rem; color:rgba(255,255,255,0.9); font-weight:400;
+            letter-spacing:0.5px; margin-bottom:14px;
+        }
+        .page-hero-divider {
+            width:80px; height:3px; background:rgba(255,255,255,0.5);
+            margin:0 auto 24px; border-radius:2px;
+        }
+        .page-hero p {
+            font-size:0.95rem; color:rgba(255,255,255,0.85); max-width:640px;
+            margin:0 auto; font-weight:300; line-height:1.65;
+        }
+        .page-hero-breadcrumb {
+            position:absolute; top:24px; left:30px; display:flex; align-items:center; gap:8px;
+            font-size:0.85rem; color:rgba(255,255,255,0.7); z-index:3;
+        }
+        .page-hero-breadcrumb a { color:rgba(255,255,255,0.7); transition:color 0.2s; }
+        .page-hero-breadcrumb a:hover { color:#fff; }
+
+        /* ===== STATS STRIP ===== */
+        .stats-strip { background:#fff; border-bottom:1px solid var(--border); padding:48px 0; }
+        .stats-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; max-width:1100px; margin:0 auto; }
+        .stats-grid.stats-grid-2 { grid-template-columns:repeat(2, 1fr); max-width:640px; }
+        .stat-cell { text-align:center; padding:8px 16px; position:relative; }
+        .stat-cell:not(:last-child)::after {
+            content:''; position:absolute; right:0; top:20%; bottom:20%;
+            width:1px; background:var(--border);
+        }
+        .stat-num {
+            display:block; font-family:'Archivo',sans-serif; font-weight:800;
+            font-size:2.8rem; line-height:1; color:var(--dark); letter-spacing:-1.5px;
+        }
+        .stat-num .stat-suffix { color:var(--primary); font-size:1.8rem; margin-left:2px; vertical-align:top; }
+        .stat-label {
+            display:block; margin-top:10px;
+            font-family:'Archivo',sans-serif; font-weight:500; font-size:0.85rem;
+            color:var(--text-light); text-transform:uppercase; letter-spacing:1px;
+        }
+
+        /* ===== SECTIONS ===== */
+        section { padding:80px 0; }
+        .section-header { text-align:center; margin-bottom:56px; }
+        .section-header h2 { font-size:2.2rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
+        .section-divider { width:60px; height:3px; background:var(--primary); margin:16px auto 20px; border-radius:2px; }
+        @keyframes dividerGrow { from { width:0; } to { width:60px; } }
+        @supports (animation-timeline: view()) {
+            .section-divider {
+                animation: dividerGrow 0.9s cubic-bezier(0.22,0.61,0.36,1) both;
+                animation-timeline: view();
+                animation-range: entry 5% entry 60%;
+            }
+        }
+        .section-header p { color:var(--text-light); max-width:640px; margin:8px auto 0; font-size:0.98rem; }
+        .section-eyebrow {
+            display:inline-block; font-family:'Archivo',sans-serif; font-weight:600;
+            font-size:0.78rem; color:var(--primary); text-transform:uppercase;
+            letter-spacing:2px; margin-bottom:10px;
+        }
+
+        /* ===== CATEGORY TABS ===== */
+        .category-section { background:var(--bg-light); padding:60px 0 70px; }
+        .category-tabs {
+            display:flex; justify-content:center; flex-wrap:wrap; gap:10px;
+            margin-bottom:40px;
+        }
+        .category-tab {
+            padding:10px 22px;
+            background:#fff; border:2px solid var(--border);
+            border-radius:50px;
+            font-family:'Archivo',sans-serif; font-weight:600; font-size:0.88rem;
+            color:var(--text); cursor:pointer;
+            transition:var(--transition);
+            display:inline-flex; align-items:center; gap:8px;
+        }
+        .category-tab:hover { border-color:var(--primary); color:var(--primary); }
+        .category-tab.active {
+            background:var(--primary); color:#fff; border-color:var(--primary);
+            box-shadow:0 4px 12px rgba(46,124,1,0.25);
+        }
+        .category-tab i { font-size:0.85rem; }
+
+        /* ===== LOGO GRID ===== */
+        .logo-grid {
+            display:grid; grid-template-columns:repeat(4, 1fr);
+            gap:20px; max-width:1100px; margin:0 auto;
+        }
+        .logo-card {
+            background:#fff; border:1px solid var(--border);
+            border-radius:12px; padding:32px 24px;
+            display:flex; flex-direction:column; align-items:center; justify-content:center;
+            text-align:center; min-height:210px;
+            transition:var(--transition); position:relative;
+            overflow:hidden; outline:none;
+        }
+        .logo-card:hover, .logo-card:focus-visible {
+            border-color:var(--primary);
+            box-shadow:var(--shadow-hover);
+            transform:translateY(-4px);
+        }
+        .logo-card[data-category] { transition:opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out), border-color 0.3s, box-shadow 0.3s; }
+        .logo-card.hidden { display:none; }
+        .logo-img-wrap {
+            width:100%; height:90px; margin-bottom:14px;
+            display:flex; align-items:center; justify-content:center;
+            position:relative;
+        }
+        .logo-img-wrap img {
+            max-width:100%; max-height:100%;
+            object-fit:contain;
+            filter:grayscale(30%) opacity(0.92);
+            transition:filter 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+        }
+        .logo-card:hover .logo-img-wrap img,
+        .logo-card:focus-visible .logo-img-wrap img { filter:grayscale(0%) opacity(1); transform:scale(1.05); }
+        .cat-count {
+            opacity:0.6; font-weight:400; font-size:0.78rem; margin-left:4px;
+        }
+        .logo-card-name {
+            font-family:'Archivo',sans-serif; font-weight:600; font-size:0.92rem;
+            color:var(--dark); line-height:1.35;
+        }
+        .logo-card-meta {
+            margin-top:6px; font-size:0.78rem;
+            color:var(--text-light); letter-spacing:0.3px;
+        }
+        /* ===== HOVER OVERLAY (proje detayı) ===== */
+        .logo-card-overlay {
+            position:absolute; inset:0;
+            background: linear-gradient(150deg, var(--primary-dark) 0%, var(--primary) 60%, var(--teal-dark) 130%);
+            color:#fff; padding:22px 18px;
+            display:flex; flex-direction:column; justify-content:center; align-items:center;
+            text-align:center; gap:12px;
+            opacity:0; transform:translateY(6px);
+            transition:opacity 0.32s var(--ease-out), transform 0.32s var(--ease-out);
+            pointer-events:none; border-radius:11px;
+        }
+        .logo-card:hover .logo-card-overlay,
+        .logo-card:focus-visible .logo-card-overlay,
+        .logo-card:focus-within .logo-card-overlay { opacity:1; transform:translateY(0); }
+        .logo-card-overlay::before {
+            content:''; position:absolute; inset:0; pointer-events:none;
+            background-image: radial-gradient(circle at 80% 10%, rgba(255,255,255,0.10) 0%, transparent 55%);
+        }
+        .logo-card-overlay-name {
+            font-family:'Archivo',sans-serif; font-weight:700; font-size:0.88rem;
+            line-height:1.3; color:#fff; position:relative;
+        }
+        .logo-card-overlay-desc {
+            font-size:0.78rem; line-height:1.55;
+            color:rgba(255,255,255,0.95); position:relative;
+            max-height:7.5em; overflow:hidden;
+            display:-webkit-box; -webkit-line-clamp:6; -webkit-box-orient:vertical;
+        }
+        .logo-card-overlay-tag {
+            display:inline-block; padding:5px 12px;
+            background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.28);
+            border-radius:20px; font-family:'Archivo',sans-serif;
+            font-size:0.68rem; text-transform:uppercase; letter-spacing:0.7px;
+            font-weight:600; color:#fff; position:relative;
+        }
+        @media (max-width:768px) {
+            .logo-card { min-height:200px; }
+            .logo-card-overlay-desc { -webkit-line-clamp:5; max-height:6em; font-size:0.74rem; }
+            .logo-card-overlay-name { font-size:0.82rem; }
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background:var(--bg-light); padding:80px 0;
+            text-align:center;
+        }
+        .cta-section h2 { font-size:2rem; color:var(--dark); margin-bottom:14px; }
+        .cta-section p { color:var(--text-light); margin-bottom:28px; max-width:580px; margin-left:auto; margin-right:auto; }
+        .cta-buttons { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+        /* ===== FOOTER ===== */
+        footer { background:#111; color:#ccc; padding:60px 0 0; }
+        .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; padding-bottom:40px; }
+        .footer-col h4 {
+            color:#fff; font-family:'Archivo',sans-serif; font-size:1rem;
+            margin-bottom:20px; padding-bottom:12px; position:relative;
+        }
+        .footer-col h4::after {
+            content:''; position:absolute; bottom:0; left:0; width:30px; height:2px; background:var(--primary-light);
+        }
+        .footer-about p { font-size:0.88rem; line-height:1.8; margin-bottom:20px; color:#999; }
+        .footer-contact-item {
+            display:flex; align-items:flex-start; gap:12px; margin-bottom:12px; font-size:0.88rem; color:#999;
+        }
+        .footer-contact-item i { color:var(--primary-light); margin-top:4px; width:16px; text-align:center; }
+        .footer-contact-item a { color:#999; transition:color 0.2s; }
+        .footer-contact-item a:hover { color:var(--primary-light); }
+        .footer-links { list-style:none; }
+        .footer-links li { margin-bottom:8px; }
+        .footer-links li a {
+            color:#999; font-size:0.88rem; transition:var(--transition);
+            display:flex; align-items:center; gap:6px;
+        }
+        .footer-links li a::before { content:'\203A'; color:var(--primary-light); font-weight:700; }
+        .footer-links li a:hover { color:var(--primary-light); padding-left:4px; }
+        .footer-bottom {
+            border-top:1px solid rgba(255,255,255,0.08); padding:20px 0;
+            display:flex; justify-content:space-between; align-items:center;
+            font-size:0.8rem; color:#555; flex-wrap:wrap; gap:12px;
+        }
+
+        /* WhatsApp */
+        .whatsapp-float { position:fixed; bottom:24px; right:24px; z-index:999; }
+        .whatsapp-float a {
+            display:flex; align-items:center; justify-content:center;
+            width:58px; height:58px; border-radius:50%;
+            background:#25D366; color:#fff; font-size:1.8rem;
+            box-shadow:0 6px 20px rgba(37,211,102,0.4);
+            transition:transform 0.3s ease;
+        }
+        .whatsapp-float a:hover { transform:scale(1.08); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width:768px) {
+            .header-contact { display:none; }
+            .nav-menu {
+                display:none; flex-direction:column; position:absolute;
+                top:100%; left:0; right:0; background:#fff;
+                box-shadow:0 8px 24px rgba(0,0,0,0.12);
+            }
+            .nav-menu.active { display:flex; }
+            .nav-menu > li > a { padding:14px 20px; text-align:center; }
+            .mobile-toggle { display:block; }
+            .main-nav .container { justify-content:space-between; }
+            .page-hero { min-height:auto; }
+            .page-hero .container { padding:60px 30px 50px; }
+            .page-hero-breadcrumb { position:static; padding:0 30px 16px; justify-content:center; }
+            .page-hero h1 { font-size:2rem; }
+            .stats-grid { grid-template-columns:repeat(2, 1fr); gap:20px 8px; }
+            .stat-cell:nth-child(2)::after { display:none; }
+            .logo-grid { grid-template-columns:repeat(2, 1fr); gap:14px; }
+            .logo-card { padding:24px 16px; min-height:200px; }
+            .footer-grid { grid-template-columns:1fr; gap:32px; }
+            section { padding:50px 0; }
+            .section-header h2 { font-size:1.7rem; }
+            .cta-section h2 { font-size:1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:10000;font-family:'Archivo',sans-serif;font-weight:600;border-radius:0 0 8px 0;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">İçeriğe Atla</a>
+
+    <!-- HEADER -->
+    <header class="header-top">
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="https://static.wixstatic.com/media/ef08d3_aa38de349e884624ac5924a9ed006f8d~mv2.png/v1/fill/w_282,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef08d3_aa38de349e884624ac5924a9ed006f8d~mv2.png" alt="MirAkıl Logo">
+            </a>
+            <div class="header-contact">
+                <a href="tel:+903122586457"><i class="fas fa-phone"></i> 0312 258 64 57</a>
+                <a href="mailto:info@mirakil.com"><i class="fas fa-envelope"></i> info@mirakil.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li>
+                    <a href="#">Ürünler <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                    <ul class="nav-dropdown">
+                        <li><a href="koha.html"><span class="dd-dot" style="background:#408540;"></span> Koha</a></li>
+                        <li><a href="vufind.html"><span class="dd-dot" style="background:#619144;"></span> VuFind</a></li>
+                        <li><a href="dspace.html"><span class="dd-dot" style="background:#44a340;"></span> DSpace</a></li>
+                        <li><a href="omeka.html"><span class="dd-dot" style="background:#CD5C28;"></span> Omeka</a></li>
+                        <li><a href="moodle.html"><span class="dd-dot" style="background:#F98012;"></span> Moodle</a></li>
+                        <li><a href="collectiveaccess.html"><span class="dd-dot" style="background:#5b7e3d;"></span> CollectiveAccess</a></li>
+                        <li><a href="ojs.html"><span class="dd-dot" style="background:#002B5C;"></span> OJS</a></li>
+                        <li><a href="indico.html"><span class="dd-dot" style="background:#29ABE2;"></span> Indico</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#services">Hizmetler</a></li>
+                <li><a href="index.html#why-us">Hakkımızda</a></li>
+                <li><a href="referanslar.html" class="active">Referanslar</a></li>
+                <li><a href="index.html#faq">SSS</a></li>
+                <li><a href="index.html#contact">İletişim</a></li>
+                <li><a href="destek.html">Destek</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="document.getElementById('navMenu').classList.toggle('active')" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" id="main">
+        <div class="page-hero-pattern" aria-hidden="true"></div>
+        <div class="page-hero-breadcrumb">
+            <a href="index.html">Ana Sayfa</a>
+            <i class="fas fa-chevron-right" style="font-size:0.6rem;"></i>
+            <span style="color:#fff;">Referanslar</span>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="page-hero-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h1>Referanslar</h1>
+                <div class="page-hero-subtitle">Bize Güvenen Kurumlar</div>
+                <div class="page-hero-divider"></div>
+                <p>Türkiye'nin önde gelen üniversite, kütüphane, arşiv ve müzeleri MirAkıl Veri İşleme çözümlerini güvenle tercih ediyor. Her bir kurumun yanında, ihtiyaçlarına özel uçtan uca destek sağlıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- İSTATİSTİKLER -->
+    <section class="stats-strip" aria-label="Referans istatistikleri">
+        <div class="container">
+            <div class="stats-grid stats-grid-2 reveal-stagger">
+                <div class="stat-cell">
+                    <span class="stat-num" data-target="50"><span class="stat-value">0</span><span class="stat-suffix">+</span></span>
+                    <span class="stat-label">Güvenilen Kurum</span>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-num" data-target="10"><span class="stat-value">0</span><span class="stat-suffix">+</span></span>
+                    <span class="stat-label">Yıllık Tecrübe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO GRID -->
+    <section class="category-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">REFERANS LİSTESİ</span>
+                <h2>Çözüm Ortağımız Olan Kurumlar</h2>
+                <div class="section-divider"></div>
+                <p>Üniversitelerden milli kütüphanelere, devlet arşivlerinden müzelere kadar geniş bir kurumsal müşteri ağıyla çalışıyoruz.</p>
+            </div>
+
+            <div class="category-tabs reveal" role="tablist" aria-label="Referans kategorileri">
+                <button class="category-tab active" data-filter="all" role="tab" aria-selected="true"><i class="fas fa-th"></i> Tümü <span class="cat-count">(46)</span></button>
+                <button class="category-tab" data-filter="universite" role="tab" aria-selected="false"><i class="fas fa-university"></i> Üniversiteler <span class="cat-count">(9)</span></button>
+                <button class="category-tab" data-filter="milli" role="tab" aria-selected="false"><i class="fas fa-landmark"></i> Devlet ve Resmi Kurumlar <span class="cat-count">(22)</span></button>
+                <button class="category-tab" data-filter="kultur" role="tab" aria-selected="false"><i class="fas fa-building"></i> Kültür / STK / Özel Sektör <span class="cat-count">(15)</span></button>
+            </div>
+
+            <div class="logo-grid reveal-stagger" id="logoGrid">
+                <!-- ÜNİVERSİTELER (9) -->
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/gazi-universitesi.png" alt="Gazi Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Gazi Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Gazi Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Yazma ve nadir eserler için Omeka tabanlı dijital arşiv anahtar teslim kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/bilecik-universitesi.gif" alt="Bilecik Şeyh Edebali Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Bilecik Şeyh Edebali Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Bilecik Şeyh Edebali Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha otomasyon sistemi sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/mef-universitesi.jpg" alt="MEF Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">MEF Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">MEF Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha ve VuFind kuruldu; SirsiDynix sisteminden veri aktarımı tamamlandı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/mudanya-universitesi.jpg" alt="Mudanya Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Mudanya Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Mudanya Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha ve DSpace sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/lokman-hekim-universitesi.png" alt="Lokman Hekim Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Lokman Hekim Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Lokman Hekim Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/beykoz-universitesi.jpg" alt="Beykoz Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Beykoz Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Beykoz Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/bursa-teknik-universitesi.jpg" alt="Bursa Teknik Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Bursa Teknik Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Bursa Teknik Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha ve VuFind sistemlerinde güncelleme ve bakım hizmetleri yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Bakım ve güncelleme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/uluslararasi-kibris-universitesi.png" alt="Uluslararası Kıbrıs Üniversitesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Uluslararası Kıbrıs Üniversitesi</div>
+                    <div class="logo-card-meta">Üniversite</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Uluslararası Kıbrıs Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; SirsiDynix sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="universite">
+                    <div class="logo-img-wrap"><img src="assets/logos/kara-harp-okulu.jpg" alt="Milli Savunma Üniversitesi - Kara Harp Okulu logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Milli Savunma Üniversitesi</div>
+                    <div class="logo-card-meta">Kara Harp Okulu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Milli Savunma Üniversitesi</div>
+                        <div class="logo-card-overlay-desc">Yaklaşık 160.000 materyalde Dewey'den LC sınıflamaya geçiş; yerleştirme ve raf dizimi tamamlandı.</div>
+                        <span class="logo-card-overlay-tag">Sınıflama dönüşümü</span>
+                    </div>
+                </div>
+
+                <!-- DEVLET VE RESMİ KURUMLAR (22) -->
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/tbmm-kutuphanesi.png" alt="TBMM Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">TBMM Kütüphanesi</div>
+                    <div class="logo-card-meta">Türkiye Büyük Millet Meclisi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">TBMM Kütüphanesi</div>
+                        <div class="logo-card-overlay-desc">Koha, VuFind ve DSpace sistemlerinde güncelleme ve bakım hizmetleri yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Bakım ve güncelleme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/milli-kutuphane.jpg" alt="Cumhurbaşkanlığı Milli Kütüphane Başkanlığı logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Milli Kütüphane Başkanlığı</div>
+                    <div class="logo-card-meta">Cumhurbaşkanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Milli Kütüphane Başkanlığı</div>
+                        <div class="logo-card-overlay-desc">Dijital Kütüphane sisteminde bakım çalışmaları yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Bakım ve güncelleme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/kygm.png" alt="Kütüphaneler ve Yayımlar Genel Müdürlüğü logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Kütüphaneler ve Yayımlar Genel Müdürlüğü</div>
+                    <div class="logo-card-meta">Kültür ve Turizm Bakanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Kütüphaneler ve Yayımlar Genel Müdürlüğü</div>
+                        <div class="logo-card-overlay-desc">Koha bakım çalışmaları 2025 yılında tamamlandı.</div>
+                        <span class="logo-card-overlay-tag">Bakım ve güncelleme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/tapu-kadastro.png" alt="Tapu ve Kadastro Genel Müdürlüğü logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Tapu ve Kadastro Genel Müdürlüğü</div>
+                    <div class="logo-card-meta">Çevre, Şehircilik ve İklim Değişikliği Bakanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Tapu ve Kadastro Genel Müdürlüğü</div>
+                        <div class="logo-card-overlay-desc">Ankara Bölgesi arşivinde 30 milyon sayfa dijitalleştirildi.</div>
+                        <span class="logo-card-overlay-tag">Dijitalleştirme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/dsi-jeoteknik.jpg" alt="DSİ Jeoteknik Hizmetler ve Yeraltısuları Dairesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">DSİ Jeoteknik Hizmetler Dairesi</div>
+                    <div class="logo-card-meta">Devlet Su İşleri</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">DSİ Jeoteknik Hizmetler Dairesi</div>
+                        <div class="logo-card-overlay-desc">1 milyon sayfa dijitalleştirildi.</div>
+                        <span class="logo-card-overlay-tag">Dijitalleştirme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/etimaden.png" alt="Eti Maden İşletmeleri Genel Müdürlüğü logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Eti Maden İşletmeleri</div>
+                    <div class="logo-card-meta">Genel Müdürlük</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Eti Maden İşletmeleri</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; veri aktarımı yapıldı ve yaklaşık 2.000 kitap dijitalleştirildi.</div>
+                        <span class="logo-card-overlay-tag">Kurulum · Sistem göçü · Dijitalleştirme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/sosyal-bilimler-lisesi.jpg" alt="Ankara Sosyal Bilimler Lisesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Sosyal Bilimler Lisesi</div>
+                    <div class="logo-card-meta">Millî Eğitim Bakanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Sosyal Bilimler Lisesi</div>
+                        <div class="logo-card-overlay-desc">Yaklaşık 17.000 kitap kataloglandı.</div>
+                        <span class="logo-card-overlay-tag">Kataloglama</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/strateji-butce-baskanligi.png" alt="Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Strateji ve Bütçe Başkanlığı</div>
+                    <div class="logo-card-meta">Cumhurbaşkanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Strateji ve Bütçe Başkanlığı</div>
+                        <div class="logo-card-overlay-desc">Koha ve VuFind kuruldu; SirsiDynix sisteminden veri aktarımı tamamlandı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/tarim-bakanligi.png" alt="Tarım ve Orman Bakanlığı logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Tarım ve Orman Bakanlığı</div>
+                    <div class="logo-card-meta">Eğitim ve Yayım Dairesi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Tarım ve Orman Bakanlığı</div>
+                        <div class="logo-card-overlay-desc">Dijital Tarım Kütüphanesi kuruldu; 5 yıllık bakım sözleşmesi sürdürüldü, 1,2 milyon sayfa ve yaklaşık 7.500 kitap dijitalleştirildi.</div>
+                        <span class="logo-card-overlay-tag">Kurulum · Dijitalleştirme · Bakım</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/meb-z-kutuphaneler.png" alt="MEB Z-Kütüphaneler logosu" loading="lazy"></div>
+                    <div class="logo-card-name">MEB Z-Kütüphaneler</div>
+                    <div class="logo-card-meta">Millî Eğitim Bakanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">MEB Z-Kütüphaneler</div>
+                        <div class="logo-card-overlay-desc">Librid sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/telif-haklari.jpg" alt="Telif Hakları Genel Müdürlüğü logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Telif Hakları Genel Müdürlüğü</div>
+                    <div class="logo-card-meta">Kültür ve Turizm Bakanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Telif Hakları Genel Müdürlüğü</div>
+                        <div class="logo-card-overlay-desc">VHS, Beta, ses kaseti, CD, DVD ve plak gibi materyaller dijital ortama aktarıldı.</div>
+                        <span class="logo-card-overlay-tag">Dijitalleştirme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/spk-kutuphanesi.png" alt="SPK Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">SPK Kütüphanesi</div>
+                    <div class="logo-card-meta">Sermaye Piyasası Kurulu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">SPK Kütüphanesi</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; BLIS sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/ytb-kutuphanesi.jpg" alt="YTB Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">YTB Kütüphanesi</div>
+                    <div class="logo-card-meta">Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">YTB Kütüphanesi</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/tbb-kutuphanesi.png" alt="Türkiye Barolar Birliği Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Türkiye Barolar Birliği</div>
+                    <div class="logo-card-meta">TBB Kütüphanesi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Türkiye Barolar Birliği</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/belediyeler-birligi.png" alt="Türkiye Belediyeler Birliği Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Türkiye Belediyeler Birliği</div>
+                    <div class="logo-card-meta">Kütüphane</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Türkiye Belediyeler Birliği</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/ankara-buyuksehir.jpg" alt="Ankara Büyükşehir Belediyesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Ankara Büyükşehir Belediyesi</div>
+                    <div class="logo-card-meta">Yerel Yönetim</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Ankara Büyükşehir Belediyesi</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/konyaalti-belediyesi.jpg" alt="Konyaaltı Belediyesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Konyaaltı Belediyesi</div>
+                    <div class="logo-card-meta">Antalya · Yerel Yönetim</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Konyaaltı Belediyesi</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/karsiyaka-belediyesi.jpg" alt="Karşıyaka Belediyesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Karşıyaka Belediyesi</div>
+                    <div class="logo-card-meta">İzmir · Yerel Yönetim</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Karşıyaka Belediyesi</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/sancaktepe-belediyesi.png" alt="Sancaktepe Belediyesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Sancaktepe Belediyesi</div>
+                    <div class="logo-card-meta">İstanbul · Yerel Yönetim</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Sancaktepe Belediyesi</div>
+                        <div class="logo-card-overlay-desc">Koha sisteminde güncelleme ve bakım hizmetleri yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Bakım ve güncelleme</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/safranbolu-belediyesi.jpg" alt="Safranbolu Belediyesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Safranbolu Belediyesi</div>
+                    <div class="logo-card-meta">Karabük · Yerel Yönetim</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Safranbolu Belediyesi</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/tanap.svg" alt="TANAP Doğalgaz İletim A.Ş. logosu" loading="lazy"></div>
+                    <div class="logo-card-name">TANAP</div>
+                    <div class="logo-card-meta">Trans Anadolu Doğal Gaz Boru Hattı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">TANAP</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="milli">
+                    <div class="logo-img-wrap"><img src="assets/logos/maarif-vakfi.jpg" alt="Türkiye Maarif Vakfı Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Türkiye Maarif Vakfı</div>
+                    <div class="logo-card-meta">Eğitim Kuruluşu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Türkiye Maarif Vakfı</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+
+                <!-- KÜLTÜR / STK / ÖZEL SEKTÖR (15) -->
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/trt-kutuphanesi.jpg" alt="TRT Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">TRT Kütüphanesi</div>
+                    <div class="logo-card-meta">Türkiye Radyo ve Televizyon Kurumu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">TRT Kütüphanesi</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; Libra sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/socar.png" alt="SOCAR Türkiye logosu" loading="lazy"></div>
+                    <div class="logo-card-name">SOCAR Türkiye</div>
+                    <div class="logo-card-meta">Enerji Şirketi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">SOCAR Türkiye</div>
+                        <div class="logo-card-overlay-desc">Koha sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/vakko-vitali-hakko-kutuphanesi.jpg" alt="Vakko Vitali Hakko Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Vakko Vitali Hakko Kütüphanesi</div>
+                    <div class="logo-card-meta">Vakko</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Vakko Vitali Hakko Kütüphanesi</div>
+                        <div class="logo-card-overlay-desc">Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/bibliopera.png" alt="Bibliopera logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Bibliopera</div>
+                    <div class="logo-card-meta">Beyoğlu Araştırma Kütüphaneleri Platformu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Bibliopera</div>
+                        <div class="logo-card-overlay-desc">Beyoğlu Araştırma Kütüphaneleri Platformu için proje çalışmaları yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Platform projesi</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/turkis-kutuphanesi.png" alt="TÜRK-İŞ Konfederasyonu Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">TÜRK-İŞ Konfederasyonu</div>
+                    <div class="logo-card-meta">İşçi Sendikaları</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">TÜRK-İŞ Konfederasyonu</div>
+                        <div class="logo-card-overlay-desc">Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/turk-seker.jpg" alt="Türkşeker Kütüphanesi logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Türkşeker</div>
+                    <div class="logo-card-meta">Türkiye Şeker Fabrikaları A.Ş.</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Türkşeker</div>
+                        <div class="logo-card-overlay-desc">Kütüphane otomasyon projesi yürütüldü.</div>
+                        <span class="logo-card-overlay-tag">Proje</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/istek-okullari.jpg" alt="İSTEK Okulları logosu" loading="lazy"></div>
+                    <div class="logo-card-name">İSTEK Okulları</div>
+                    <div class="logo-card-meta">Eğitim Kuruluşu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">İSTEK Okulları</div>
+                        <div class="logo-card-overlay-desc">Yordam sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/folklor-kurumu.jpg" alt="Folklor Kurumu Derneği logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Folklor Kurumu Derneği</div>
+                    <div class="logo-card-meta">Sivil Toplum Kuruluşu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Folklor Kurumu Derneği</div>
+                        <div class="logo-card-overlay-desc">Omeka sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/tmmob-mimarlar-odasi.png" alt="TMMOB Mimarlar Odası logosu" loading="lazy"></div>
+                    <div class="logo-card-name">TMMOB Mimarlar Odası</div>
+                    <div class="logo-card-meta">Meslek Kuruluşu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">TMMOB Mimarlar Odası</div>
+                        <div class="logo-card-overlay-desc">Omeka sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/erler-film.jpg" alt="Erler Film logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Erler Film</div>
+                    <div class="logo-card-meta">Yapım Şirketi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Erler Film</div>
+                        <div class="logo-card-overlay-desc">Koha kuruldu; yerel sistemden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/cigdem-egitim-dernegi.jpg" alt="Çiğdem Eğitim Derneği logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Çiğdem Eğitim Derneği</div>
+                    <div class="logo-card-meta">Sivil Toplum Kuruluşu</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Çiğdem Eğitim Derneği</div>
+                        <div class="logo-card-overlay-desc">Yordam sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/beslenme-diyetisyenler-dernegi.jpg" alt="Türkiye Diyetisyenler Derneği logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Türkiye Diyetisyenler Derneği</div>
+                    <div class="logo-card-meta">Meslek Derneği</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Türkiye Diyetisyenler Derneği</div>
+                        <div class="logo-card-overlay-desc">Dergi yönetim sistemi yenilendi; içerikler dijital ortama aktarıldı.</div>
+                        <span class="logo-card-overlay-tag">Dijitalleştirme · Özel sistem</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/cin-ali.jpg" alt="Cin Ali Eğitim ve Kültür Vakfı logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Cin Ali Eğitim ve Kültür Vakfı</div>
+                    <div class="logo-card-meta">Eğitim Vakfı</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Cin Ali Eğitim ve Kültür Vakfı</div>
+                        <div class="logo-card-overlay-desc">Kütüphane otomasyon sistemi sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Anahtar teslim kurulum</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/kurk.jpg" alt="Kürk Sanayicileri Derneği logosu" loading="lazy"></div>
+                    <div class="logo-card-name">KÜRK Derneği</div>
+                    <div class="logo-card-meta">Sektörel Dernek</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">KÜRK Derneği</div>
+                        <div class="logo-card-overlay-desc">Koha sistemi ve özel rezervasyon modülü sıfırdan kuruldu.</div>
+                        <span class="logo-card-overlay-tag">Kurulum · Özel sistem</span>
+                    </div>
+                </div>
+                <div class="logo-card" data-category="kultur">
+                    <div class="logo-img-wrap"><img src="assets/logos/pekin-hukuk-burosu.jpg" alt="Pekin Hukuk Bürosu logosu" loading="lazy"></div>
+                    <div class="logo-card-name">Pekin Hukuk Bürosu</div>
+                    <div class="logo-card-meta">Hukuk Ofisi</div>
+                    <div class="logo-card-overlay">
+                        <div class="logo-card-overlay-name">Pekin Hukuk Bürosu</div>
+                        <div class="logo-card-overlay-desc">Milas sisteminden veri aktarımı yapıldı.</div>
+                        <span class="logo-card-overlay-tag">Sistem göçü</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="reveal" style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--text-light);font-style:italic;">
+                <i class="fas fa-info-circle" style="color:var(--primary);"></i>
+                Listede yer alan kurumlar, MirAkıl Veri İşleme tarafından çeşitli ürün ve hizmetlerle desteklenen referans kurumlardır.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="reveal">
+                <h2>Siz de Referanslarımız Arasına Katılın</h2>
+                <p>Kurumunuza özel açık kaynaklı kütüphane, arşiv ve müze yönetim sistemleri için bizimle iletişime geçin. İhtiyacınıza uygun çözümü birlikte planlayalım.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-green"><i class="fas fa-paper-plane"></i> Ücretsiz Danışmanlık</a>
+                    <a href="destek.html" class="btn btn-outline-green"><i class="fas fa-headset"></i> Destek Talebi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h4>MirAkıl Veri İşleme</h4>
+                    <p>Müze, arşiv ve kütüphane yönetim sistemleri alanında yazılım, donanım, eğitim ve danışmanlık hizmetleri sunan teknoloji şirketi.</p>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Kızılırmak Mah. 1445 Sok. No:2/1-113 The Paragon Kat:23, Çukurambar, Çankaya/Ankara</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+903122586457">0312 258 64 57</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-fax"></i><span>Faks: 0850 762 69 82</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@mirakil.com">info@mirakil.com</a></div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ürünler</h4>
+                    <ul class="footer-links">
+                        <li><a href="koha.html">Koha</a></li>
+                        <li><a href="vufind.html">VuFind</a></li>
+                        <li><a href="dspace.html">DSpace</a></li>
+                        <li><a href="omeka.html">Omeka</a></li>
+                        <li><a href="moodle.html">Moodle</a></li>
+                        <li><a href="collectiveaccess.html">CollectiveAccess</a></li>
+                        <li><a href="ojs.html">OJS</a></li>
+                        <li><a href="indico.html">Indico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Kurulum ve Yapılandırma</a></li>
+                        <li><a href="index.html#services">Yazılım Geliştirme</a></li>
+                        <li><a href="index.html#services">Eğitim ve Danışmanlık</a></li>
+                        <li><a href="index.html#services">Veri Aktarımı</a></li>
+                        <li><a href="index.html#services">Teknik Destek</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Erişim</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="index.html#products">Ürünler</a></li>
+                        <li><a href="index.html#services">Hizmetler</a></li>
+                        <li><a href="index.html#why-us">Hakkımızda</a></li>
+                        <li><a href="referanslar.html">Referanslar</a></li>
+                        <li><a href="index.html#faq">SSS</a></li>
+                        <li><a href="destek.html">Destek</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 MirAkıl Veri İşleme Yazılım Donanım Eğitim Danışmanlık Tic. Ltd. Şti. Tüm hakları saklıdır.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/905319824672" target="_blank" rel="noopener noreferrer" title="WhatsApp ile iletişime geçin" aria-label="WhatsApp ile iletişime geçin">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <script>
+        // ===== REVEAL ON SCROLL =====
+        (function() {
+            const els = document.querySelectorAll('.reveal, .reveal-stagger');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(e => e.classList.add('in'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            els.forEach(e => io.observe(e));
+        })();
+
+        // ===== STAT COUNTER =====
+        (function() {
+            const nums = document.querySelectorAll('.stat-num[data-target]');
+            if (!nums.length) return;
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const animate = (el) => {
+                const target = parseInt(el.dataset.target, 10);
+                const valueEl = el.querySelector('.stat-value');
+                if (!valueEl) return;
+                if (prefersReduced) {
+                    valueEl.textContent = target.toLocaleString('tr-TR');
+                    return;
+                }
+                const duration = 1400;
+                const start = performance.now();
+                const tick = (now) => {
+                    const t = Math.min(1, (now - start) / duration);
+                    const eased = 1 - Math.pow(1 - t, 3);
+                    const val = Math.round(target * eased);
+                    valueEl.textContent = val.toLocaleString('tr-TR');
+                    if (t < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+            };
+            if (!('IntersectionObserver' in window)) {
+                nums.forEach(animate);
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animate(entry.target);
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            nums.forEach(n => io.observe(n));
+        })();
+
+        // ===== CATEGORY FILTER =====
+        (function() {
+            const tabs = document.querySelectorAll('.category-tab');
+            const cards = document.querySelectorAll('.logo-card');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const filter = tab.dataset.filter;
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    cards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
