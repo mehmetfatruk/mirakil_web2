@@ -1,0 +1,92 @@
+---
+import { supabase } from '../../lib/site';
+---
+<div class="contact-form" data-supabase-url={supabase.url} data-supabase-key={supabase.anonKey}>
+  <h3>Mesaj Gönderin</h3>
+  <div class="notice notice--success" id="contactSuccess" role="status"><i class="fas fa-check-circle" aria-hidden="true"></i><span>Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.</span></div>
+  <div class="notice notice--error" id="contactError" role="alert"><i class="fas fa-exclamation-circle" aria-hidden="true"></i><span>Bir hata oluştu. Lütfen tekrar deneyin.</span></div>
+  <form id="contactForm" class="form-grid" novalidate>
+    <div class="field">
+      <label for="cName">Ad Soyad <span class="req">*</span></label>
+      <input type="text" id="cName" name="name" autocomplete="name" placeholder="Adınız Soyadınız" required />
+    </div>
+    <div class="field">
+      <label for="cEmail">E-posta <span class="req">*</span></label>
+      <input type="email" id="cEmail" name="email" autocomplete="email" spellcheck="false" autocapitalize="off" placeholder="ornek@email.com" required />
+    </div>
+    <div class="field">
+      <label for="cPhone">Telefon</label>
+      <input type="tel" id="cPhone" name="phone" autocomplete="tel" placeholder="+90 5XX XXX XX XX" />
+    </div>
+    <div class="field">
+      <label for="cSubject">Konu <span class="req">*</span></label>
+      <input type="text" id="cSubject" name="subject" placeholder="Konu başlığı" required />
+    </div>
+    <div class="field span-2">
+      <label for="cMessage">Mesajınız <span class="req">*</span></label>
+      <textarea id="cMessage" name="message" placeholder="Mesajınızı yazın…" required></textarea>
+    </div>
+    <div class="span-2">
+      <button type="submit" class="btn" id="contactBtn"><span data-label>Gönder</span> <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+  </form>
+</div>
+
+<style>
+  .contact-form { padding: clamp(24px, 3vw, 40px); }
+  .contact-form h3 { font-size: var(--fs-headline); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--sp-5); }
+  .notice { margin-bottom: var(--sp-5); }
+  .btn { min-width: 180px; }
+</style>
+
+<script>
+  // Same payload and endpoint as the legacy form (Supabase contact_submissions).
+  const wrap = document.querySelector<HTMLElement>('.contact-form');
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  if (wrap && form) {
+    const SUPABASE_URL = wrap.dataset.supabaseUrl!;
+    const SUPABASE_KEY = wrap.dataset.supabaseKey!;
+    const ok = document.getElementById('contactSuccess')!;
+    const err = document.getElementById('contactError')!;
+    const btn = document.getElementById('contactBtn') as HTMLButtonElement;
+    const label = btn.querySelector('[data-label]')!;
+    const val = (id: string) => (document.getElementById(id) as HTMLInputElement).value.trim();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.classList.remove('is-visible');
+      err.classList.remove('is-visible');
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      btn.disabled = true;
+      label.textContent = 'Gönderiliyor…';
+      try {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/contact_submissions', {
+          method: 'POST',
+          headers: {
+            apikey: SUPABASE_KEY,
+            Authorization: 'Bearer ' + SUPABASE_KEY,
+            'Content-Type': 'application/json',
+            Prefer: 'return=representation',
+          },
+          body: JSON.stringify({
+            name: val('cName'),
+            email: val('cEmail'),
+            phone: val('cPhone') || null,
+            subject: val('cSubject'),
+            message: val('cMessage'),
+          }),
+        });
+        if (!res.ok) throw new Error('Hata');
+        ok.classList.add('is-visible');
+        form.reset();
+      } catch {
+        err.classList.add('is-visible');
+      }
+      btn.disabled = false;
+      label.textContent = 'Gönder';
+    });
+  }
+</script>

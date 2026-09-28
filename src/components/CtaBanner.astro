@@ -1,0 +1,26 @@
+---
+import { url } from '../lib/site';
+
+interface Button { href: string; label: string; icon?: string | null }
+interface Props { id?: string; title: string; text: string; buttons: Button[] }
+const { id, title, text, buttons } = Astro.props;
+const href = (h: string) => (/^(https?:|mailto:|tel:|#)/.test(h) ? h : url(h));
+---
+<section class="cta-banner" id={id}>
+  <div class="container">
+   <div class="cta-panel reveal">
+    <div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+    </div>
+    <div class="btn-row">
+      {buttons.map((b, i) => (
+        <a href={href(b.href)} class={i === 0 ? 'btn btn--on-brand' : 'btn btn--outline-light'}>
+          {b.label}
+          <i class={b.icon ?? 'fas fa-arrow-right'} aria-hidden="true"></i>
+        </a>
+      ))}
+    </div>
+   </div>
+  </div>
+</section>

@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import StatValue from '../components/StatValue.astro';
+import { url } from '../lib/site';
+import refs from '../data/references.json';
+
+const counts: Record<string, number> = { all: refs.items.length };
+for (const r of refs.items) counts[r.category] = (counts[r.category] ?? 0) + 1;
+---
+<BaseLayout
+  title="Referanslar - Güvenilen Kurumlar | MirAkıl"
+  description="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler. Türkiye'nin önde gelen kurumları MirAkıl çözümlerini tercih ediyor."
+  ogDescription="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler."
+  path="referanslar.html"
+  nav="references"
+>
+  <section class="page-hero">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="container ref-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Sayfa konumu">
+          <ol>
+            <li><a href={url('index.html')}>Ana Sayfa</a></li>
+            <li aria-current="page">Referanslar</li>
+          </ol>
+        </nav>
+        <h1>Referanslar</h1>
+        <p class="ref-sub">Bize Güvenen Kurumlar</p>
+        <p class="lead">Türkiye'nin önde gelen üniversite, kütüphane, arşiv ve müzeleri MirAkıl Veri İşleme çözümlerini güvenle tercih ediyor. Her bir kurumun yanında, ihtiyaçlarına özel uçtan uca destek sağlıyoruz.</p>
+      </div>
+      <dl class="ref-stats reveal-stagger" data-count aria-label="Referans istatistikleri">
+        <div><dd class="stat-num"><StatValue target={50} suffix="+" /></dd><dt class="stat-label">Güvenilen Kurum</dt></div>
+        <div><dd class="stat-num"><StatValue target={10} suffix="+" /></dd><dt class="stat-label">Yıllık Tecrübe</dt></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Referans listesi</span>
+        <h2>Çözüm Ortağımız Olan Kurumlar</h2>
+        <p>Üniversitelerden milli kütüphanelere, devlet arşivlerinden müzelere kadar geniş bir kurumsal müşteri ağıyla çalışıyoruz.</p>
+      </div>
+
+      <div class="ref-tabs reveal" role="tablist" aria-label="Referans kategorileri">
+        {refs.categories.map((c, i) => (
+          <button type="button" role="tab" class="ref-tab" data-filter={c.id} aria-selected={i === 0 ? 'true' : 'false'} aria-controls="logoGrid">
+            <i class={c.icon} aria-hidden="true"></i>{c.label} <span class="ref-count">({counts[c.id]})</span>
+          </button>
+        ))}
+      </div>
+
+      <ul role="list" class="tiles ref-grid reveal-stagger" id="logoGrid" aria-live="polite">
+        {refs.items.map((r) => (
+          <li class="ref-card" data-category={r.category} tabindex="0">
+            <div class="ref-logo"><img src={url(`assets/${r.logo}`)} alt={r.alt} loading="lazy" width="200" height="100" /></div>
+            <div class="ref-body">
+              <h3>{r.name}</h3>
+              <span class="ref-meta">{r.meta}</span>
+              <div class="ref-detail">
+                <div>
+                  <p>{r.desc}</p>
+                  <span class="ref-tag">{r.tag}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="ref-note reveal"><i class="fas fa-info-circle" aria-hidden="true"></i> Listede yer alan kurumlar, MirAkıl Veri İşleme tarafından çeşitli ürün ve hizmetlerle desteklenen referans kurumlardır.</p>
+    </div>
+  </section>
+
+  <CtaBanner
+    title="Siz de Referanslarımız Arasına Katılın"
+    text="Kurumunuza özel açık kaynaklı kütüphane, arşiv ve müze yönetim sistemleri için bizimle iletişime geçin. İhtiyacınıza uygun çözümü birlikte planlayalım."
+    buttons={[
+      { href: 'index.html#contact', label: 'Ücretsiz Danışmanlık', icon: 'fas fa-paper-plane' },
+      { href: 'destek.html', label: 'Destek Talebi', icon: 'fas fa-headset' },
+    ]}
+  />
+</BaseLayout>
+
+<style>
+  .ref-hero { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--sp-8); align-items: end; }
+  .ref-sub { margin-top: var(--sp-3); font-size: var(--fs-subhead); }
+  .ref-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
+  .ref-stats > div { padding: var(--sp-6) var(--sp-5); background: rgba(255, 255, 255, 0.92); }
+  .ref-stats dd { margin: 0; }
+
+  .ref-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--hairline); margin-bottom: var(--sp-6); }
+  .ref-tab { display: inline-flex; align-items: center; gap: var(--sp-2); min-height: 48px; padding: 0 var(--sp-5); font-size: var(--fs-body-sm); color: var(--ink-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color var(--dur-fast), border-color var(--dur-fast), background-color var(--dur-fast); }
+  .ref-tab:hover { color: var(--ink); background: var(--surface-1); }
+  .ref-tab[aria-selected='true'] { color: var(--ink); font-weight: 600; border-bottom-color: var(--brand); }
+  .ref-tab i { color: var(--brand); }
+  .ref-count { color: var(--ink-subtle); font-weight: 400; }
+
+  .ref-note { margin-top: var(--sp-5); font-size: var(--fs-body-sm); color: var(--ink-muted); }
+  .ref-note i { color: var(--brand); margin-right: 4px; }
+  .ref-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ref-card { position: relative; display: flex; flex-direction: column; overflow: hidden; outline-offset: -2px; }
+  .ref-card[hidden] { display: none; }
+  .ref-logo { display: grid; place-items: center; height: 152px; padding: var(--sp-5); border-bottom: 1px solid var(--hairline); }
+  .ref-logo img { max-width: 160px; max-height: 88px; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: 0.8; transition: filter var(--dur), opacity var(--dur), transform var(--dur-slow) var(--ease-out); }
+  .ref-body { padding: var(--sp-4) var(--sp-5) var(--sp-5); flex: 1; }
+  .ref-body h3 { font-size: var(--fs-body); font-weight: 500; line-height: 1.35; }
+  .ref-meta { display: block; margin-top: var(--sp-1); font-size: var(--fs-caption); color: var(--ink-muted); letter-spacing: 0.32px; }
+  .ref-detail { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--dur) var(--ease-out); }
+  .ref-detail > * { overflow: hidden; }
+  .ref-detail p { font-size: var(--fs-body-sm); color: var(--ink-muted); line-height: 1.55; }
+  .ref-tag { display: inline-block; margin-top: var(--sp-2); font-size: var(--fs-caption); font-weight: 500; color: var(--brand-pressed); }
+  .ref-detail { gap: 0; }
+  .ref-card:hover .ref-logo img, .ref-card:focus-within .ref-logo img, .ref-card:focus .ref-logo img { filter: none; opacity: 1; transform: scale(1.04); }
+  .ref-card:hover .ref-detail, .ref-card:focus .ref-detail { grid-template-rows: 1fr; }
+  .ref-card:hover .ref-detail p, .ref-card:focus .ref-detail p { padding-top: var(--sp-3); }
+  .ref-card::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform var(--dur-slow) var(--ease-out); }
+  .ref-card:hover::after, .ref-card:focus::after { transform: scaleX(1); }
+
+  /* Touch devices have no hover: show details inline. */
+  @media (hover: none) {
+    .ref-detail { grid-template-rows: 1fr; }
+    .ref-detail p { padding-top: var(--sp-3); }
+    .ref-logo img { filter: none; opacity: 1; }
+  }
+  @media (max-width: 1055px) { .ref-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 859px) {
+    .ref-hero { grid-template-columns: 1fr; gap: var(--sp-6); }
+    .ref-note { margin-top: var(--sp-5); font-size: var(--fs-body-sm); color: var(--ink-muted); }
+  .ref-note i { color: var(--brand); margin-right: 4px; }
+  .ref-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 479px) {
+    .ref-note { margin-top: var(--sp-5); font-size: var(--fs-body-sm); color: var(--ink-muted); }
+  .ref-note i { color: var(--brand); margin-right: 4px; }
+  .ref-grid { grid-template-columns: 1fr; }
+    .ref-tab { flex: 1 1 100%; justify-content: flex-start; }
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.ref-tab');
+  const cards = document.querySelectorAll<HTMLElement>('.ref-card');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const f = tab.dataset.filter;
+      tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+      cards.forEach((c) => { c.hidden = !(f === 'all' || c.dataset.category === f); });
+    });
+  });
+</script>

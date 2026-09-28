@@ -1,0 +1,358 @@
+{
+  "slug": "indico",
+  "color": "#29ABE2",
+  "meta": {
+    "title": "Indico - Konferans ve Etkinlik Yönetim Sistemi | MirAkıl",
+    "description": "Indico - CERN tarafından geliştirilen konferans ve etkinlik yönetim sistemi. Akademik konferans, seminer ve toplantı organizasyonu. MirAkıl ile kurulum ve destek.",
+    "keywords": "Indico, konferans yönetim sistemi, etkinlik yönetimi, akademik konferans, seminer yönetimi, CERN Indico, etkinlik kayıt sistemi, toplantı organizasyonu, Indico kurulumu",
+    "ogTitle": "Indico - Konferans ve Etkinlik Yönetim Sistemi | MirAkıl",
+    "ogDescription": "Indico - CERN tarafından geliştirilen açık kaynaklı konferans ve etkinlik yönetim sistemi. Akademik konferansların yönetimi ve organizasyonu için profesyonel çözümler."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-calendar-alt",
+    "name": "Indico",
+    "subtitle": "Konferans ve Etkinlik Yönetim Sistemi",
+    "lead": "CERN tarafından geliştirilen, akademik konferansların ve bilimsel etkinliklerin uçtan uca yönetimi için kullanılan açık kaynaklı bir platformdur.",
+    "ctas": [
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 600,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dünya Genelinde Kurum"
+    },
+    {
+      "target": 20,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "MIT",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "CERN",
+      "label": "Geliştirici Topluluğu"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Indico'nun temel modüllerini keşfedin. Akademik konferans, toplantı ve hibrit etkinlik yönetimi için CERN tarafından geliştirilen güçlü altyapı.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-calendar-days",
+        "label": "Konferans & Toplantı"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-list-check",
+        "label": "Bildiri & Program"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-ticket",
+        "label": "Kayıt & Bilet"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-video",
+        "label": "Webinar & Yayın"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-folder-open",
+        "label": "Doküman Yönetimi"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-calendar-days",
+        "eyebrow": "Organizatör için",
+        "title": "Konferans & Toplantı",
+        "desc": "Tek günlük toplantıdan çok günlü uluslararası konferansa kadar her ölçekte etkinlik; oda rezervasyonu ve detaylı program çizelgesi yerleşik.",
+        "features": [
+          {
+            "i": "fa-calendar-check",
+            "t": "Tek / çok günlü etkinlik"
+          },
+          {
+            "i": "fa-door-open",
+            "t": "Oda rezervasyonu"
+          },
+          {
+            "i": "fa-clock",
+            "t": "Program çizelgesi"
+          },
+          {
+            "i": "fa-globe",
+            "t": "Çoklu zaman dilimi"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-list-check",
+        "eyebrow": "Bilim kurulu için",
+        "title": "Bildiri & Program",
+        "desc": "Bildiri çağrısı (call for papers), hakem değerlendirme süreci ve oturum yönetimi ile bilimsel programınızı uçtan uca yapılandırın.",
+        "features": [
+          {
+            "i": "fa-bullhorn",
+            "t": "Bildiri çağrısı"
+          },
+          {
+            "i": "fa-user-check",
+            "t": "Hakem süreci"
+          },
+          {
+            "i": "fa-people-group",
+            "t": "Oturum yönetimi"
+          },
+          {
+            "i": "fa-file-pdf",
+            "t": "Bildiri kitabı üretimi"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-ticket",
+        "eyebrow": "Katılımcı için",
+        "title": "Kayıt & Bilet",
+        "desc": "Online kayıt formu, ücret tahsilatı entegrasyonu ve katılım sertifikası üretimi ile katılımcı operasyonu otomatize.",
+        "features": [
+          {
+            "i": "fa-file-signature",
+            "t": "Online kayıt formu"
+          },
+          {
+            "i": "fa-credit-card",
+            "t": "Ücret tahsilatı"
+          },
+          {
+            "i": "fa-certificate",
+            "t": "Katılım sertifikası"
+          },
+          {
+            "i": "fa-id-card",
+            "t": "Yaka kartı / barkod"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-video",
+        "eyebrow": "Hibrit etkinlik için",
+        "title": "Webinar & Yayın",
+        "desc": "Zoom, Jitsi ve diğer video konferans platformlarıyla entegrasyon, canlı yayın ve oturum kaydı ile hibrit etkinlikleri sorunsuz yönetin.",
+        "features": [
+          {
+            "i": "fa-video",
+            "t": "Zoom / Jitsi entegrasyonu"
+          },
+          {
+            "i": "fa-tower-broadcast",
+            "t": "Canlı yayın"
+          },
+          {
+            "i": "fa-record-vinyl",
+            "t": "Oturum kaydı"
+          },
+          {
+            "i": "fa-circle-play",
+            "t": "Yayın sonrası arşiv"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-folder-open",
+        "eyebrow": "Sunum yöneticisi için",
+        "title": "Doküman Yönetimi",
+        "desc": "Sunum yükleme, materyal paylaşımı ve granül erişim kontrolü ile etkinlik içeriğinin tüm dağıtımını tek noktadan yönetin.",
+        "features": [
+          {
+            "i": "fa-upload",
+            "t": "Sunum yükleme"
+          },
+          {
+            "i": "fa-share-nodes",
+            "t": "Materyal paylaşımı"
+          },
+          {
+            "i": "fa-lock",
+            "t": "Erişim kontrolü"
+          },
+          {
+            "i": "fa-folder-tree",
+            "t": "Hiyerarşik klasör yapısı"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "title": "Genel Bakış",
+    "highlight": {
+      "title": "CERN Güvencesiyle:",
+      "text": "2004 yılından bu yana CERN tarafından geliştirilmekte olan Indico, dünya genelinde 300'den fazla kurumda aktif olarak kullanılmaktadır. Python tabanlı modern mimarisi ile güvenilir, ölçeklenebilir ve sürekli güncellenen bir platform sunar."
+    },
+    "paragraphs": [
+      "Indico, CERN (Avrupa Nükleer Araştırma Merkezi) tarafından geliştirilen ve dünya genelinde akademik kurumlar, araştırma merkezleri ve üniversiteler tarafından yaygın olarak kullanılan açık kaynaklı bir konferans ve etkinlik yönetim sistemidir.",
+      "Küçük ölçekli toplantılardan binlerce katılımcılı uluslararası konferanslara kadar her tür etkinliğin planlanması, yönetilmesi ve arşivlenmesi için kapsamlı araçlar sunar. Bildiri gönderim süreçleri, hakem değerlendirme, program oluşturma, kayıt yönetimi ve oda rezervasyonu gibi tüm etkinlik organizasyonu ihtiyaçlarını tek bir platformda karşılar.",
+      "MirAkıl olarak, Indico'nun Türkiye'deki üniversiteler ve araştırma kurumları için kurulumu, yapılandırması, Türkçe lokalizasyonu ve teknik desteğini sağlıyoruz."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-microphone-alt",
+        "title": "CERN Kökenli Güven",
+        "text": "Avrupa Nükleer Araştırma Merkezi tarafından 2004'ten beri geliştiriliyor — dünyanın en büyük bilimsel etkinlikleri Indico üzerinden yönetiliyor."
+      },
+      {
+        "icon": "fas fa-clipboard-list",
+        "title": "Uçtan Uca Etkinlik Yönetimi",
+        "text": "Bildiri çağrısı, hakem değerlendirme, program oluşturma, kayıt ve oda rezervasyonu — tek platformda."
+      },
+      {
+        "icon": "fas fa-language",
+        "title": "Türkçe Lokalizasyon",
+        "text": "MirAkıl tarafından Türkçe arayüz, e-posta şablonları ve destek hizmetleri ile tam yerelleştirme."
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "Indico, akademik etkinlik yönetiminin tüm aşamalarını kapsayan zengin özellik seti sunar.",
+    "items": [
+      {
+        "icon": "fas fa-tasks",
+        "title": "Etkinlik Planlama",
+        "text": "Konferans, seminer, çalıştay ve toplantılarınızı baştan sona planlayın. Zaman çizelgesi, oturum yönetimi ve görev dağılımı ile etkinliklerinizi profesyonelce organize edin."
+      },
+      {
+        "icon": "fas fa-clipboard-list",
+        "title": "Kayıt Yönetimi",
+        "text": "Özelleştirilebilir kayıt formları, ödeme entegrasyonu ve otomatik onay süreçleri ile katılımcı kayıtlarını sorunsuz yönetin. Erken kayıt indirimleri ve kontenjan kontrolü sağlayın."
+      },
+      {
+        "icon": "fas fa-sitemap",
+        "title": "Program Oluşturma",
+        "text": "Sürükle-bırak arayüzü ile etkinlik programlarınızı kolayca oluşturun. Paralel oturumlar, ara zamanları ve konuşmacı atamalarını görsel olarak düzenleyin."
+      },
+      {
+        "icon": "fas fa-file-upload",
+        "title": "Bildiri Gönderimi",
+        "text": "Akademik bildiri çağrısı, makale gönderimi ve hakem değerlendirme süreçlerini yönetin. Çok aşamalı değerlendirme, otomatik bildirim ve sonuç duyurusu yapın."
+      },
+      {
+        "icon": "fas fa-door-open",
+        "title": "Oda ve Kaynak Yönetimi",
+        "text": "Toplantı odaları, konferans salonları ve teknik ekipmanların rezervasyonunu merkezi olarak yönetin. Uygunluk takvimi ve çakışma kontrolü ile verimliliği artırın."
+      },
+      {
+        "icon": "fas fa-user-check",
+        "title": "Katılımcı Takibi",
+        "text": "Katılımcı listelerini yönetin, check-in süreçlerini dijitalleştirin ve katılım sertifikalarını otomatik oluşturun. Detaylı istatistikler ve raporlar alın."
+      },
+      {
+        "icon": "fas fa-video",
+        "title": "Çevrimiçi Toplantılar",
+        "text": "Zoom, Webex ve diğer video konferans araçları ile entegre çalışarak hibrit etkinlikler düzenleyin. Canlı yayın bağlantıları ve kayıt yönetimi yapın."
+      },
+      {
+        "icon": "fas fa-calendar-plus",
+        "title": "Takvim Entegrasyonu",
+        "text": "iCal, Google Calendar ve Outlook ile senkronizasyon sağlayın. Etkinlik hatırlatmaları, otomatik davetler ve takvim abonelikleri ile hiçbir etkinliği kaçırmayın."
+      }
+    ]
+  },
+  "why": {
+    "id": "why-indico",
+    "title": "Neden Indico?",
+    "intro": "Akademik etkinlik yönetiminde Indico'yu tercih etmeniz için güçlü nedenler.",
+    "items": [
+      {
+        "icon": "fas fa-atom",
+        "title": "CERN Tarafından Geliştirilmiş",
+        "text": "Dünyanın en büyük araştırma merkezi CERN tarafından geliştirilen Indico, bilimsel etkinlik yönetiminin en yüksek standartlarını karşılar. Sürekli güncellenen ve iyileştirilen güvenilir bir platformdur."
+      },
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Açık Kaynak ve Ücretsiz",
+        "text": "Lisans maliyeti olmadan tam işlevsellikten yararlanın. Açık kaynak topluluk desteği ile sürekli gelişen özellikler ve güvenlik güncellemeleri alın. Verileriniz tamamen sizin kontrolünüzde."
+      },
+      {
+        "icon": "fas fa-expand-arrows-alt",
+        "title": "Her Ölçekte Etkinlik",
+        "text": "5 kişilik bir toplantıdan 10.000 katılımcılı uluslararası konferansa kadar her ölçekte etkinliği destekler. Esnek yapısı ile ihtiyaçlarınıza göre ölçeklenir."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "Güçlü Entegrasyonlar",
+        "text": "LDAP, OAuth, SSO gibi kimlik doğrulama sistemleri, ödeme ağ geçitleri, video konferans araçları ve takvim uygulamaları ile sorunsuz entegrasyon sağlar."
+      },
+      {
+        "icon": "fas fa-shield-alt",
+        "title": "Güvenlik ve Gizlilik",
+        "text": "Rol tabanlı erişim kontrolü, şifreli veri iletişimi ve GDPR uyumluluğu ile verilerinizi koruyun. Kendi sunucunuzda barındırarak tam kontrol sağlayın."
+      },
+      {
+        "icon": "fas fa-headset",
+        "title": "MirAkıl Profesyonel Destek",
+        "text": "Kurulum, yapılandırma, Türkçe lokalizasyon, eğitim ve sürekli teknik destek ile Indico deneyiminizi en üst düzeye çıkarın. Uzman ekibimiz her adımda yanınızda."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Indico ile Etkinlik Yönetimini Dönüştürün",
+    "text": "Konferans ve etkinlik yönetim ihtiyaçlarınız için ücretsiz danışmanlık alın. Uzman ekibimiz sizin için en uygun çözümü sunmaya hazır.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

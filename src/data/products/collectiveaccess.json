@@ -1,0 +1,389 @@
+{
+  "slug": "collectiveaccess",
+  "color": "#5b7e3d",
+  "meta": {
+    "title": "CollectiveAccess - Müze ve Arşiv Koleksiyon Yönetimi | MirAkıl",
+    "description": "CollectiveAccess müze ve arşiv koleksiyon yönetim yazılımı. Envanter, kataloglama ve dijital varlık yönetimi. MirAkıl ile kurulum, eğitim ve destek.",
+    "keywords": "CollectiveAccess, müze koleksiyon yönetimi, arşiv envanter yazılımı, müze veritabanı, koleksiyon kataloglama, dijital varlık yönetimi, müze yazılımı, arşiv yönetim sistemi",
+    "ogTitle": "CollectiveAccess - Müze ve Arşiv Koleksiyon Yönetimi | MirAkıl",
+    "ogDescription": "CollectiveAccess ile müze ve arşiv koleksiyonlarınızı profesyonelce yönetin. MirAkıl Veri İşleme kurulum, eğitim ve destek hizmetleri."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-archive",
+    "name": "CollectiveAccess",
+    "subtitle": "Müze ve Arşiv Koleksiyon Yönetimi",
+    "lead": "Müze ve arşiv koleksiyonlarının yönetimi için esnek bir platformdur. Dünyanın önde gelen kültürel miras kurumları tarafından tercih edilen, açık kaynaklı ve güçlü bir koleksiyon yönetim sistemidir.",
+    "ctas": [
+      {
+        "href": "https://demo.collectiveaccess.org/",
+        "label": "Canlı Demoyu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 500,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dünya Genelinde Kurum"
+    },
+    {
+      "target": 25,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "GPL",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "PHP",
+      "label": "Backend Teknolojisi"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "CollectiveAccess'in temel modüllerini keşfedin. Müze, arşiv ve dijital koleksiyon kurumları için kurumsal sınıfta katalog ve yönetim altyapısı.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-clipboard-list",
+        "label": "Kayıt & Kataloglama"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-sitemap",
+        "label": "Hiyerarşik Sınıflama"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-photo-film",
+        "label": "Medya Yönetimi"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-file-export",
+        "label": "Rapor & Çıktı"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-users-cog",
+        "label": "Çoklu Kullanıcı / Rol"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-clipboard-list",
+        "eyebrow": "Kataloglayan için",
+        "title": "Kayıt & Kataloglama",
+        "desc": "Esnek kayıt tipleri, alana özgü metaveri şemaları ve çoklu dil desteği ile her tür koleksiyonu standardize ederek kataloglayın.",
+        "features": [
+          {
+            "i": "fa-clipboard",
+            "t": "Esnek kayıt tipleri"
+          },
+          {
+            "i": "fa-sliders",
+            "t": "Özel metaveri şeması"
+          },
+          {
+            "i": "fa-language",
+            "t": "Çoklu dil desteği"
+          },
+          {
+            "i": "fa-table-list",
+            "t": "Toplu kayıt aktarımı"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-sitemap",
+        "eyebrow": "Müzeci için",
+        "title": "Hiyerarşik Sınıflama",
+        "desc": "Sınıflandırma ağaçları, çok yönlü bağıntı türleri ve otorite kayıtları ile koleksiyon nesnelerinin tüm ilişkilerini modelleyin.",
+        "features": [
+          {
+            "i": "fa-folder-tree",
+            "t": "Sınıflandırma ağaçları"
+          },
+          {
+            "i": "fa-share-nodes",
+            "t": "Bağıntı türleri"
+          },
+          {
+            "i": "fa-id-card",
+            "t": "Otorite kayıtları"
+          },
+          {
+            "i": "fa-diagram-project",
+            "t": "Çapraz ilişki haritası"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-photo-film",
+        "eyebrow": "Dijital koleksiyon için",
+        "title": "Medya Yönetimi",
+        "desc": "IIIF görüntüleyici desteği, çok formatlı medya saklama ve otomatik derivative üretimi ile dijital varlıkları profesyonel şekilde yönetin.",
+        "features": [
+          {
+            "i": "fa-image",
+            "t": "IIIF desteği"
+          },
+          {
+            "i": "fa-file-video",
+            "t": "Çoklu format desteği"
+          },
+          {
+            "i": "fa-wand-magic-sparkles",
+            "t": "Derivative otomasyon"
+          },
+          {
+            "i": "fa-cloud",
+            "t": "S3 / yerel depolama"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-file-export",
+        "eyebrow": "Yönetici için",
+        "title": "Rapor & Çıktı",
+        "desc": "PDF, Excel ve CSV formatında rapor üretimi, etiket basımı ve özelleştirilebilir sorgular ile koleksiyon verilerinizi dış dünya ile paylaşın.",
+        "features": [
+          {
+            "i": "fa-file-pdf",
+            "t": "PDF / Excel raporlar"
+          },
+          {
+            "i": "fa-tag",
+            "t": "Etiket / barkod basımı"
+          },
+          {
+            "i": "fa-magnifying-glass-chart",
+            "t": "Özelleştirilebilir sorgular"
+          },
+          {
+            "i": "fa-download",
+            "t": "Toplu dışa aktarım"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-users-cog",
+        "eyebrow": "Sistem yöneticisi için",
+        "title": "Çoklu Kullanıcı / Rol",
+        "desc": "Rol bazlı yetkilendirme, denetim logu ve kullanıcı grupları ile büyük ekiplerin paralel çalışabildiği güvenli üretim ortamı.",
+        "features": [
+          {
+            "i": "fa-user-shield",
+            "t": "Rol bazlı yetkilendirme"
+          },
+          {
+            "i": "fa-clipboard-list",
+            "t": "Audit log"
+          },
+          {
+            "i": "fa-users",
+            "t": "Kullanıcı grupları"
+          },
+          {
+            "i": "fa-key",
+            "t": "SSO / LDAP entegrasyonu"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "title": "Genel Bakış",
+    "stats": [
+      {
+        "value": "1000+",
+        "label": "Küresel Kurum"
+      },
+      {
+        "value": "60+",
+        "label": "Ülkede Kullanım"
+      },
+      {
+        "value": "20+",
+        "label": "Yıllık Geliştirme"
+      }
+    ],
+    "paragraphs": [
+      "CollectiveAccess, müzeler, arşivler, tarihî topluluklar ve dijital kütüphaneler için tasarlanmış güçlü bir açık kaynaklı koleksiyon yönetim platformudur. Esnek veri modelleme yapısı sayesinde her türlü koleksiyona uyum sağlayabilir ve kurumların benzersiz kataloglama ihtiyaçlarını karşılayabilir.",
+      "Sistem, Providence (arka uç yönetim arayüzü) ve Pawtucket (herkese açık web arayüzü) olmak üzere iki ana bileşenden oluşur. Providence ile koleksiyonlarınızı detaylı bir şekilde kataloglayabilir, dijital varlıklarınızı yönetebilir ve iş akışlarınızı özelleştirebilirsiniz. Pawtucket ise koleksiyonlarınızı çevrimiçi olarak sergilemenizi ve araştırmacıların erişimine açmanızı sağlar.",
+      "CollectiveAccess, Dublin Core, CDWA, ISAD(G), PBCore ve daha birçok uluslararası metadata standardını destekleyerek kurumlar arası veri paylaşımını ve uyumluluğu kolaylaştırır."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-layer-group",
+        "title": "Koleksiyon Yönetimi",
+        "text": null
+      },
+      {
+        "icon": "fas fa-photo-video",
+        "title": "Dijital Varlıklar",
+        "text": null
+      },
+      {
+        "icon": "fas fa-globe",
+        "title": "Çevrimiçi Erişim",
+        "text": null
+      },
+      {
+        "icon": "fas fa-chart-bar",
+        "title": "Raporlama",
+        "text": null
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "CollectiveAccess, müze ve arşiv yönetimi için kapsamlı araçlar sunar.",
+    "items": [
+      {
+        "icon": "fas fa-tags",
+        "title": "Koleksiyon Kataloglama",
+        "text": "Nesnelerinizi detaylı metadata ile kataloglayın. Özelleştirilebilir alanlar, kontrollü sözlükler ve hiyerarşik yapılarla zengin kayıtlar oluşturun."
+      },
+      {
+        "icon": "fas fa-photo-video",
+        "title": "Dijital Varlık Yönetimi",
+        "text": "Görsel, video, ses ve belge dosyalarınızı merkezi bir depoda yönetin. Otomatik küçük resim oluşturma ve format dönüştürme özellikleriyle verimliliği artırın."
+      },
+      {
+        "icon": "fas fa-project-diagram",
+        "title": "Esnek Veri Modelleri",
+        "text": "Kurumunuzun ihtiyaçlarına göre tamamen özelleştirilebilir veri yapıları oluşturun. Dublin Core, CDWA, ISAD(G) ve diğer standartları destekleyin."
+      },
+      {
+        "icon": "fas fa-globe",
+        "title": "Çevrimiçi Yayınlama",
+        "text": "Pawtucket arayüzü ile koleksiyonlarınızı herkese açık web siteleri üzerinden yayınlayın. Sanal sergiler ve tematik sunumlar hazırlayın."
+      },
+      {
+        "icon": "fas fa-search-plus",
+        "title": "Gelişmiş Arama",
+        "text": "Tam metin arama, fasetli filtreleme ve boolean operatörleri ile koleksiyonlarınızda hızlı ve doğru sonuçlara ulaşın."
+      },
+      {
+        "icon": "fas fa-history",
+        "title": "Provenance Takibi",
+        "text": "Nesnelerinizin sahiplik geçmişini, edinim kaynaklarını ve konum değişikliklerini eksiksiz olarak izleyin ve belgeleyin."
+      },
+      {
+        "icon": "fas fa-film",
+        "title": "Çoklu Medya Desteği",
+        "text": "Görüntü, video, ses, 3D model ve belge gibi çeşitli medya formatlarını destekleyin. IIIF uyumluluğu ile yüksek çözünürlüklü görüntüleme sağlayın."
+      },
+      {
+        "icon": "fas fa-chart-pie",
+        "title": "Raporlama Araçları",
+        "text": "Koleksiyonlarınız hakkında detaylı raporlar oluşturun. Envanter listeleri, durum raporları ve istatistiksel analizlerle karar süreçlerinizi destekleyin."
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "title": "Neden CollectiveAccess?",
+    "paragraphs": [
+      "CollectiveAccess, geleneksel koleksiyon yönetim yazılımlarının ötesinde esneklik ve güç sunan açık kaynaklı bir platformdur. Müze, arşiv ve kültürel miras kurumlarının karmaşık kataloglama ihtiyaçlarına uyum sağlayacak şekilde tasarlanmıştır.",
+      "Lisans maliyeti olmadan dünya standartlarında bir koleksiyon yönetim sistemi kurmak isteyen kurumlar için ideal bir çözümdür. MirAkıl olarak, CollectiveAccess kurulumu, yapılandırması ve Türkçe yerelleştirme süreçlerinde profesyonel destek sağlıyoruz."
+    ],
+    "badges": [
+      "Açık Kaynak",
+      "Lisans Maliyetsiz",
+      "Uluslararası Standartlar",
+      "Türkçe Destek",
+      "IIIF Uyumlu",
+      "REST API"
+    ],
+    "items": [
+      {
+        "icon": "fas fa-sliders-h",
+        "title": "Tam Özelleştirilebilirlik",
+        "text": "Veri modelleri, kullanıcı arayüzleri ve iş akışları kurumunuzun gereksinimlerine göre tamamen yapılandırılabilir."
+      },
+      {
+        "icon": "fas fa-university",
+        "title": "Kültürel Miras Odaklı",
+        "text": "Özellikle müze, arşiv ve galeri kurumlarının ihtiyaçları düşünülerek geliştirilmiş uzman çözümler sunar."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "Güçlü Entegrasyon",
+        "text": "REST API desteği ile diğer sistemlerle sorunsuz entegrasyon. OAI-PMH, SRU/SRW ve Z39.50 protokol desteği."
+      },
+      {
+        "icon": "fas fa-users",
+        "title": "Aktif Topluluk",
+        "text": "Dünya genelinde aktif bir geliştirici ve kullanıcı topluluğu tarafından sürekli geliştirilmektedir."
+      },
+      {
+        "icon": "fas fa-shield-alt",
+        "title": "Güvenli ve Ölçeklenebilir",
+        "text": "Rol tabanlı erişim kontrolü, denetim günlükleri ve milyonlarca kayıt ile ölçeklenebilir mimari."
+      }
+    ]
+  },
+  "cta": {
+    "title": "CollectiveAccess ile Koleksiyonlarınızı Dijitalleştirin",
+    "text": "Müze ve arşiv koleksiyon yönetimi ihtiyaçlarınız için ücretsiz danışmanlık alın. Uzman ekibimiz sizinle iletişime geçsin.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { url, supabase } from '../lib/site';
+import ticketScript from '../scripts/destek-legacy.js?raw';
+
+const productOptions = ['Koha', 'DSpace', 'VuFind', 'Omeka', 'Moodle', 'CollectiveAccess', 'OJS', 'Indico', 'Diğer'];
+const cfg = `window.MIRAKIL_SUPABASE = ${JSON.stringify({ url: supabase.url, anonKey: supabase.anonKey })};`;
+---
+<BaseLayout
+  title="Destek - Teknik Destek Talebi | MirAkıl"
+  description="MirAkıl Veri İşleme teknik destek talebi oluşturun ve mevcut taleplerinizi takip edin."
+  path="destek.html"
+  nav="support"
+>
+  <section class="page-hero">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Sayfa konumu">
+          <ol>
+            <li><a href={url('index.html')}>Ana Sayfa</a></li>
+            <li aria-current="page">Destek</li>
+          </ol>
+        </nav>
+        <h1>Teknik Destek</h1>
+        <p class="lead">Yeni bir destek talebi oluşturun veya mevcut talebinizin durumunu takip edin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface support-section">
+    <div class="container">
+      <div class="tabs-container">
+        <div class="tabs-header">
+          <button class="tab-btn active" type="button" onclick="switchTab('new-ticket')">
+            <i class="fas fa-plus-circle" aria-hidden="true"></i> Yeni Destek Talebi
+          </button>
+          <button class="tab-btn" type="button" onclick="switchTab('track-ticket')">
+            <i class="fas fa-search" aria-hidden="true"></i> Ticket Takip
+          </button>
+        </div>
+
+        <!-- Tab 1: New ticket -->
+        <div id="tab-new-ticket" class="tab-content active">
+          <div id="new-ticket-alert" class="alert" role="alert"></div>
+          <form id="newTicketForm" class="form-grid" onsubmit="submitTicket(event)">
+            <div class="field">
+              <label for="ticket-name">Ad Soyad <span class="required">*</span></label>
+              <input type="text" id="ticket-name" autocomplete="name" placeholder="Adınız ve soyadınız" required />
+            </div>
+            <div class="field">
+              <label for="ticket-email">E-posta <span class="required">*</span></label>
+              <input type="email" id="ticket-email" autocomplete="email" spellcheck="false" autocapitalize="off" placeholder="ornek@email.com" required />
+            </div>
+            <div class="field">
+              <label for="ticket-phone">Telefon</label>
+              <input type="tel" id="ticket-phone" autocomplete="tel" placeholder="+90 5XX XXX XX XX" />
+            </div>
+            <div class="field">
+              <label for="ticket-product">Ürün <span class="required">*</span></label>
+              <select id="ticket-product" required>
+                <option value="">Ürün seçiniz...</option>
+                {productOptions.map((p) => <option value={p}>{p}</option>)}
+              </select>
+            </div>
+            <div class="field span-2">
+              <label for="ticket-subject">Konu <span class="required">*</span></label>
+              <input type="text" id="ticket-subject" placeholder="Destek talebinizin konusu" required />
+            </div>
+            <div class="field span-2">
+              <label for="ticket-description">Açıklama <span class="required">*</span></label>
+              <textarea id="ticket-description" placeholder="Sorununuzu veya talebinizi detaylı olarak açıklayınız..." required></textarea>
+            </div>
+            <div class="span-2">
+              <button type="submit" class="submit-btn btn" id="submitTicketBtn">
+                <span class="btn-text">Destek Talebi Oluştur <i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 2: Track ticket -->
+        <div id="tab-track-ticket" class="tab-content">
+          <div id="track-ticket-alert" class="alert" role="alert"></div>
+          <div id="track-form-view">
+            <div class="track-form-wrapper">
+              <div class="track-intro">
+                <span class="icon-tile"><i class="fas fa-ticket-alt" aria-hidden="true"></i></span>
+                <h2>Ticket Durumu Sorgula</h2>
+                <p>Destek talebinizin durumunu öğrenmek için e-posta adresinizi ve ticket numaranızı girin.</p>
+              </div>
+              <form class="track-form" onsubmit="trackTicket(event)">
+                <div class="field">
+                  <label for="track-email">E-posta <span class="required">*</span></label>
+                  <input type="email" id="track-email" autocomplete="email" spellcheck="false" autocapitalize="off" placeholder="Kayıt e-posta adresiniz" required />
+                </div>
+                <div class="field">
+                  <label for="track-number">Ticket Numarası <span class="required">*</span></label>
+                  <input type="text" id="track-number" placeholder="MRK-00001" required />
+                </div>
+                <button type="submit" class="submit-btn btn" id="trackTicketBtn">
+                  <span class="btn-text">Sorgula <i class="fas fa-search" aria-hidden="true"></i></span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div id="ticket-detail-view" class="ticket-detail">
+            <button class="ticket-back-btn link" type="button" onclick="showTrackForm()">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Geri Dön
+            </button>
+            <div class="ticket-card">
+              <div class="ticket-card-header">
+                <span class="ticket-number" id="detail-ticket-number"></span>
+                <span class="status-badge" id="detail-status"></span>
+              </div>
+              <h3 class="ticket-subject" id="detail-subject"></h3>
+              <div class="ticket-meta">
+                <div class="ticket-meta-item"><i class="fas fa-box" aria-hidden="true"></i><span id="detail-product"></span></div>
+                <div class="ticket-meta-item"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span id="detail-date"></span></div>
+              </div>
+            </div>
+            <div class="replies-section">
+              <h3><i class="fas fa-comments" aria-hidden="true"></i> Yanıtlar</h3>
+              <div id="replies-list" aria-live="polite"></div>
+            </div>
+            <div class="reply-form" id="reply-form-container">
+              <h4><i class="fas fa-reply" aria-hidden="true"></i> Yanıt Yaz</h4>
+              <div class="field">
+                <label for="reply-message" class="sr-only">Yanıtınız</label>
+                <textarea id="reply-message" placeholder="Yanıtınızı buraya yazın..."></textarea>
+              </div>
+              <div class="reply-form-actions">
+                <button class="reply-submit-btn btn" type="button" onclick="sendReply()" id="replyBtn">
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i> Yanıt Gönder
+                </button>
+                <button class="close-ticket-btn btn btn--tertiary" type="button" onclick="closeTicket()" id="closeTicketBtn">
+                  <i class="fas fa-times-circle" aria-hidden="true"></i> Ticket'ı Kapat
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success modal -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+      <h3 id="modal-title">Destek Talebiniz Oluşturuldu!</h3>
+      <p>Talebiniz başarıyla kaydedildi. Ticket numaranız:</p>
+      <div class="modal-ticket-number" id="modal-ticket-number"></div>
+      <p class="modal-warning"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Bu numarayı kaydedin, takip için gereklidir.</p>
+      <div class="modal-actions">
+        <button class="btn" type="button" onclick="goToTrackFromModal()">Ticket Takibine Git <i class="fas fa-search" aria-hidden="true"></i></button>
+        <button class="btn btn--tertiary" type="button" onclick="closeModal()">Kapat <i class="fas fa-times" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="scripts">
+    <script is:inline set:html={cfg} />
+    <script is:inline set:html={ticketScript} />
+    <script is:inline>
+      // Escape closes the success modal (closeModal comes from the legacy ticket script).
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.getElementById('successModal').classList.contains('visible')) closeModal();
+      });
+    </script>
+  </Fragment>
+</BaseLayout>
+
+<style is:global>
+  .tabs-container { max-width: 960px; margin-inline: auto; background: var(--canvas); border: 1px solid var(--hairline); }
+  .tabs-header { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--hairline); }
+  .tab-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-2); min-height: 56px; font-size: var(--fs-body-sm); color: var(--ink-muted); background: var(--surface-1); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color var(--dur-fast), background-color var(--dur-fast), border-color var(--dur-fast); }
+  .tab-btn + .tab-btn { border-left: 1px solid var(--hairline); }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.active { background: var(--canvas); color: var(--ink); font-weight: 600; border-bottom-color: var(--brand); }
+  .tab-btn i { color: var(--brand); }
+  .tab-content { display: none; padding: var(--sp-7) var(--sp-6); }
+  .tab-content.active { display: block; animation: fade-up 360ms var(--ease-out); }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .support-section .field input, .support-section .field select, .support-section .field textarea { background: var(--surface-1); }
+
+  .alert { display: none; align-items: flex-start; gap: var(--sp-3); margin-bottom: var(--sp-5); padding: var(--sp-4); font-size: var(--fs-body-sm); border-left: 3px solid var(--info); background: #edf5ff; }
+  .alert.visible { display: flex; }
+  .alert.alert-error { border-left-color: var(--error); background: #fff1f1; }
+  .alert.alert-error i { color: var(--error); }
+  .alert.alert-success { border-left-color: var(--success); background: #defbe6; }
+  .alert.alert-success i { color: var(--success); }
+
+  .submit-btn { min-width: 220px; }
+  .submit-btn .spinner { display: none; width: 18px; height: 18px; border: 2px solid rgba(255, 255, 255, 0.4); border-top-color: #fff; border-radius: 50%; animation: spin 700ms linear infinite; }
+  .submit-btn .btn-text { display: inline-flex; align-items: center; justify-content: space-between; gap: var(--sp-6); width: 100%; }
+  .submit-btn.loading .btn-text { opacity: 0.6; }
+  .submit-btn.loading .spinner { display: inline-block; position: absolute; right: 16px; }
+  .submit-btn.loading .btn-text i { visibility: hidden; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .track-form-wrapper { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sp-7); align-items: start; }
+  .track-intro h2 { margin-top: var(--sp-4); font-size: var(--fs-headline); font-weight: 400; }
+  .track-intro p { margin-top: var(--sp-3); color: var(--ink-muted); line-height: 1.6; }
+  .track-form { display: grid; gap: var(--sp-5); }
+  .track-form .submit-btn { justify-self: start; }
+
+  .ticket-detail { display: none; }
+  .ticket-detail.visible { display: block; animation: fade-up 360ms var(--ease-out); }
+  .ticket-back-btn { margin-bottom: var(--sp-5); }
+  .ticket-back-btn:hover i { transform: translateX(-4px); }
+  .ticket-card { padding: var(--sp-5); border: 1px solid var(--hairline); border-left: 3px solid var(--brand); }
+  .ticket-card-header { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); }
+  .ticket-number { font-size: var(--fs-body-sm); font-weight: 600; font-variant-numeric: tabular-nums; color: var(--brand); }
+  .ticket-subject { margin-top: var(--sp-3); font-size: var(--fs-headline); font-weight: 400; }
+  .ticket-meta { display: flex; flex-wrap: wrap; gap: var(--sp-5); margin-top: var(--sp-4); font-size: var(--fs-body-sm); color: var(--ink-muted); }
+  .ticket-meta-item { display: inline-flex; align-items: center; gap: var(--sp-2); }
+  .ticket-meta-item i { color: var(--ink-subtle); }
+
+  .status-badge { display: inline-flex; align-items: center; padding: 4px 10px; font-size: var(--fs-caption); font-weight: 600; letter-spacing: 0.32px; background: var(--surface-2); color: var(--ink); }
+  .status-open { background: #d0e2ff; color: #002d9c; }
+  .status-in_progress { background: #fcf4d6; color: #684e00; }
+  .status-resolved { background: #defbe6; color: #0e6027; }
+  .status-closed { background: var(--surface-2); color: var(--ink-muted); }
+
+  .replies-section { margin-top: var(--sp-7); }
+  .replies-section h3, .reply-form h4 { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-subhead); font-weight: 400; margin-bottom: var(--sp-4); }
+  .replies-section h3 i, .reply-form h4 i { color: var(--brand); font-size: 0.9em; }
+  #replies-list { display: grid; gap: var(--sp-3); }
+  .reply-item { padding: var(--sp-5); border: 1px solid var(--hairline); background: var(--canvas); }
+  .reply-admin { background: var(--brand-tint); border-color: var(--brand-tint-2); }
+  .reply-header { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); margin-bottom: var(--sp-3); }
+  .reply-author { display: flex; align-items: center; gap: var(--sp-3); }
+  .reply-avatar { display: grid; place-items: center; width: 36px; height: 36px; font-size: var(--fs-caption); font-weight: 600; background: var(--ink); color: #fff; }
+  .reply-admin .reply-avatar { background: var(--brand); }
+  .reply-author-name { font-size: var(--fs-body-sm); font-weight: 600; }
+  .reply-admin-label { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-caption); color: var(--brand-pressed); }
+  .reply-date { font-size: var(--fs-caption); color: var(--ink-subtle); }
+  .reply-message { font-size: var(--fs-body-sm); line-height: 1.65; white-space: pre-wrap; }
+  .no-replies { display: flex; flex-direction: column; align-items: center; gap: var(--sp-3); padding: var(--sp-6); color: var(--ink-muted); background: var(--surface-1); font-size: var(--fs-body-sm); }
+  .no-replies i { font-size: 1.4rem; color: var(--ink-subtle); }
+
+  .reply-form { margin-top: var(--sp-6); padding-top: var(--sp-6); border-top: 1px solid var(--hairline); }
+  .reply-form-actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-4); }
+  .reply-form-actions .btn { gap: var(--sp-3); }
+
+  .modal-overlay { position: fixed; inset: 0; z-index: var(--z-modal); display: grid; place-items: center; padding: var(--sp-4); background: rgba(22, 22, 22, 0.6); opacity: 0; visibility: hidden; transition: opacity var(--dur), visibility var(--dur); }
+  .modal-overlay.visible { opacity: 1; visibility: visible; }
+  .modal-box { width: min(520px, 100%); padding: var(--sp-7) var(--sp-6); background: var(--canvas); border-top: 4px solid var(--brand); text-align: center; transform: translateY(16px); transition: transform var(--dur) var(--ease-out); }
+  .modal-overlay.visible .modal-box { transform: none; }
+  .modal-icon { display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto var(--sp-5); background: var(--brand); color: #fff; font-size: 1.4rem; }
+  .modal-box h3 { font-size: var(--fs-headline); font-weight: 400; }
+  .modal-box p { margin-top: var(--sp-3); color: var(--ink-muted); }
+  .modal-ticket-number { margin-top: var(--sp-4); padding: var(--sp-4); font-size: var(--fs-headline); font-weight: 600; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; background: var(--brand-tint); color: var(--brand-pressed); }
+  .modal-warning { font-size: var(--fs-body-sm); }
+  .modal-warning i { color: #b28600; }
+  .modal-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-3); margin-top: var(--sp-6); }
+
+  @media (max-width: 767px) {
+    .tab-content { padding: var(--sp-6) var(--sp-4); }
+    .track-form-wrapper { grid-template-columns: 1fr; gap: var(--sp-5); }
+    .submit-btn, .track-form .submit-btn { width: 100%; }
+  }
+</style>

@@ -1,0 +1,365 @@
+{
+  "slug": "koha",
+  "color": "#408540",
+  "meta": {
+    "title": "Koha - Entegre Kütüphane Otomasyon Sistemi | MirAkıl",
+    "description": "Koha açık kaynaklı kütüphane otomasyon sistemi - kataloglama, ödünç verme, OPAC, MARC21 desteği. MirAkıl ile Koha kurulumu, özelleştirme ve eğitim.",
+    "keywords": "Koha, kütüphane otomasyon sistemi, kütüphane kataloglama, OPAC yazılımı, açık kaynak kütüphane, kütüphane yazılımı, MARC21, kütüphane yönetim sistemi, Koha kurulumu, Koha Türkiye",
+    "ogTitle": "Koha - Entegre Kütüphane Otomasyon Sistemi | MirAkıl",
+    "ogDescription": "Koha, kütüphaneler için açık kaynaklı entegre kütüphane otomasyon sistemidir. Kataloglama, ödünç verme, OPAC ve daha fazlası."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-book-open",
+    "name": "Koha",
+    "subtitle": "Entegre Kütüphane Otomasyon Sistemi",
+    "lead": "Kütüphaneler için entegre bir kütüphane otomasyon sistemidir. Dünyanın en yaygın kullanılan açık kaynaklı kütüphane yönetim yazılımı ile koleksiyonlarınızı profesyonelce yönetin.",
+    "ctas": [
+      {
+        "href": "https://kohademo.tr/",
+        "label": "Canlı Demoyu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 20000,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dünya Genelinde Kütüphane"
+    },
+    {
+      "target": 25,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Yıllık Geliştirme Deneyimi"
+    },
+    {
+      "target": 100,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "GPL",
+      "label": "Açık Kaynak Lisansı"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Koha'nın temel modüllerini keşfedin. Her modül, kütüphanenizin farklı bir alanında günlük operasyonu kolaylaştırmak için tasarlandı.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-book",
+        "label": "Bibliyografik İşlemler"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-exchange-alt",
+        "label": "Dolaşım & Üye"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-search",
+        "label": "OPAC & Halk Erişimi"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-shopping-cart",
+        "label": "Süreli Yayın & Edinme"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-chart-line",
+        "label": "Yönetim & Raporlama"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "image": "assets/koha-modules/cataloging.png",
+        "url": "koha.local/cgi-bin/koha/cataloguing/addbooks.pl",
+        "eyebrow": "Katalogcu için",
+        "title": "Bibliyografik İşlemler",
+        "desc": "MARC21 ve UNIMARC standartlarında tam uyumlu kataloglama. Şablon, otorite kayıtları ve toplu içe aktarım ile hızlı, tutarlı bibliyografik üretim.",
+        "features": [
+          {
+            "i": "fa-tags",
+            "t": "MARC21 / UNIMARC kataloglama"
+          },
+          {
+            "i": "fa-clone",
+            "t": "Z39.50 ile kopya kataloglama"
+          },
+          {
+            "i": "fa-id-card",
+            "t": "Otorite kayıt yönetimi"
+          },
+          {
+            "i": "fa-file-import",
+            "t": "Toplu MARC içe aktarım"
+          }
+        ]
+      },
+      "mod-2": {
+        "image": "assets/koha-modules/circulation.png",
+        "url": "koha.local/cgi-bin/koha/circ/circulation-home.pl",
+        "eyebrow": "Dolaşım personeli için",
+        "title": "Dolaşım & Üye Yönetimi",
+        "desc": "Ödünç verme, iade, yenileme ve rezervasyon işlemleri tek ekranda. Esnek kurallar ve otomatik bildirimler ile dolaşım operasyonu sorunsuz akar.",
+        "features": [
+          {
+            "i": "fa-right-left",
+            "t": "Hızlı ödünç / iade akışı"
+          },
+          {
+            "i": "fa-user-plus",
+            "t": "Üye kayıt ve kategoriler"
+          },
+          {
+            "i": "fa-calendar-check",
+            "t": "Rezervasyon ve süre uzatma"
+          },
+          {
+            "i": "fa-bell",
+            "t": "Otomatik gecikme bildirimi"
+          }
+        ]
+      },
+      "mod-3": {
+        "image": "assets/koha-modules/opac.png",
+        "url": "opac.koha.local",
+        "eyebrow": "Son kullanıcı için",
+        "title": "OPAC & Halk Erişimi",
+        "desc": "Modern, mobil uyumlu çevrimiçi katalog. Gelişmiş arama, facet filtreleme, kullanıcı hesabı ve self-servis işlemler ile zengin kullanıcı deneyimi.",
+        "features": [
+          {
+            "i": "fa-magnifying-glass",
+            "t": "Gelişmiş arama + facet filtre"
+          },
+          {
+            "i": "fa-mobile-screen",
+            "t": "Responsive mobil arayüz"
+          },
+          {
+            "i": "fa-user",
+            "t": "Kişisel hesap ve geçmiş"
+          },
+          {
+            "i": "fa-bookmark",
+            "t": "Liste ve favori yönetimi"
+          }
+        ]
+      },
+      "mod-4": {
+        "image": "assets/koha-modules/acquisitions.png",
+        "url": "koha.local/cgi-bin/koha/acqui/acqui-home.pl",
+        "eyebrow": "Edinme bölümü için",
+        "title": "Süreli Yayın & Edinme",
+        "desc": "Dergi abonelikleri, sayı takibi ve kitap satınalma süreçlerinin uçtan uca yönetimi. Bütçe takibi, sipariş ve fatura entegrasyonu ile şeffaf operasyon.",
+        "features": [
+          {
+            "i": "fa-newspaper",
+            "t": "Süreli yayın aboneliği"
+          },
+          {
+            "i": "fa-truck",
+            "t": "Sipariş ve teslimat takibi"
+          },
+          {
+            "i": "fa-file-invoice",
+            "t": "Fatura ve EDIFACT desteği"
+          },
+          {
+            "i": "fa-coins",
+            "t": "Bütçe ve fon yönetimi"
+          }
+        ]
+      },
+      "mod-5": {
+        "image": "assets/koha-modules/reports.png",
+        "url": "koha.local/cgi-bin/koha/reports/reports-home.pl",
+        "eyebrow": "Yönetici için",
+        "title": "Yönetim & Raporlama",
+        "desc": "Özelleştirilebilir SQL raporları, gerçek zamanlı KPI panosu ve detaylı kullanım istatistikleri ile kütüphane performansını veri odaklı yönetin.",
+        "features": [
+          {
+            "i": "fa-gauge-high",
+            "t": "KPI ve performans panosu"
+          },
+          {
+            "i": "fa-database",
+            "t": "Özel SQL rapor üreteci"
+          },
+          {
+            "i": "fa-users",
+            "t": "Kullanıcı / koleksiyon istatistiği"
+          },
+          {
+            "i": "fa-shield-halved",
+            "t": "Yetkilendirme ve denetim"
+          }
+        ]
+      }
+    },
+    "altTpl": "alt=\"Koha ' + escapeHTML(d.title) + ' ekranı\""
+  },
+  "overview": {
+    "title": "Koha Hakkında Genel Bakış",
+    "titleAccent": "Koha",
+    "paragraphs": [
+      "Koha, 1999 yılında Yeni Zelanda'da geliştirilen ve günümüzde dünya genelinde binlerce kütüphane tarafından kullanılan, tamamen açık kaynaklı bir entegre kütüphane otomasyon sistemidir (ILS). GNU Genel Kamu Lisansı (GPL) altında dağıtılan Koha, lisans maliyeti olmaksızın kapsamlı kütüphane yönetim özellikleri sunar.",
+      "MARC21 ve UNIMARC standartlarını tam olarak destekleyen Koha, kataloglama, ödünç verme, süreli yayın takibi, kullanıcı yönetimi ve çevrimiçi halk erişim kataloğu (OPAC) gibi temel kütüphane işlevlerinin tamamını karşılar. Web tabanlı arayüzü sayesinde herhangi bir tarayıcıdan erişilebilir ve yönetilebilir.",
+      "Koha, küçük halk kütüphanelerinden büyük üniversite kütüphanelerine, okul kütüphanelerinden özel koleksiyonlara kadar her ölçekte kütüphaneye uyum sağlayabilen esnek yapısıyla öne çıkar. Aktif ve geniş bir geliştirici topluluğu ile sürekli güncellenmekte ve iyileştirilmektedir."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-university",
+        "title": "Her Ölçekte Kütüphane",
+        "text": "Halk, üniversite, okul ve özel kütüphaneler için ölçeklenebilir çözüm sunar."
+      },
+      {
+        "icon": "fas fa-globe",
+        "title": "Web Tabanlı Erişim",
+        "text": "Tamamen web tabanlı arayüzü ile her yerden, her cihazdan erişim imkânı sağlar."
+      },
+      {
+        "icon": "fas fa-code-branch",
+        "title": "Aktif Geliştirici Topluluğu",
+        "text": "Dünya genelinde yüzlerce geliştirici tarafından sürekli güncellenir ve iyileştirilir."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "Geniş Entegrasyon",
+        "text": "Z39.50, SRU/SRW, OAI-PMH ve REST API ile diğer sistemlerle entegre olur."
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "Koha, kütüphane yönetiminin tüm alanlarını kapsayan zengin özellik seti ile eksiksiz bir otomasyon çözümü sunar.",
+    "items": [
+      {
+        "icon": "fas fa-tags",
+        "title": "Kataloglama ve MARC21",
+        "text": "MARC21 ve UNIMARC standartlarında tam uyumlu kataloglama. Şablon desteği, yetki kayıtları ve toplu veri aktarımı ile hızlı ve doğru bibliyografik kayıt oluşturma."
+      },
+      {
+        "icon": "fas fa-exchange-alt",
+        "title": "Ödünç Verme ve İade",
+        "text": "Esnek ödünç verme kuralları, otomatik ceza hesaplama, yenileme ve rezervasyon yönetimi. Barkod ve RFID entegrasyonu ile hızlı işlem yapabilme imkânı."
+      },
+      {
+        "icon": "fas fa-search",
+        "title": "OPAC Çevrimiçi Katalog",
+        "text": "Kullanıcı dostu çevrimiçi halk erişim kataloğu. Gelişmiş arama, facet filtreleme, kitap kapağı görselleri, yorum ve puanlama özellikleri ile zengin kullanıcı deneyimi."
+      },
+      {
+        "icon": "fas fa-newspaper",
+        "title": "Süreli Yayın Yönetimi",
+        "text": "Dergi ve gazete abonelik takibi, sayı numaralama şablonları, eksik sayı kontrolü ve talep yönetimi. Süreli yayın koleksiyonlarının eksiksiz yönetimi."
+      },
+      {
+        "icon": "fas fa-chart-bar",
+        "title": "Raporlama ve İstatistik",
+        "text": "Önceden tanımlı ve özel SQL raporları oluşturma. Ödünç verme, koleksiyon ve kullanıcı istatistikleri ile kütüphane performansını detaylı olarak izleme."
+      },
+      {
+        "icon": "fas fa-network-wired",
+        "title": "Z39.50/SRU Protokolleri",
+        "text": "Z39.50 ve SRU/SRW protokolleri ile ulusal ve uluslararası kütüphane veritabanlarından kopya kataloglama. Kütüphanelerarası veri paylaşımı ve işbirliği."
+      },
+      {
+        "icon": "fas fa-language",
+        "title": "Çok Dilli Arayüz",
+        "text": "Türkçe dâhil 100'den fazla dilde kullanılabilir arayüz. Unicode desteği ile farklı alfabe ve karakter setlerinde sorunsuz çalışma. RTL dil desteği."
+      },
+      {
+        "icon": "fas fa-users-cog",
+        "title": "Kullanıcı Yönetimi",
+        "text": "Kapsamlı üye kayıt ve yönetim sistemi. Kullanıcı kategorileri, yetkilendirme, mesaj bildirimleri ve kendi hesap yönetimi ile verimli üye hizmetleri."
+      }
+    ]
+  },
+  "why": {
+    "id": "why-koha",
+    "title": "Neden Koha?",
+    "intro": "Koha'yı tercih etmeniz için pek çok güçlü neden var. İşte kütüphaneniz için Koha'yı öne çıkaran avantajlar.",
+    "items": [
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Sıfır Lisans Maliyeti",
+        "text": "Koha, GNU GPL lisansı ile tamamen ücretsiz olarak dağıtılır. Ticari kütüphane otomasyon sistemlerinin aksine hiçbir lisans ücreti ödemezsiniz. Bütçenizi yazılım lisansı yerine koleksiyon geliştirme ve hizmet kalitesini artırmaya ayırabilirsiniz."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "title": "Tam Özelleştirilebilirlik",
+        "text": "Açık kaynak yapısı sayesinde Koha, kurumunuzun ihtiyaçlarına göre tamamen özelleştirilebilir. Arayüz tasarımından iş akışlarına, raporlardan bildirim şablonlarına kadar her detayı kütüphanenize uyarlayabilirsiniz."
+      },
+      {
+        "icon": "fas fa-shield-alt",
+        "title": "Bağımsızlık ve Güvenlik",
+        "text": "Verileriniz tamamen sizin kontrolünüzde kalır. Herhangi bir firmaya bağımlı kalmadan sisteminizi yönetebilir, istediğiniz zaman hizmet sağlayıcınızı değiştirebilirsiniz. Açık kaynak topluluğu güvenlik açıklarını hızla tespit eder ve giderir."
+      },
+      {
+        "icon": "fas fa-certificate",
+        "title": "Uluslararası Standart Uyumu",
+        "text": "MARC21, UNIMARC, Z39.50, SRU/SRW, OAI-PMH, Dublin Core ve EDIFACT gibi uluslararası kütüphane standartlarına tam uyum sağlar. Bu sayede diğer kütüphane sistemleri ve veritabanları ile sorunsuz entegrasyon mümkündür."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Koha ile Kütüphanenizi Dijitalleştirin",
+    "text": "Koha kurulumu, özelleştirme ve eğitim hizmetlerimiz hakkında bilgi almak için bizimle iletişime geçin.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-green"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "icon": "fas fa-th",
+      "label": "Tümü"
+    },
+    {
+      "id": "universite",
+      "icon": "fas fa-university",
+      "label": "Üniversiteler"
+    },
+    {
+      "id": "milli",
+      "icon": "fas fa-landmark",
+      "label": "Devlet ve Resmi Kurumlar"
+    },
+    {
+      "id": "kultur",
+      "icon": "fas fa-building",
+      "label": "Kültür / STK / Özel Sektör"
+    }
+  ],
+  "items": [
+    {
+      "name": "Gazi Üniversitesi",
+      "logo": "logos/gazi-universitesi.png",
+      "alt": "Gazi Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Yazma ve nadir eserler için Omeka tabanlı dijital arşiv anahtar teslim kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Bilecik Şeyh Edebali Üniversitesi",
+      "logo": "logos/bilecik-universitesi.gif",
+      "alt": "Bilecik Şeyh Edebali Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha otomasyon sistemi sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "MEF Üniversitesi",
+      "logo": "logos/mef-universitesi.jpg",
+      "alt": "MEF Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha ve VuFind kuruldu; SirsiDynix sisteminden veri aktarımı tamamlandı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Mudanya Üniversitesi",
+      "logo": "logos/mudanya-universitesi.jpg",
+      "alt": "Mudanya Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha ve DSpace sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Lokman Hekim Üniversitesi",
+      "logo": "logos/lokman-hekim-universitesi.png",
+      "alt": "Lokman Hekim Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Beykoz Üniversitesi",
+      "logo": "logos/beykoz-universitesi.jpg",
+      "alt": "Beykoz Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Bursa Teknik Üniversitesi",
+      "logo": "logos/bursa-teknik-universitesi.jpg",
+      "alt": "Bursa Teknik Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha ve VuFind sistemlerinde güncelleme ve bakım hizmetleri yürütüldü.",
+      "tag": "Bakım ve güncelleme"
+    },
+    {
+      "name": "Uluslararası Kıbrıs Üniversitesi",
+      "logo": "logos/uluslararasi-kibris-universitesi.png",
+      "alt": "Uluslararası Kıbrıs Üniversitesi logosu",
+      "category": "universite",
+      "meta": "Üniversite",
+      "desc": "Koha kuruldu; SirsiDynix sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Milli Savunma Üniversitesi",
+      "logo": "logos/kara-harp-okulu.jpg",
+      "alt": "Milli Savunma Üniversitesi - Kara Harp Okulu logosu",
+      "category": "universite",
+      "meta": "Kara Harp Okulu",
+      "desc": "Yaklaşık 160.000 materyalde Dewey'den LC sınıflamaya geçiş; yerleştirme ve raf dizimi tamamlandı.",
+      "tag": "Sınıflama dönüşümü"
+    },
+    {
+      "name": "TBMM Kütüphanesi",
+      "logo": "logos/tbmm-kutuphanesi.png",
+      "alt": "TBMM Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "Türkiye Büyük Millet Meclisi",
+      "desc": "Koha, VuFind ve DSpace sistemlerinde güncelleme ve bakım hizmetleri yürütüldü.",
+      "tag": "Bakım ve güncelleme"
+    },
+    {
+      "name": "Milli Kütüphane Başkanlığı",
+      "logo": "logos/milli-kutuphane.jpg",
+      "alt": "Cumhurbaşkanlığı Milli Kütüphane Başkanlığı logosu",
+      "category": "milli",
+      "meta": "Cumhurbaşkanlığı",
+      "desc": "Dijital Kütüphane sisteminde bakım çalışmaları yürütüldü.",
+      "tag": "Bakım ve güncelleme"
+    },
+    {
+      "name": "Kütüphaneler ve Yayımlar Genel Müdürlüğü",
+      "logo": "logos/kygm.png",
+      "alt": "Kütüphaneler ve Yayımlar Genel Müdürlüğü logosu",
+      "category": "milli",
+      "meta": "Kültür ve Turizm Bakanlığı",
+      "desc": "Koha bakım çalışmaları 2025 yılında tamamlandı.",
+      "tag": "Bakım ve güncelleme"
+    },
+    {
+      "name": "Tapu ve Kadastro Genel Müdürlüğü",
+      "logo": "logos/tapu-kadastro.png",
+      "alt": "Tapu ve Kadastro Genel Müdürlüğü logosu",
+      "category": "milli",
+      "meta": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+      "desc": "Ankara Bölgesi arşivinde 30 milyon sayfa dijitalleştirildi.",
+      "tag": "Dijitalleştirme"
+    },
+    {
+      "name": "DSİ Jeoteknik Hizmetler Dairesi",
+      "logo": "logos/dsi-jeoteknik.jpg",
+      "alt": "DSİ Jeoteknik Hizmetler ve Yeraltısuları Dairesi logosu",
+      "category": "milli",
+      "meta": "Devlet Su İşleri",
+      "desc": "1 milyon sayfa dijitalleştirildi.",
+      "tag": "Dijitalleştirme"
+    },
+    {
+      "name": "Eti Maden İşletmeleri",
+      "logo": "logos/etimaden.png",
+      "alt": "Eti Maden İşletmeleri Genel Müdürlüğü logosu",
+      "category": "milli",
+      "meta": "Genel Müdürlük",
+      "desc": "Koha kuruldu; veri aktarımı yapıldı ve yaklaşık 2.000 kitap dijitalleştirildi.",
+      "tag": "Kurulum · Sistem göçü · Dijitalleştirme"
+    },
+    {
+      "name": "Sosyal Bilimler Lisesi",
+      "logo": "logos/sosyal-bilimler-lisesi.jpg",
+      "alt": "Ankara Sosyal Bilimler Lisesi logosu",
+      "category": "milli",
+      "meta": "Millî Eğitim Bakanlığı",
+      "desc": "Yaklaşık 17.000 kitap kataloglandı.",
+      "tag": "Kataloglama"
+    },
+    {
+      "name": "Strateji ve Bütçe Başkanlığı",
+      "logo": "logos/strateji-butce-baskanligi.png",
+      "alt": "Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı logosu",
+      "category": "milli",
+      "meta": "Cumhurbaşkanlığı",
+      "desc": "Koha ve VuFind kuruldu; SirsiDynix sisteminden veri aktarımı tamamlandı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Tarım ve Orman Bakanlığı",
+      "logo": "logos/tarim-bakanligi.png",
+      "alt": "Tarım ve Orman Bakanlığı logosu",
+      "category": "milli",
+      "meta": "Eğitim ve Yayım Dairesi",
+      "desc": "Dijital Tarım Kütüphanesi kuruldu; 5 yıllık bakım sözleşmesi sürdürüldü, 1,2 milyon sayfa ve yaklaşık 7.500 kitap dijitalleştirildi.",
+      "tag": "Kurulum · Dijitalleştirme · Bakım"
+    },
+    {
+      "name": "MEB Z-Kütüphaneler",
+      "logo": "logos/meb-z-kutuphaneler.png",
+      "alt": "MEB Z-Kütüphaneler logosu",
+      "category": "milli",
+      "meta": "Millî Eğitim Bakanlığı",
+      "desc": "Librid sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Telif Hakları Genel Müdürlüğü",
+      "logo": "logos/telif-haklari.jpg",
+      "alt": "Telif Hakları Genel Müdürlüğü logosu",
+      "category": "milli",
+      "meta": "Kültür ve Turizm Bakanlığı",
+      "desc": "VHS, Beta, ses kaseti, CD, DVD ve plak gibi materyaller dijital ortama aktarıldı.",
+      "tag": "Dijitalleştirme"
+    },
+    {
+      "name": "SPK Kütüphanesi",
+      "logo": "logos/spk-kutuphanesi.png",
+      "alt": "SPK Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "Sermaye Piyasası Kurulu",
+      "desc": "Koha kuruldu; BLIS sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "YTB Kütüphanesi",
+      "logo": "logos/ytb-kutuphanesi.jpg",
+      "alt": "YTB Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı",
+      "desc": "Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Türkiye Barolar Birliği",
+      "logo": "logos/tbb-kutuphanesi.png",
+      "alt": "Türkiye Barolar Birliği Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "TBB Kütüphanesi",
+      "desc": "Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Türkiye Belediyeler Birliği",
+      "logo": "logos/belediyeler-birligi.png",
+      "alt": "Türkiye Belediyeler Birliği Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "Kütüphane",
+      "desc": "Koha kuruldu; Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Ankara Büyükşehir Belediyesi",
+      "logo": "logos/ankara-buyuksehir.jpg",
+      "alt": "Ankara Büyükşehir Belediyesi logosu",
+      "category": "milli",
+      "meta": "Yerel Yönetim",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Konyaaltı Belediyesi",
+      "logo": "logos/konyaalti-belediyesi.jpg",
+      "alt": "Konyaaltı Belediyesi logosu",
+      "category": "milli",
+      "meta": "Antalya · Yerel Yönetim",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Karşıyaka Belediyesi",
+      "logo": "logos/karsiyaka-belediyesi.jpg",
+      "alt": "Karşıyaka Belediyesi logosu",
+      "category": "milli",
+      "meta": "İzmir · Yerel Yönetim",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Sancaktepe Belediyesi",
+      "logo": "logos/sancaktepe-belediyesi.png",
+      "alt": "Sancaktepe Belediyesi logosu",
+      "category": "milli",
+      "meta": "İstanbul · Yerel Yönetim",
+      "desc": "Koha sisteminde güncelleme ve bakım hizmetleri yürütüldü.",
+      "tag": "Bakım ve güncelleme"
+    },
+    {
+      "name": "Safranbolu Belediyesi",
+      "logo": "logos/safranbolu-belediyesi.jpg",
+      "alt": "Safranbolu Belediyesi logosu",
+      "category": "milli",
+      "meta": "Karabük · Yerel Yönetim",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "TANAP",
+      "logo": "logos/tanap.svg",
+      "alt": "TANAP Doğalgaz İletim A.Ş. logosu",
+      "category": "milli",
+      "meta": "Trans Anadolu Doğal Gaz Boru Hattı",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Türkiye Maarif Vakfı",
+      "logo": "logos/maarif-vakfi.jpg",
+      "alt": "Türkiye Maarif Vakfı Kütüphanesi logosu",
+      "category": "milli",
+      "meta": "Eğitim Kuruluşu",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "TRT Kütüphanesi",
+      "logo": "logos/trt-kutuphanesi.jpg",
+      "alt": "TRT Kütüphanesi logosu",
+      "category": "kultur",
+      "meta": "Türkiye Radyo ve Televizyon Kurumu",
+      "desc": "Koha kuruldu; Libra sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "SOCAR Türkiye",
+      "logo": "logos/socar.png",
+      "alt": "SOCAR Türkiye logosu",
+      "category": "kultur",
+      "meta": "Enerji Şirketi",
+      "desc": "Koha sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Vakko Vitali Hakko Kütüphanesi",
+      "logo": "logos/vakko-vitali-hakko-kutuphanesi.jpg",
+      "alt": "Vakko Vitali Hakko Kütüphanesi logosu",
+      "category": "kultur",
+      "meta": "Vakko",
+      "desc": "Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Bibliopera",
+      "logo": "logos/bibliopera.png",
+      "alt": "Bibliopera logosu",
+      "category": "kultur",
+      "meta": "Beyoğlu Araştırma Kütüphaneleri Platformu",
+      "desc": "Beyoğlu Araştırma Kütüphaneleri Platformu için proje çalışmaları yürütüldü.",
+      "tag": "Platform projesi"
+    },
+    {
+      "name": "TÜRK-İŞ Konfederasyonu",
+      "logo": "logos/turkis-kutuphanesi.png",
+      "alt": "TÜRK-İŞ Konfederasyonu Kütüphanesi logosu",
+      "category": "kultur",
+      "meta": "İşçi Sendikaları",
+      "desc": "Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Türkşeker",
+      "logo": "logos/turk-seker.jpg",
+      "alt": "Türkşeker Kütüphanesi logosu",
+      "category": "kultur",
+      "meta": "Türkiye Şeker Fabrikaları A.Ş.",
+      "desc": "Kütüphane otomasyon projesi yürütüldü.",
+      "tag": "Proje"
+    },
+    {
+      "name": "İSTEK Okulları",
+      "logo": "logos/istek-okullari.jpg",
+      "alt": "İSTEK Okulları logosu",
+      "category": "kultur",
+      "meta": "Eğitim Kuruluşu",
+      "desc": "Yordam sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Folklor Kurumu Derneği",
+      "logo": "logos/folklor-kurumu.jpg",
+      "alt": "Folklor Kurumu Derneği logosu",
+      "category": "kultur",
+      "meta": "Sivil Toplum Kuruluşu",
+      "desc": "Omeka sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "TMMOB Mimarlar Odası",
+      "logo": "logos/tmmob-mimarlar-odasi.png",
+      "alt": "TMMOB Mimarlar Odası logosu",
+      "category": "kultur",
+      "meta": "Meslek Kuruluşu",
+      "desc": "Omeka sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "Erler Film",
+      "logo": "logos/erler-film.jpg",
+      "alt": "Erler Film logosu",
+      "category": "kultur",
+      "meta": "Yapım Şirketi",
+      "desc": "Koha kuruldu; yerel sistemden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Çiğdem Eğitim Derneği",
+      "logo": "logos/cigdem-egitim-dernegi.jpg",
+      "alt": "Çiğdem Eğitim Derneği logosu",
+      "category": "kultur",
+      "meta": "Sivil Toplum Kuruluşu",
+      "desc": "Yordam sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    },
+    {
+      "name": "Türkiye Diyetisyenler Derneği",
+      "logo": "logos/beslenme-diyetisyenler-dernegi.jpg",
+      "alt": "Türkiye Diyetisyenler Derneği logosu",
+      "category": "kultur",
+      "meta": "Meslek Derneği",
+      "desc": "Dergi yönetim sistemi yenilendi; içerikler dijital ortama aktarıldı.",
+      "tag": "Dijitalleştirme · Özel sistem"
+    },
+    {
+      "name": "Cin Ali Eğitim ve Kültür Vakfı",
+      "logo": "logos/cin-ali.jpg",
+      "alt": "Cin Ali Eğitim ve Kültür Vakfı logosu",
+      "category": "kultur",
+      "meta": "Eğitim Vakfı",
+      "desc": "Kütüphane otomasyon sistemi sıfırdan kuruldu.",
+      "tag": "Anahtar teslim kurulum"
+    },
+    {
+      "name": "KÜRK Derneği",
+      "logo": "logos/kurk.jpg",
+      "alt": "Kürk Sanayicileri Derneği logosu",
+      "category": "kultur",
+      "meta": "Sektörel Dernek",
+      "desc": "Koha sistemi ve özel rezervasyon modülü sıfırdan kuruldu.",
+      "tag": "Kurulum · Özel sistem"
+    },
+    {
+      "name": "Pekin Hukuk Bürosu",
+      "logo": "logos/pekin-hukuk-burosu.jpg",
+      "alt": "Pekin Hukuk Bürosu logosu",
+      "category": "kultur",
+      "meta": "Hukuk Ofisi",
+      "desc": "Milas sisteminden veri aktarımı yapıldı.",
+      "tag": "Sistem göçü"
+    }
+  ]
+}

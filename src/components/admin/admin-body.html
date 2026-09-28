@@ -1,0 +1,155 @@
+<!-- ===== LOGIN SCREEN ===== -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <div class="logo-area">
+                <h1>Mir<span>Akıl</span></h1>
+                <p>Yönetim Paneli</p>
+            </div>
+            <div class="login-divider"></div>
+            <div class="login-error" id="loginError">
+                <i class="fas fa-exclamation-circle"></i>
+                Geçersiz şifre. Lütfen tekrar deneyin.
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i>&nbsp; Yönetici Şifresi</label>
+                    <input type="password" id="loginPassword" placeholder="Şifrenizi girin..." required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Giriş
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== DASHBOARD ===== -->
+    <div class="dashboard" id="dashboard">
+        <!-- Header -->
+        <div class="dash-header">
+            <div class="dash-header-inner">
+                <div class="dash-header-title">
+                    <h1>Mir<span>Akıl</span> Admin Paneli</h1>
+                    <span class="admin-badge"><i class="fas fa-shield-halved"></i>&nbsp; Admin</span>
+                </div>
+                <button class="btn-logout" onclick="handleLogout()">
+                    <i class="fas fa-right-from-bracket"></i>
+                    Çıkış
+                </button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="dash-container">
+            <!-- Tabs Navigation -->
+            <div class="tab-nav">
+                <button class="tab-btn active" onclick="switchTab('tickets')" id="tabBtnTickets">
+                    <i class="fas fa-ticket"></i>
+                    Destek Talepleri
+                    <span class="badge-count" id="ticketCount">0</span>
+                </button>
+                <button class="tab-btn" onclick="switchTab('contacts')" id="tabBtnContacts">
+                    <i class="fas fa-envelope"></i>
+                    İletişim Formları
+                    <span class="badge-count" id="contactCount">0</span>
+                </button>
+            </div>
+
+            <!-- TAB 1: TICKETS LIST -->
+            <div class="tab-content active" id="tabTickets">
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <span><i class="fas fa-filter"></i> Filtre:</span>
+                    <button class="filter-btn active" onclick="filterTickets('all')" data-filter="all">Tümü</button>
+                    <button class="filter-btn" onclick="filterTickets('open')" data-filter="open">Açık</button>
+                    <button class="filter-btn" onclick="filterTickets('in_progress')" data-filter="in_progress">İşlemde</button>
+                    <button class="filter-btn" onclick="filterTickets('closed')" data-filter="closed">Kapalı</button>
+                </div>
+
+                <!-- Tickets Table -->
+                <div class="data-table" id="ticketsTable">
+                    <div class="table-header tickets-grid">
+                        <div>#</div>
+                        <div>Ad</div>
+                        <div>E-posta</div>
+                        <div>Konu</div>
+                        <div>Ürün</div>
+                        <div>Durum</div>
+                        <div>Tarih</div>
+                    </div>
+                    <div id="ticketsBody">
+                        <div class="loading-state">
+                            <div class="spinner"></div>
+                            <p>Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TICKET DETAIL VIEW -->
+            <div class="ticket-detail" id="ticketDetail">
+                <div class="detail-header">
+                    <button class="detail-back" onclick="backToList()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2 class="detail-title" id="detailTitle">Ticket <span>#---</span></h2>
+                </div>
+
+                <div class="ticket-info-card" id="detailInfo">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <div class="replies-section">
+                    <h3><i class="fas fa-comments"></i> Yanıtlar</h3>
+                    <div class="replies-list" id="repliesList">
+                        <div class="loading-state">
+                            <div class="spinner"></div>
+                            <p>Yanıtlar yükleniyor...</p>
+                        </div>
+                    </div>
+
+                    <div class="reply-form" id="replyForm">
+                        <h4><i class="fas fa-reply"></i> Yanıt Yaz</h4>
+                        <textarea id="replyMessage" placeholder="Yanıtınızı buraya yazın..."></textarea>
+                        <div class="reply-actions">
+                            <button class="btn btn-primary" onclick="sendReply()" id="sendReplyBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Yanıt Gönder
+                            </button>
+                            <button class="btn btn-danger" onclick="closeTicket()" id="closeTicketBtn">
+                                <i class="fas fa-times-circle"></i>
+                                Ticket'ı Kapat
+                            </button>
+                            <button class="btn btn-outline" onclick="backToList()">
+                                <i class="fas fa-arrow-left"></i>
+                                Geri
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: CONTACTS -->
+            <div class="tab-content" id="tabContacts">
+                <div class="data-table" id="contactsTable">
+                    <div class="table-header contacts-grid">
+                        <div>Ad</div>
+                        <div>E-posta</div>
+                        <div>Telefon</div>
+                        <div>Konu</div>
+                        <div>Mesaj</div>
+                        <div>Tarih</div>
+                    </div>
+                    <div id="contactsBody">
+                        <div class="loading-state">
+                            <div class="spinner"></div>
+                            <p>Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>

@@ -1,0 +1,199 @@
+---
+import { url } from '../../lib/site';
+
+interface Feature { i: string; t: string }
+interface ModuleData { image?: string; url?: string; icon?: string; eyebrow: string; title: string; desc: string; features: Feature[] }
+interface Tab { id: string; icon: string | null; label: string }
+interface Props {
+  productName: string;
+  title: string;
+  intro: string;
+  tabs: Tab[];
+  data: Record<string, ModuleData>;
+}
+const { productName, title, intro, tabs, data } = Astro.props;
+const fa = (i?: string | null) => (!i ? '' : i.includes('fa-') && i.includes(' ') ? i : `fas ${i}`);
+---
+<section class="section" id="modules">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{title}</h2>
+      <p>{intro}</p>
+    </div>
+
+    <div class="mods reveal" data-modules>
+      <div class="mods-tabs" role="tablist" aria-label={`${productName} modülleri`} aria-orientation="vertical">
+        {tabs.map((t, i) => (
+          <button
+            type="button"
+            role="tab"
+            id={`tab-${t.id}`}
+            class="mods-tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`panel-${t.id}`}
+            tabindex={i === 0 ? 0 : -1}
+          >
+            <i class={fa(t.icon)} aria-hidden="true"></i>
+            <span>{t.label}</span>
+            <span class="mods-progress" aria-hidden="true"></span>
+          </button>
+        ))}
+      </div>
+
+      <div class="mods-panels">
+        {tabs.map((t, i) => {
+          const d = data[t.id];
+          return (
+            <div
+              class:list={['mods-panel', { 'mods-panel--shot': d.image }]}
+              role="tabpanel"
+              id={`panel-${t.id}`}
+              aria-labelledby={`tab-${t.id}`}
+              hidden={i !== 0}
+            >
+              {d.image ? (
+                <figure class="mods-shot">
+                  <div class="mods-shot-bar" aria-hidden="true"><span></span><span></span><span></span><code>{d.url}</code></div>
+                  <img src={url(d.image)} alt={`${productName} ${d.title} ekranı`} loading={i === 0 ? 'eager' : 'lazy'} width="1280" height="800" />
+                </figure>
+              ) : (
+                <div class="mods-mark" aria-hidden="true"><i class={fa(d.icon)}></i></div>
+              )}
+              <div class="mods-copy">
+                <span class="mods-eyebrow">{d.eyebrow}</span>
+                <h3>{d.title}</h3>
+                <p>{d.desc}</p>
+                <ul role="list" class="mods-features">
+                  {d.features.map((f) => (
+                    <li><i class={fa(f.i)} aria-hidden="true"></i><span>{f.t}</span></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mods { display: grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); overflow: hidden; background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-lg); box-shadow: var(--shadow-md); }
+  .mods-tabs { display: flex; flex-direction: column; gap: 4px; padding: var(--sp-3); border-right: 1px solid var(--hairline); background: var(--surface-1); }
+  .mods-tab {
+    position: relative; display: flex; align-items: center; gap: var(--sp-3);
+    min-height: 60px; padding: var(--sp-3) var(--sp-4); text-align: left; overflow: hidden;
+    font-size: var(--fs-body-sm); font-weight: 600; color: var(--ink-muted);
+    border-radius: var(--r-sm);
+    transition: background-color var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+  }
+  .mods-tab i { width: 20px; text-align: center; color: var(--ink-subtle); transition: color var(--dur-fast); }
+  .mods-tab:hover { background: var(--surface-2); color: var(--ink); }
+  .mods-tab[aria-selected='true'] { background: var(--brand); color: #fff; font-weight: 700; box-shadow: var(--shadow-brand); }
+  .mods-tab[aria-selected='true'] i { color: #fff; }
+  .mods-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #7fd0f7; transform: scaleX(0); transform-origin: left; }
+  .mods-tab.is-rotating .mods-progress { animation: mods-progress var(--rotate-ms, 6000ms) linear forwards; }
+  @keyframes mods-progress { to { transform: scaleX(1); } }
+
+  .mods-panels { position: relative; min-width: 0; }
+  .mods-panel { padding: var(--sp-6); }
+  .mods-panel[hidden] { display: none; }
+
+  .mods-panel--shot { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: var(--sp-6); align-items: start; }
+  .mods-panel--shot[hidden] { display: none; }
+  .mods-panel--shot .mods-features { grid-template-columns: 1fr; }
+  .mods-shot { margin: 0; overflow: hidden; border: 1px solid var(--hairline); border-radius: var(--r-md); background: var(--surface-1); box-shadow: var(--shadow-sm); }
+  .mods-shot-bar { display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-bottom: 1px solid var(--hairline); }
+  .mods-shot-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--hairline-strong); }
+  .mods-shot-bar code { margin-left: var(--sp-3); font-size: var(--fs-caption); color: var(--ink-subtle); font-family: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mods-shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+
+  .mods-mark { position: absolute; right: var(--sp-6); top: var(--sp-6); display: grid; place-items: center; width: 76px; height: 76px; border-radius: 20px; background: var(--brand-tint); color: var(--brand); font-size: 1.9rem; }
+  .mods-copy { max-width: 720px; }
+  .mods-mark + .mods-copy { padding-right: 96px; }
+  .mods-eyebrow { display: inline-block; padding: 4px 12px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 700; color: var(--brand-pressed); background: var(--brand-tint); margin-bottom: var(--sp-3); }
+  .mods-copy h3 { font-size: var(--fs-headline); font-weight: 800; line-height: 1.2; }
+  .mods-copy p { margin-top: var(--sp-4); color: var(--ink-muted); line-height: 1.6; max-width: 62ch; }
+  .mods-features { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); margin-top: var(--sp-6); }
+  .mods-features li { display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); border-radius: var(--r-sm); background: var(--surface-1); font-size: var(--fs-body-sm); font-weight: 500; }
+  .mods-features i { color: var(--brand); width: 18px; text-align: center; }
+
+  @media (max-width: 1199px) {
+    .mods-panel--shot { grid-template-columns: minmax(0, 1fr); }
+    .mods-panel--shot .mods-features { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 859px) {
+    .mods { grid-template-columns: minmax(0, 1fr); }
+    .mods-tabs { min-width: 0; flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--hairline); scroll-snap-type: x mandatory; }
+    .mods-tab { flex: 0 0 auto; scroll-snap-align: start; min-height: 52px; }
+    .mods-progress { left: 0; }
+    .mods-panel { padding: var(--sp-5); }
+  }
+  @media (max-width: 559px) {
+    .mods-features, .mods-panel--shot .mods-features { grid-template-columns: 1fr; }
+    .mods-mark { display: none; }
+    .mods-mark + .mods-copy { padding-right: 0; }
+  }
+</style>
+
+<script>
+  // Accessible tabs with auto-rotation that stops for good once the visitor interacts.
+  import { enter } from '../../scripts/motion-presets';
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-modules]').forEach((root) => {
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')!)!);
+    const ROTATE_MS = 6000;
+    root.style.setProperty('--rotate-ms', `${ROTATE_MS}ms`);
+    let current = 0;
+    let timer: number | undefined;
+    let stopped = reduce;
+
+    const select = (i: number, focus = false) => {
+      tabs.forEach((t, j) => {
+        const on = i === j;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+        t.classList.remove('is-rotating');
+      });
+      if (i !== current) enter(panels[i].querySelectorAll('.mods-shot, .mods-mark, .mods-copy > *'), { y: 12, gap: 0.04 });
+      current = i;
+      if (focus) tabs[i].focus();
+      if (!stopped) {
+        void tabs[i].offsetWidth; // restart progress animation
+        tabs[i].classList.add('is-rotating');
+      }
+    };
+    const stop = () => {
+      stopped = true;
+      window.clearInterval(timer);
+      tabs.forEach((t) => t.classList.remove('is-rotating'));
+    };
+    const start = () => {
+      if (stopped) return;
+      select(current);
+      timer = window.setInterval(() => select((current + 1) % tabs.length), ROTATE_MS);
+    };
+
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => { stop(); select(i); });
+      t.addEventListener('keydown', (e) => {
+        const keys: Record<string, number> = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+        if (e.key in keys) { e.preventDefault(); stop(); select((i + keys[e.key] + tabs.length) % tabs.length, true); }
+        if (e.key === 'Home') { e.preventDefault(); stop(); select(0, true); }
+        if (e.key === 'End') { e.preventDefault(); stop(); select(tabs.length - 1, true); }
+      });
+    });
+    // Pause while hovered so the reader is not interrupted.
+    root.addEventListener('mouseenter', () => { if (!stopped) { window.clearInterval(timer); tabs[current].classList.remove('is-rotating'); } });
+    root.addEventListener('mouseleave', () => { if (!stopped) { window.clearInterval(timer); start(); } });
+
+    if (!stopped && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) { start(); io.disconnect(); }
+      }, { threshold: 0.3 });
+      io.observe(root);
+    }
+  });
+</script>

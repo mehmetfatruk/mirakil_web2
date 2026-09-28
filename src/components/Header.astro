@@ -1,0 +1,63 @@
+---
+import { url, company, productsInNavOrder, type NavKey } from '../lib/site';
+
+interface Props { active: NavKey; contactHref: string }
+const { active, contactHref } = Astro.props;
+const onHome = active === 'home';
+const home = (hash: string) => (onHome ? hash : url('index.html' + hash));
+---
+<div class="utility-bar">
+  <div class="container utility-inner">
+    <span class="utility-note">Müze, arşiv ve kütüphane yönetim çözümleri</span>
+    <div class="utility-links">
+      <a href={company.phoneHref}><i class="fas fa-phone" aria-hidden="true"></i> {company.phone}</a>
+      <a href={company.emailHref}><i class="fas fa-envelope" aria-hidden="true"></i> {company.email}</a>
+      <a href={url('destek.html')}><i class="fas fa-headset" aria-hidden="true"></i> Destek</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-nav" data-nav>
+  <div class="container nav-inner">
+    <a href={url('index.html')} class="nav-logo" aria-label="MirAkıl ana sayfa">
+      <img src={url('assets/logo.png')} alt="MirAkıl Logo" width="184" height="40" />
+    </a>
+
+    <nav aria-label="Ana menü" class="nav-menu" id="navMenu">
+      <ul role="list">
+        <li><a href={url('index.html')} aria-current={onHome ? 'page' : undefined}>Ana Sayfa</a></li>
+        <li class="has-dropdown">
+          <button type="button" class="nav-dd-toggle" aria-expanded="false" aria-controls="productsMenu" data-active={active === 'products' ? 'true' : undefined}>
+            Ürünler <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="nav-dropdown" id="productsMenu">
+            <ul role="list" class="nav-dd-grid">
+              {productsInNavOrder.map((p) => (
+                <li>
+                  <a href={url(`${p.slug}.html`)}>
+                    <span class="dd-logo"><img src={url(p.logo)} alt="" loading="lazy" /></span>
+                    <span class="dd-text">
+                      <span class="dd-name">{p.name}</span>
+                      <span class="dd-sub">{p.category}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a class="link nav-dd-all" href={home('#products')}>Tüm ürünler <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </li>
+        <li><a href={home('#services')}>Hizmetler</a></li>
+        <li><a href={home('#why-us')}>Hakkımızda</a></li>
+        <li><a href={url('referanslar.html')} aria-current={active === 'references' ? 'page' : undefined}>Referanslar</a></li>
+        <li><a href={home('#faq')}>SSS</a></li>
+        <li><a href={url('destek.html')} aria-current={active === 'support' ? 'page' : undefined}>Destek</a></li>
+        <li><a href={contactHref.startsWith('#') ? contactHref : url(contactHref)} class="btn nav-cta">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="nav-toggle" aria-label="Menü" aria-expanded="false" aria-controls="navMenu" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

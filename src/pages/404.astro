@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { url, productsInNavOrder } from '../lib/site';
+// GitHub Pages serves this for any unknown path, so every link is absolute (url()).
+const popular = ['koha', 'dspace', 'vufind', 'omeka', 'moodle', 'ojs', 'indico', 'collectiveaccess'].map(
+  (s) => productsInNavOrder.find((p) => p.slug === s)!,
+);
+---
+<BaseLayout
+  title="404 - Sayfa Bulunamadı | MirAkıl"
+  description="Aradığınız sayfa bulunamadı. MirAkıl ana sayfasına dönerek devam edebilirsiniz."
+  path="404.html"
+  noindex
+>
+  <section class="nf">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="container nf-inner">
+      <p class="nf-code" aria-hidden="true">404</p>
+      <h1>Sayfa Bulunamadı</h1>
+      <p class="lead">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.<br />Aşağıdaki bağlantıları kullanarak devam edebilirsiniz.</p>
+      <div class="btn-row">
+        <a href={url('index.html')} class="btn">Ana Sayfaya Dön <i class="fas fa-home" aria-hidden="true"></i></a>
+        <a href={url('destek.html')} class="btn btn--tertiary">Destek Talebi Oluştur <i class="fas fa-headset" aria-hidden="true"></i></a>
+      </div>
+      <h2 class="nf-title">Popüler Sayfalar</h2>
+      <ul role="list" class="tiles nf-links">
+        {popular.map((p) => (
+          <li><a href={url(`${p.slug}.html`)} style={`--p:${p.color}`}>{p.name}<i class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf { position: relative; overflow: hidden; padding-block: var(--sp-9); }
+  .nf-inner { position: relative; z-index: 1; max-width: 880px; }
+  .nf-code { font-family: var(--font-display); font-size: clamp(5rem, 3rem + 10vw, 10rem); font-weight: 300; line-height: 1; letter-spacing: -0.04em; color: var(--brand); }
+  .nf h1 { margin-top: var(--sp-4); font-size: var(--fs-display-md); font-weight: 300; }
+  .nf .lead { margin-top: var(--sp-4); }
+  .nf .btn-row { margin-top: var(--sp-6); }
+  .nf-title { margin-top: var(--sp-8); margin-bottom: var(--sp-4); font-size: var(--fs-subhead); }
+  .nf-links { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .nf-links a { display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding: 0 var(--sp-4); border-left: 3px solid var(--p); font-size: var(--fs-body-sm); font-weight: 500; transition: background-color var(--dur-fast); }
+  .nf-links a:hover { background: var(--surface-1); }
+  .nf-links i { font-size: 0.75rem; color: var(--brand); transition: transform var(--dur) var(--ease-out); }
+  .nf-links a:hover i { transform: translateX(4px); }
+  @media (max-width: 671px) { .nf-links { grid-template-columns: 1fr 1fr; } }
+</style>

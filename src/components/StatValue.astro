@@ -1,0 +1,7 @@
+---
+// Renders a stat's final value (count-up happens client-side on [data-target]).
+interface Props { target?: number | null; prefix?: string | null; suffix?: string | null; text?: string | null }
+const { target, prefix, suffix, text } = Astro.props;
+const fmt = (n: number) => (n >= 1000 ? n.toLocaleString('tr-TR') : String(n));
+---
+{prefix && <span class="affix">{prefix}</span>}{target != null ? <span data-target={target}>{fmt(target)}</span> : <span>{text}</span>}{suffix && <span class="affix">{suffix}</span>}

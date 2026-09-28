@@ -1,0 +1,108 @@
+---
+import { url } from '../../lib/site';
+import StatValue from '../StatValue.astro';
+
+interface Cta { href: string; label: string; icon?: string | null; external?: boolean }
+interface Stat { target: number | null; prefix?: string | null; suffix?: string | null; text?: string | null; label: string }
+interface Props {
+  name: string;
+  subtitle: string;
+  lead: string;
+  logo: string;
+  ctas: Cta[];
+  stats: Stat[];
+}
+const { name, subtitle, lead, logo, ctas, stats } = Astro.props;
+---
+<section class="p-hero">
+  <div class="container p-hero-grid">
+    <div class="p-hero-copy">
+      <nav class="breadcrumb p-crumb" aria-label="Sayfa konumu">
+        <ol>
+          <li><a href={url('index.html')}>Ana Sayfa</a></li>
+          <li><a href={url('index.html#products')}>Ürünler</a></li>
+          <li aria-current="page">{name}</li>
+        </ol>
+      </nav>
+      <h1>{name}</h1>
+      <p class="p-hero-sub">{subtitle}</p>
+      <p class="p-hero-lead">{lead}</p>
+      <div class="btn-row">
+        {ctas.map((c, i) => (
+          <a
+            href={c.external ? c.href : c.href.startsWith('#') ? c.href : url(c.href)}
+            class={i === 0 ? 'btn' : 'btn btn--tertiary'}
+            {...(c.external ? { target: '_blank', rel: 'noopener' } : {})}
+          >
+            {c.label}
+            <i class={c.external ? 'fas fa-arrow-up-right-from-square' : 'fas fa-arrow-right'} aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="p-hero-visual reveal" aria-hidden="true">
+      <div class="p-logo-card">
+        <img src={url(logo)} alt="" width="320" height="140" />
+      </div>
+      <span class="p-orb p-orb--a"></span>
+      <span class="p-orb p-orb--b"></span>
+    </div>
+  </div>
+</section>
+
+<section class="p-stats" aria-label={`${name} istatistikleri`}>
+  <div class="container">
+    <dl class="p-stats-grid reveal-stagger" data-count>
+      {stats.map((s) => (
+        <div class="p-stat">
+          <dd class="stat-num"><StatValue {...s} /></dd>
+          <dt class="stat-label">{s.label}</dt>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<style>
+  .p-hero { position: relative; overflow: hidden; isolation: isolate; color: var(--ink); background: linear-gradient(180deg, #f4f8fd 0%, #e7f1fb 100%); }
+  .p-hero::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background:
+      radial-gradient(55% 90% at 88% 15%, rgba(10, 143, 214, 0.18), transparent 60%),
+      radial-gradient(40% 60% at 5% 110%, rgba(0, 85, 164, 0.12), transparent 70%),
+      radial-gradient(rgba(0, 85, 164, 0.12) 1.2px, transparent 1.2px) 0 0 / 22px 22px;
+  }
+  .p-hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--sp-8); align-items: center; padding-block: var(--sp-8) 150px; }
+  .p-crumb { margin-bottom: var(--sp-5); }
+  .p-hero h1 { font-size: var(--fs-display-xl); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; color: var(--ink); }
+  .p-hero-sub { display: inline-block; margin-top: var(--sp-4); padding: 6px 14px; border-radius: var(--r-pill); font-size: var(--fs-body-sm); font-weight: 700; color: var(--brand-pressed); background: #fff; border: 1px solid var(--brand-tint-2); box-shadow: var(--shadow-sm); }
+  .p-hero-lead { margin-top: var(--sp-5); font-size: var(--fs-body-lg); line-height: 1.65; color: var(--ink-muted); max-width: 60ch; }
+  .btn-row { margin-top: var(--sp-6); }
+
+  .p-hero-visual { position: relative; display: grid; place-items: center; min-height: 300px; }
+  .p-logo-card { position: relative; z-index: 1; display: grid; place-items: center; width: min(100%, 420px); aspect-ratio: 16 / 10; padding: var(--sp-7); background: #fff; border-radius: var(--r-lg); box-shadow: 0 30px 60px -24px rgba(15, 74, 116, 0.35); animation: float 7s ease-in-out infinite; }
+  .p-logo-card img { max-width: 100%; max-height: 120px; width: auto; height: auto; object-fit: contain; }
+  .p-orb { position: absolute; border-radius: 50%; }
+  .p-orb--a { width: 140px; height: 140px; right: 2%; top: 4%; background: var(--brand); opacity: 0.85; }
+  .p-orb--b { width: 84px; height: 84px; left: 6%; bottom: 6%; background: var(--brand-bright); opacity: 0.45; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  .p-stats { position: relative; z-index: 2; margin-top: -90px; }
+  .p-stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); }
+  .p-stat { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; padding: var(--sp-5); background: var(--canvas); border-radius: var(--r-md); box-shadow: var(--shadow-md); }
+  .p-stat dd { margin: 0; }
+  .p-stat .stat-num { font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem); }
+  .p-stat .stat-label { margin-top: 0; }
+
+  @media (max-width: 959px) {
+    .p-hero-grid { grid-template-columns: 1fr; gap: var(--sp-6); padding-block: var(--sp-7) 130px; }
+    .p-hero-visual { min-height: 0; order: -1; justify-items: start; }
+    .p-logo-card { width: min(100%, 300px); padding: var(--sp-5); }
+    .p-orb { display: none; }
+    .p-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 479px) {
+    .btn-row .btn { width: 100%; }
+    .p-stat { padding: var(--sp-4); }
+  }
+</style>

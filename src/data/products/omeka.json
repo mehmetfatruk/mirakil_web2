@@ -1,0 +1,392 @@
+{
+  "slug": "omeka",
+  "color": "#CD5C28",
+  "meta": {
+    "title": "Omeka - Dijital Sergi ve Kültürel Miras Platformu | MirAkıl",
+    "description": "Omeka dijital sergi ve kültürel miras platformu. Müze koleksiyonları için çevrimiçi sergileme. MirAkıl ile Omeka kurulum, özelleştirme ve eğitim.",
+    "keywords": "Omeka, dijital sergi platformu, müze dijital sergi, kültürel miras yönetimi, çevrimiçi sergi, koleksiyon sergileme, müze yazılımı, Omeka kurulumu, dijital koleksiyon",
+    "ogTitle": "Omeka - Dijital Sergi ve Kültürel Miras Platformu | MirAkıl",
+    "ogDescription": "Omeka dijital sergiler ve kültürel miras projeleri için içerik yönetim platformudur. MirAkıl ile Omeka kurulum, özelleştirme ve destek hizmetleri."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-landmark",
+    "name": "Omeka",
+    "subtitle": "Dijital Sergi ve Kültürel Miras Platformu",
+    "lead": "Dijital sergiler ve kültürel miras projeleri için içerik yönetim platformudur. Müzeler, kütüphaneler ve arşivler için zengin dijital koleksiyonlar oluşturun.",
+    "ctas": [
+      {
+        "href": "https://omeka.org/classic/",
+        "label": "Canlı Demoyu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 50000,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dijital Sergi Projesi"
+    },
+    {
+      "target": 25,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "GPL",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "PHP",
+      "label": "Backend Teknolojisi"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Omeka'nın temel modüllerini keşfedin. Dijital koleksiyonlar, sergiler ve kültürel miras yayını için esnek, kullanıcı dostu altyapı.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-photo-film",
+        "label": "Öğe Yönetimi"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-folder-tree",
+        "label": "Koleksiyon & Set"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-images",
+        "label": "Sergi (Exhibit)"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-puzzle-piece",
+        "label": "Plugin & Tema"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-tags",
+        "label": "Dublin Core"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-photo-film",
+        "eyebrow": "Kürator için",
+        "title": "Öğe Yönetimi",
+        "desc": "Görsel, video, ses, doküman ve diğer dijital medyayı tek noktadan yükleyip Dublin Core tabanlı zengin metaveri ile kataloglayın.",
+        "features": [
+          {
+            "i": "fa-upload",
+            "t": "Çoklu medya yükleme"
+          },
+          {
+            "i": "fa-tags",
+            "t": "Dublin Core metaveri"
+          },
+          {
+            "i": "fa-file-image",
+            "t": "Görsel / video / ses / doküman"
+          },
+          {
+            "i": "fa-magnifying-glass",
+            "t": "Hızlı arama ve filtreleme"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-folder-tree",
+        "eyebrow": "Sergi için",
+        "title": "Koleksiyon & Set",
+        "desc": "Tematik koleksiyonlar ve item-set bağıntıları ile öğelerinizi farklı bağlamlarda gruplayın; çapraz ilişkilerle zengin keşif sağlayın.",
+        "features": [
+          {
+            "i": "fa-folder-open",
+            "t": "Tematik koleksiyon yapısı"
+          },
+          {
+            "i": "fa-link",
+            "t": "Item-set bağıntıları"
+          },
+          {
+            "i": "fa-layer-group",
+            "t": "Çapraz koleksiyon ilişkileri"
+          },
+          {
+            "i": "fa-sort",
+            "t": "Esnek sıralama"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-images",
+        "eyebrow": "Sergi tasarımcısı için",
+        "title": "Sergi (Exhibit)",
+        "desc": "Sayfa builder ile çoklu sayfa, anlatı blokları ve tema seçenekleri kullanarak online sergiler oluşturun; teknik bilgi gerektirmez.",
+        "features": [
+          {
+            "i": "fa-pen-ruler",
+            "t": "Görsel sayfa builder"
+          },
+          {
+            "i": "fa-book-open",
+            "t": "Anlatı blokları"
+          },
+          {
+            "i": "fa-file-lines",
+            "t": "Çoklu sayfa desteği"
+          },
+          {
+            "i": "fa-palette",
+            "t": "Tema seçimi"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-puzzle-piece",
+        "eyebrow": "Yönetici için",
+        "title": "Plugin & Tema",
+        "desc": "Geniş plugin pazarı ve özelleştirilebilir tema sistemi ile Omeka'yı kurumunuzun ihtiyaçlarına göre şekillendirin.",
+        "features": [
+          {
+            "i": "fa-plug",
+            "t": "Geniş plugin pazarı"
+          },
+          {
+            "i": "fa-paint-roller",
+            "t": "Özelleştirilebilir tema"
+          },
+          {
+            "i": "fa-language",
+            "t": "Çoklu dil desteği"
+          },
+          {
+            "i": "fa-code",
+            "t": "Açık API"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-tags",
+        "eyebrow": "Kataloglama için",
+        "title": "Dublin Core",
+        "desc": "Dublin Core standardına tam uyum, özel metaveri profilleri ve kontrollü terim sözlükleri ile uluslararası standartlarda kataloglama.",
+        "features": [
+          {
+            "i": "fa-list-check",
+            "t": "Dublin Core standart"
+          },
+          {
+            "i": "fa-sliders",
+            "t": "Özel metaveri profili"
+          },
+          {
+            "i": "fa-book",
+            "t": "Controlled vocabulary"
+          },
+          {
+            "i": "fa-link",
+            "t": "URI / Linked Data"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "header": {
+      "title": "Genel Bakış",
+      "intro": "Omeka, kültürel miras kuruluşlarının dijital koleksiyonlarını çevrimiçi ortamda sergilemesi için tasarlanmış güçlü bir platformdur."
+    },
+    "title": "Omeka ile Dijital Sergilemenin Gücünü Keşfedin",
+    "titleAccent": "Omeka",
+    "stats": [
+      {
+        "value": "75.000+",
+        "label": "Aktif Kurulum"
+      },
+      {
+        "value": "100+",
+        "label": "Eklenti ve Tema"
+      },
+      {
+        "value": "50+",
+        "label": "Desteklenen Dil"
+      },
+      {
+        "value": "2008",
+        "label": "Yılından Bu Yana"
+      }
+    ],
+    "paragraphs": [
+      "Omeka, müzeler, kütüphaneler, arşivler ve araştırma kurumları için geliştirilmiş açık kaynaklı bir web yayıncılık platformudur. Kullanıcı dostu arayüzü sayesinde teknik bilgi gerektirmeden zengin dijital sergiler ve koleksiyonlar oluşturabilirsiniz.",
+      "Roy Rosenzweig Tarih ve Yeni Medya Merkezi tarafından geliştirilen Omeka, Dublin Core metadata standardını temel alarak dijital nesnelerin profesyonel düzeyde kataloglanmasını ve sunulmasını sağlar. Omeka S (Semantik) sürümü ile Linked Data desteği sunarak koleksiyonlarınızı küresel bilgi ağına bağlayabilirsiniz.",
+      "Esnek tema ve eklenti yapısı sayesinde kurumunuzun ihtiyaçlarına göre tamamen özelleştirilebilir. Eğitim projeleri, sanal müzeler, dijital arşivler ve topluluk tabanlı sergiler için ideal bir çözümdür."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-images",
+        "title": "Dijital Koleksiyonlar",
+        "text": "Fotoğraf, belge, video ve ses dosyalarını tek bir platformda düzenleyerek zengin dijital koleksiyonlar oluşturun."
+      },
+      {
+        "icon": "fas fa-palette",
+        "title": "Sanal Sergiler",
+        "text": "Interaktif ve görsel açıdan etkileyici sanal sergiler tasarlayarak koleksiyonlarınızı dünya ile paylaşın."
+      },
+      {
+        "icon": "fas fa-university",
+        "title": "Kültürel Miras Koruma",
+        "text": "Tarihi eserler, el yazmaları ve nadide materyallerin dijital ortamda korunması ve erişime açılması."
+      },
+      {
+        "icon": "fas fa-project-diagram",
+        "title": "Linked Data Entegrasyonu",
+        "text": "Omeka S ile semantik web standartlarını destekleyerek koleksiyonlarınızı küresel bilgi ağına bağlayın."
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "Omeka'nın sunduğu kapsamlı özellikler ile dijital sergileme süreçlerinizi profesyonel düzeye taşıyın.",
+    "items": [
+      {
+        "icon": "fas fa-photo-film",
+        "title": "Dijital Sergi Oluşturma",
+        "text": "Sürükle-bırak arayüzü ile interaktif ve zengin dijital sergiler tasarlayın. Anlatı tabanlı sergi yapısı ile hikayenizi etkili şekilde aktarın."
+      },
+      {
+        "icon": "fas fa-tags",
+        "title": "Zengin Metadata Desteği",
+        "text": "Dublin Core, MODS ve özel metadata şemaları ile dijital nesnelerinizi detaylı şekilde tanımlayın. Standartlara uygun kataloglama yapın."
+      },
+      {
+        "icon": "fas fa-photo-video",
+        "title": "Çoklu Medya Yönetimi",
+        "text": "Görsel, video, ses, PDF ve 3D model dosyalarını destekleyen kapsamlı medya yönetimi. Otomatik küçük resim oluşturma ve format dönüştürme."
+      },
+      {
+        "icon": "fas fa-puzzle-piece",
+        "title": "Tema ve Eklenti Desteği",
+        "text": "Zengin tema ve eklenti ekosistemi ile platformu ihtiyacınıza göre özelleştirin. Özel tasarım ve işlevsellik ekleyin."
+      },
+      {
+        "icon": "fas fa-search-dollar",
+        "title": "SEO Optimizasyonu",
+        "text": "Arama motoru dostu URL yapısı, meta etiketler ve yapısal veri desteği ile sergilerinizin keşfedilebilirliğini artırın."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "API Entegrasyonu",
+        "text": "RESTful API ile diğer sistemlerle sorunsuz entegrasyon sağlayın. OAI-PMH protokolü ile metadata paylaşımı yapın."
+      },
+      {
+        "icon": "fas fa-link",
+        "title": "Linked Data Desteği",
+        "text": "Omeka S ile JSON-LD, RDF ve SPARQL desteği sayesinde koleksiyonlarınızı semantik web standartlarına uygun hale getirin."
+      },
+      {
+        "icon": "fas fa-users-cog",
+        "title": "Kullanıcı Rolleri",
+        "text": "Yönetici, editör, katkıda bulunan ve araştırmacı rolleri ile erişim kontrolünü detaylı şekilde yönetin."
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "title": "Neden Omeka?",
+    "intro": "Kültürel miras projeleriniz için Omeka'yı tercih etmeniz gereken temel nedenler.",
+    "items": [
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Açık Kaynak ve Ücretsiz",
+        "text": "Lisans maliyeti olmadan tam donanımlı bir dijital sergileme platformuna sahip olun. Kaynak koduna erişim ile tam kontrol sağlayın."
+      },
+      {
+        "icon": "fas fa-laptop-code",
+        "title": "Kolay Kullanım",
+        "text": "Teknik bilgi gerektirmeden sezgisel arayüz ile dijital sergiler ve koleksiyonlar oluşturun. Hızlı öğrenme eğrisi."
+      },
+      {
+        "icon": "fas fa-certificate",
+        "title": "Uluslararası Standartlar",
+        "text": "Dublin Core, OAI-PMH, Linked Data ve diğer uluslararası standartlara tam uyumluluk ile profesyonel kataloglama."
+      },
+      {
+        "icon": "fas fa-expand-arrows-alt",
+        "title": "Ölçeklenebilir Yapı",
+        "text": "Küçük bir koleksiyondan milyonlarca nesneye kadar ölçeklenebilen esnek mimari. Büyüdükçe sizinle birlikte büyür."
+      },
+      {
+        "icon": "fas fa-users",
+        "title": "Güçlü Topluluk",
+        "text": "Dünya genelinde binlerce kurum ve geliştirici tarafından desteklenen aktif bir topluluk. Sürekli güncelleme ve iyileştirmeler."
+      },
+      {
+        "icon": "fas fa-hand-holding-heart",
+        "title": "MirAkıl Uzman Desteği",
+        "text": "Kurulum, özelleştirme, veri aktarımı ve eğitim süreçlerinde MirAkıl'ın deneyimli ekibinden profesyonel destek alın."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Dijital Sergilerinizi Hayata Geçirin",
+    "text": "Kültürel miras projeleriniz ve dijital sergi ihtiyaçlarınız için ücretsiz danışmanlık alın.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

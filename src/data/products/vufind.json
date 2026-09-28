@@ -1,0 +1,369 @@
+{
+  "slug": "vufind",
+  "color": "#619144",
+  "meta": {
+    "title": "VuFind - Kütüphane Arama Arayüzü | MirAkıl",
+    "description": "VuFind kütüphane arama ve keşif arayüzü. Kütüphane katalogları için kullanıcı dostu arama motoru. MirAkıl ile VuFind kurulum ve özelleştirme.",
+    "keywords": "VuFind, kütüphane arama motoru, katalog arama sistemi, kütüphane keşif arayüzü, federated search, kütüphane arama yazılımı, VuFind kurulumu, açık kaynak arama",
+    "ogTitle": "VuFind - Kütüphane Arama Arayüzü | MirAkıl",
+    "ogDescription": "VuFind ile kütüphane katalogları için kullanıcı dostu bir arama arayüzü. MirAkıl Veri İşleme - kurulum, özelleştirme ve destek hizmetleri."
+  },
+  "order": [
+    "stats",
+    "overview",
+    "modules",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-search",
+    "name": "VuFind",
+    "subtitle": "Kütüphane Arama Arayüzü",
+    "lead": "Kütüphane katalogları için kullanıcı dostu bir arama arayüzü sunar. Birden fazla kaynağı tek bir platformda birleştirerek bilgiye hızlı ve kolay erişim sağlar.",
+    "ctas": [
+      {
+        "href": "https://katalog.btu.edu.tr/vufind/?lng=tr",
+        "label": "Canlı Demoyu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 500,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dünya Genelinde Kurulum"
+    },
+    {
+      "target": 20,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": 100,
+      "prefix": "%",
+      "suffix": null,
+      "text": null,
+      "label": "Açık Kaynak"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "Solr",
+      "label": "Apache Arama Motoru"
+    }
+  ],
+  "overview": {
+    "title": "VuFind Nedir?",
+    "paragraphs": [
+      "VuFind, kütüphane kaynakları için geliştirilmiş açık kaynaklı bir keşif arayüzüdür. Villanova Üniversitesi tarafından başlatılan proje, dünya genelinde yüzlerce kütüphane ve bilgi merkezi tarafından aktif olarak kullanılmaktadır.",
+      "VuFind, geleneksel kütüphane kataloglarının (OPAC) ötesine geçerek kullanıcılara modern ve sezgisel bir arama deneyimi sunar. Apache Solr arama motoru üzerine inşa edilen sistem, milyonlarca kaydı milisaniyeler içinde tarayarak ilgili sonuçları hızla getirir.",
+      "Sistem; kütüphane katalogları, dijital arşivler, kurumsal depolar ve diğer bilgi kaynaklarını tek bir arayüz altında birleştirerek kullanıcıların tüm kaynaklara tek noktadan erişmesini mümkün kılar. Faceted (yönlü) arama, otomatik tamamlama, öneri sistemi ve kişiselleştirme özellikleriyle modern bir arama deneyimi sağlar."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-search-plus",
+        "title": "Gelişmiş Arama Motoru",
+        "text": "Apache Solr tabanlı güçlü indeksleme ve arama altyapısı ile milyonlarca kayıt arasında anlık sonuçlar."
+      },
+      {
+        "icon": "fas fa-layer-group",
+        "title": "Birleşik Erişim",
+        "text": "Farklı kütüphane sistemleri ve dijital kaynaklardan gelen verileri tek bir arayüzde birleştirir."
+      },
+      {
+        "icon": "fas fa-paint-brush",
+        "title": "Esnek Özelleştirme",
+        "text": "Tema sistemi ve modüler yapısı sayesinde kurumunuzun kimliğine uygun arayüz tasarımı."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "Kolay Entegrasyon",
+        "text": "Koha, Alma, Symphony ve diğer ILS sistemleriyle sorunsuz entegrasyon desteği."
+      }
+    ]
+  },
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "VuFind'in temel modüllerini keşfedin. Modern keşif arayüzü, esnek facet filtreleme ve geniş entegrasyon ile zengin kullanıcı deneyimi.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-magnifying-glass",
+        "label": "Çoklu Kaynak Arama"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-filter",
+        "label": "Facet Filtreleme"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-user",
+        "label": "MyResearch"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-database",
+        "label": "MARC + Solr"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-paint-brush",
+        "label": "Tema & Markalama"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-magnifying-glass",
+        "eyebrow": "Son kullanıcı için",
+        "title": "Çoklu Kaynak Arama",
+        "desc": "Tek bir arama kutusunda kütüphanenin tüm kaynaklarını sorgulayın. Solr indeksleme, autosuggest ve faset desteği ile hızlı, isabetli sonuçlar.",
+        "features": [
+          {
+            "i": "fa-layer-group",
+            "t": "Tek aramada tüm kaynaklar"
+          },
+          {
+            "i": "fa-bolt",
+            "t": "Solr ile yüksek performans"
+          },
+          {
+            "i": "fa-keyboard",
+            "t": "Otomatik tamamlama (autosuggest)"
+          },
+          {
+            "i": "fa-sliders",
+            "t": "Facet bazlı sonuç daraltma"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-filter",
+        "eyebrow": "Keşif için",
+        "title": "Facet Filtreleme",
+        "desc": "Format, dil, yıl, yazar ve daha fazlası için çok seçimli facet filtreleri. Aramalar kayıt edilebilir, tekrar çağrılabilir.",
+        "features": [
+          {
+            "i": "fa-tags",
+            "t": "Format / dil / yıl / yazar"
+          },
+          {
+            "i": "fa-list-check",
+            "t": "Çok seçimli filtreleme"
+          },
+          {
+            "i": "fa-bookmark",
+            "t": "Kayıt edilebilir aramalar"
+          },
+          {
+            "i": "fa-clock-rotate-left",
+            "t": "Arama geçmişi"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-user",
+        "eyebrow": "Üye için",
+        "title": "MyResearch",
+        "desc": "Üyelere özel kişisel hesap alanı; rezervasyon takibi, favori liste yönetimi ve ödünç geçmişine tek noktadan erişim.",
+        "features": [
+          {
+            "i": "fa-id-badge",
+            "t": "Kişisel hesap paneli"
+          },
+          {
+            "i": "fa-calendar-check",
+            "t": "Rezervasyon takibi"
+          },
+          {
+            "i": "fa-heart",
+            "t": "Favori ve okuma listeleri"
+          },
+          {
+            "i": "fa-clock-rotate-left",
+            "t": "Ödünç geçmişi"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-database",
+        "eyebrow": "Sistemci için",
+        "title": "MARC + Solr",
+        "desc": "MARC21 kayıt aktarımı, Solr indeks yapılandırması ve özel boost ayarları ile arama deneyimini ihtiyaca göre şekillendirin.",
+        "features": [
+          {
+            "i": "fa-file-import",
+            "t": "MARC21 kayıt aktarımı"
+          },
+          {
+            "i": "fa-cubes",
+            "t": "Solr indeks yapılandırması"
+          },
+          {
+            "i": "fa-arrow-up-right-dots",
+            "t": "Özel boost ayarları"
+          },
+          {
+            "i": "fa-rotate",
+            "t": "Inkrementel reindex"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-paint-brush",
+        "eyebrow": "Yönetici için",
+        "title": "Tema & Markalama",
+        "desc": "Bootstrap tabanlı tema sistemi, kurum logosu ve renk paletini kolayca özelleştirin. Çoklu dil desteği yerleşik gelir.",
+        "features": [
+          {
+            "i": "fa-palette",
+            "t": "Bootstrap tabanlı tema"
+          },
+          {
+            "i": "fa-image",
+            "t": "Kurum logosu / başlık"
+          },
+          {
+            "i": "fa-pen-ruler",
+            "t": "Renk ve tipografi"
+          },
+          {
+            "i": "fa-language",
+            "t": "Çoklu dil desteği"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "VuFind, kütüphane kullanıcılarının bilgiye hızlı ve etkin bir şekilde erişmesini sağlayan kapsamlı özellikler sunar.",
+    "items": [
+      {
+        "icon": "fas fa-globe-americas",
+        "title": "Birleşik Katalog Arama",
+        "text": "Birden fazla kütüphane kataloğunu ve dijital koleksiyonu tek bir arama noktasında birleştirerek kapsamlı sonuçlar sunar."
+      },
+      {
+        "icon": "fas fa-filter",
+        "title": "Faceted Arama ve Filtreleme",
+        "text": "Yazar, konu, tarih, dil, format gibi çeşitli filtrelerle arama sonuçlarını daraltma ve yönlü navigasyon imkanı sağlar."
+      },
+      {
+        "icon": "fas fa-hand-pointer",
+        "title": "Kullanıcı Dostu Arayüz",
+        "text": "Modern ve sezgisel tasarımı ile her seviyedeki kullanıcının kolayca arama yapabilmesini ve sonuçlara erişmesini sağlar."
+      },
+      {
+        "icon": "fas fa-project-diagram",
+        "title": "Çoklu Kaynak Entegrasyonu",
+        "text": "Koha, Alma, EDS, Primo ve diğer ILS/keşif sistemleri ile sorunsuz entegrasyon kurarak tüm kaynakları birleştirir."
+      },
+      {
+        "icon": "fas fa-palette",
+        "title": "Özelleştirilebilir Temalar",
+        "text": "Esnek tema sistemi sayesinde kurumunuzun kurumsal kimliğine uygun görsel tasarım ve arayüz düzenlemesi yapılabilir."
+      },
+      {
+        "icon": "fas fa-language",
+        "title": "Çok Dilli Destek",
+        "text": "Türkçe dahil 20'den fazla dil desteği ile uluslararası kullanıcılar için çoklu dil arayüzü ve yerelleştirme seçenekleri sunar."
+      },
+      {
+        "icon": "fas fa-code",
+        "title": "API Entegrasyonu",
+        "text": "RESTful API desteği sayesinde üçüncü parti uygulamalar ve mobil platformlarla veri alışverişi ve entegrasyon imkanı sağlar."
+      },
+      {
+        "icon": "fas fa-mobile-alt",
+        "title": "Responsive Tasarım",
+        "text": "Masaüstü, tablet ve mobil cihazlarda sorunsuz çalışan duyarlı arayüz tasarımı ile her yerden erişim kolaylığı sunar."
+      }
+    ]
+  },
+  "why": {
+    "id": "why-vufind",
+    "title": "Neden VuFind?",
+    "intro": "VuFind, kütüphanelerin dijital dönüşüm sürecinde arama ve keşif deneyimini üst seviyeye taşıyan güçlü bir çözümdür.",
+    "items": [
+      {
+        "icon": "fas fa-rocket",
+        "title": "Yüksek Performans",
+        "text": "Apache Solr arama motoru sayesinde milyonlarca kayıt arasında milisaniyeler içinde arama yaparak kullanıcılara hızlı sonuçlar sunar. Ölçeklenebilir mimarisi büyük koleksiyonlarda bile kesintisiz performans sağlar."
+      },
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Açık Kaynak Avantajı",
+        "text": "Lisans maliyeti olmadan tam donanımlı bir keşif arayüzü sunar. Kaynak kodu açık olduğundan kurumunuzun ihtiyaçlarına göre özgürce özelleştirilebilir ve genişletilebilir."
+      },
+      {
+        "icon": "fas fa-users",
+        "title": "Güçlü Topluluk",
+        "text": "Dünya genelinde aktif bir geliştirici ve kullanıcı topluluğu tarafından desteklenir. Sürekli güncellenen belgeler, forumlar ve düzenli sürüm güncellemeleri ile güvenilir bir ekosistem sunar."
+      },
+      {
+        "icon": "fas fa-puzzle-piece",
+        "title": "Modüler Mimari",
+        "text": "Eklenti tabanlı modüler yapısı sayesinde ihtiyaç duyulan özellikleri kolayca ekleyebilir, gereksiz bileşenleri devre dışı bırakabilirsiniz. Laminas Framework altyapısı güçlü bir temel sağlar."
+      },
+      {
+        "icon": "fas fa-sync-alt",
+        "title": "Kolay Göç ve Geçiş",
+        "text": "Mevcut kütüphane sisteminizle yan yana çalışabilir. Koha, Alma veya diğer ILS sistemlerinizden veri çekme ve senkronizasyon süreçleri sorunsuz şekilde gerçekleştirilir."
+      },
+      {
+        "icon": "fas fa-shield-alt",
+        "title": "Güvenlik ve Güvenilirlik",
+        "text": "Düzenli güvenlik güncellemeleri, LDAP/Shibboleth kimlik doğrulama desteği ve güçlü erişim kontrol mekanizmaları ile verileriniz güvende kalır."
+      }
+    ]
+  },
+  "cta": {
+    "title": "VuFind ile Kütüphanenizi Keşfedilebilir Kılın",
+    "text": "VuFind kurulum, özelleştirme ve entegrasyon hizmetlerimiz hakkında bilgi almak için bizimle iletişime geçin.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-green"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+---
+// Internal dashboard: markup, styles and logic are carried over verbatim from the
+// legacy admin.html; only fonts/radius follow the new tokens and credentials are injected.
+import '@fontsource/figtree/400.css';
+import '@fontsource/figtree/500.css';
+import '@fontsource/figtree/600.css';
+import '@fontsource/archivo/700.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../styles/admin-legacy.css';
+import { url, supabase } from '../lib/site';
+import body from '../components/admin/admin-body.html?raw';
+import adminScript from '../scripts/admin-legacy.js?raw';
+
+const cfg = `window.MIRAKIL_SUPABASE = ${JSON.stringify({ url: supabase.url, anonKey: supabase.anonKey })};`;
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MirAkıl - Admin Paneli</title>
+    <meta name="description" content="MirAkıl Veri İşleme yönetim paneli - destek talepleri ve iletişim yönetimi." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href={url('favicon.ico')} sizes="any" />
+  </head>
+  <body>
+    <Fragment set:html={body} />
+    <script is:inline set:html={cfg} />
+    <script is:inline set:html={adminScript} />
+  </body>
+</html>

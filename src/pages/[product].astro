@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductHero from '../components/product/ProductHero.astro';
+import Modules from '../components/product/Modules.astro';
+import Overview from '../components/product/Overview.astro';
+import Features from '../components/product/Features.astro';
+import Why from '../components/product/Why.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { products } from '../lib/site';
+
+// One JSON file per product, extracted 1:1 from the legacy pages.
+const files = import.meta.glob('../data/products/*.json', { eager: true, import: 'default' });
+
+export function getStaticPaths() {
+  const all = import.meta.glob('../data/products/*.json', { eager: true, import: 'default' }) as Record<string, any>;
+  return Object.values(all).map((p) => ({ params: { product: p.slug } }));
+}
+
+const { product } = Astro.params;
+const p = Object.values(files as Record<string, any>).find((d) => d.slug === product);
+// Stats move into the hero; remaining sections keep the legacy order.
+const logo = products.find((x) => x.slug === p.slug)!.logo;
+const order: string[] = p.order.filter((s: string) => s !== 'stats');
+---
+<BaseLayout
+  title={p.meta.title}
+  description={p.meta.description}
+  keywords={p.meta.keywords}
+  ogTitle={p.meta.ogTitle}
+  ogDescription={p.meta.ogDescription}
+  path={`${p.slug}.html`}
+  nav="products"
+  contactHref="#contact"
+>
+  <ProductHero
+    name={p.hero.name}
+    subtitle={p.hero.subtitle}
+    lead={p.hero.lead}
+    logo={logo}
+    ctas={p.hero.ctas}
+    stats={p.stats}
+  />
+
+  {order.map((section) => {
+    if (section === 'modules') return <Modules productName={p.hero.name} title={p.modules.title} intro={p.modules.intro} tabs={p.modules.tabs} data={p.modules.data} />;
+    if (section === 'overview') return <Overview {...p.overview} />;
+    if (section === 'features' && p.features) return <Features {...p.features} />;
+    if (section === 'why') return <Why {...p.why} />;
+    return null;
+  })}
+
+  <CtaBanner id="contact" title={p.cta.title} text={p.cta.text} buttons={p.cta.buttons} />
+</BaseLayout>

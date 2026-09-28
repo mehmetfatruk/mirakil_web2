@@ -1,0 +1,199 @@
+---
+import StatValue from '../StatValue.astro';
+
+const slides = [
+  {
+    title: 'Müze, Arşiv ve Kütüphane Otomasyonunda Uzman Çözümler',
+    text: 'Dünya standartlarında açık kaynaklı platformlarla bilgi ve belge yönetimi süreçlerinizi dijitalleştiriyoruz.',
+    image: 'https://images.unsplash.com/photo-1544213456-bc37cb97df74?w=1920&q=80',
+    alt: 'Müze galerisi',
+    ctas: [{ href: '#contact', label: 'Ücretsiz Demo Talep Edin' }, { href: '#products', label: 'Ürünlerimizi İnceleyin' }],
+  },
+  {
+    title: 'Koha, DSpace, Omeka ve Daha Fazlası',
+    text: '8 farklı açık kaynaklı platform ile kütüphaneler, arşivler, müzeler ve akademik kurumlar için özelleştirilmiş çözümler.',
+    image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1920&q=80',
+    alt: 'Kütüphane',
+    ctas: [{ href: '#products', label: 'Tüm Ürünlerimiz' }, { href: '#services', label: 'Hizmetlerimiz' }],
+  },
+  {
+    title: 'Yazılım, Donanım, Eğitim ve Danışmanlık',
+    text: 'Kurulum, özelleştirme, veri aktarımı, eğitim ve 7/24 teknik destek ile dijital dönüşümünüzde yanınızdayız.',
+    image: 'https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=1920&q=80',
+    alt: 'Arşiv deposu',
+    ctas: [{ href: '#contact', label: 'Bize Ulaşın' }, { href: '#why-us', label: 'Neden MirAkıl?' }],
+  },
+];
+
+const stats = [
+  { target: 12, suffix: '+', label: 'Yıllık Tecrübe', icon: 'fas fa-award' },
+  { target: 50, suffix: '+', label: 'Kurumsal Müşteri', icon: 'fas fa-building-columns' },
+  { target: 8, label: 'Açık Kaynak Platform', icon: 'fas fa-layer-group' },
+  { target: null, text: '7/24', label: 'Teknik Destek', icon: 'fas fa-headset' },
+];
+---
+<section class="hero" id="hero" aria-roledescription="carousel" aria-label="Öne çıkanlar" data-slider>
+  <h1 class="sr-only">MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Yazılımları</h1>
+
+  <div class="hero-media" aria-hidden="true">
+    {slides.map((s, i) => (
+      <img src={s.image} alt="" data-media class={i === 0 ? 'is-active' : ''} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} width="1920" height="1280" />
+    ))}
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-slides">
+      {slides.map((s, i) => (
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${slides.length}: ${s.alt}`} data-slide aria-hidden={i === 0 ? 'false' : 'true'}>
+          <span class="hero-kicker">Müze, Arşiv ve Kütüphane Yönetim Çözümleri</span>
+          <h2>{s.title}</h2>
+          <p>{s.text}</p>
+          <div class="btn-row">
+            <a href={s.ctas[0].href} class="btn" tabindex={i === 0 ? 0 : -1}>{s.ctas[0].label} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a href={s.ctas[1].href} class="btn btn--outline-light" tabindex={i === 0 ? 0 : -1}>{s.ctas[1].label}</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="hero-controls">
+      <div class="hero-dots" role="tablist" aria-label="Slayt seçimi">
+        {slides.map((_, i) => (
+          <button type="button" role="tab" class="hero-dot" aria-selected={i === 0 ? 'true' : 'false'} aria-label={`Slayt ${i + 1}`} data-dot><span></span></button>
+        ))}
+      </div>
+      <div class="hero-arrows">
+        <button type="button" class="hero-arrow" aria-label="Otomatik geçişi durdur" aria-pressed="false" data-toggle><i class="fas fa-pause" aria-hidden="true"></i></button>
+        <button type="button" class="hero-arrow" aria-label="Önceki" data-prev><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+        <button type="button" class="hero-arrow" aria-label="Sonraki" data-next><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero-stats" aria-label="Şirket istatistikleri">
+  <div class="container">
+    <dl class="hero-stats-grid reveal-stagger" data-count>
+      {stats.map((s) => (
+        <div class="hero-stat">
+          <span class="hero-stat-icon" aria-hidden="true"><i class={s.icon}></i></span>
+          <div>
+            <dd class="stat-num"><StatValue {...s} /></dd>
+            <dt class="stat-label">{s.label}</dt>
+          </div>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; isolation: isolate; overflow: hidden; color: #fff; background: var(--navy-2); }
+  .hero-media { position: absolute; inset: 0; z-index: -2; }
+  .hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity 1.1s var(--ease-out), transform 8s linear; }
+  .hero-media img.is-active { opacity: 1; transform: scale(1); }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(8, 44, 84, 0.82) 0%, rgba(8, 52, 100, 0.62) 40%, rgba(8, 52, 100, 0.18) 78%, rgba(8, 52, 100, 0.05) 100%),
+      linear-gradient(0deg, rgba(8, 44, 84, 0.45), transparent 35%);
+  }
+  .hero-inner { display: flex; flex-direction: column; justify-content: center; min-height: min(720px, calc(100dvh - var(--nav-h) - var(--utility-h))); padding-block: var(--sp-8) 140px; }
+  .hero-slides { display: grid; max-width: 700px; }
+  .hero-slide { grid-area: 1 / 1; visibility: hidden; opacity: 0; transition: opacity 500ms var(--ease-out), visibility 500ms; }
+  .hero-slide[aria-hidden='false'] { visibility: visible; opacity: 1; }
+  .hero-kicker { display: inline-flex; align-items: center; gap: var(--sp-2); padding: 6px 14px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 700; letter-spacing: 0.02em; color: #fff; background: rgba(10, 143, 214, 0.35); border: 1px solid rgba(120, 200, 245, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .hero-slide h2 { text-shadow: 0 2px 24px rgba(4, 30, 60, 0.35); margin-top: var(--sp-5); font-size: var(--fs-display-xl); font-weight: 800; line-height: 1.07; letter-spacing: -0.02em; color: #fff; }
+  .hero-slide p { margin-top: var(--sp-5); font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); line-height: 1.6; color: rgba(255, 255, 255, 0.86); max-width: 56ch; }
+  .hero-slide .btn-row { margin-top: var(--sp-6); }
+
+  .hero-controls { display: flex; align-items: center; gap: var(--sp-5); margin-top: var(--sp-7); max-width: 560px; }
+  .hero-dots { display: flex; gap: var(--sp-2); flex: 1; }
+  .hero-dot { flex: 1; height: 44px; display: flex; align-items: center; }
+  .hero-dot span { position: relative; display: block; width: 100%; height: 4px; border-radius: var(--r-pill); background: rgba(255, 255, 255, 0.25); overflow: hidden; }
+  .hero-dot span::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: var(--brand-bright); transform: scaleX(0); transform-origin: left; }
+  .hero-dot[aria-selected='true'] span::after { transform: scaleX(1); }
+  .hero.is-playing .hero-dot[aria-selected='true'] span::after { animation: hero-progress var(--hero-ms, 7000ms) linear forwards; }
+  @keyframes hero-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .hero-arrows { display: flex; gap: var(--sp-2); }
+  .hero-arrow { width: 44px; height: 44px; border-radius: 50%; color: #fff; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.25); transition: background-color var(--dur-fast), border-color var(--dur-fast); }
+  .hero-arrow:hover { background: var(--brand); border-color: var(--brand); }
+
+  .hero-stats { position: relative; z-index: 2; margin-top: -84px; }
+  .hero-stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); }
+  .hero-stat { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-5); background: var(--canvas); border-radius: var(--r-md); box-shadow: var(--shadow-md); }
+  .hero-stat-icon { display: grid; place-items: center; flex: none; width: 56px; height: 56px; border-radius: 14px; background: var(--brand-tint); color: var(--brand); font-size: 1.35rem; }
+  .hero-stat dd { margin: 0; }
+  .hero-stat .stat-num { font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem); }
+  .hero-stat .stat-label { margin-top: 2px; }
+
+  @media (max-width: 959px) {
+    .hero::before { background: linear-gradient(180deg, rgba(8, 44, 84, 0.62), rgba(8, 44, 84, 0.82)); }
+    .hero-inner { padding-block: var(--sp-7) 120px; min-height: 0; }
+    .hero-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 479px) {
+    .hero-slide .btn { width: 100%; }
+    .hero-stat { flex-direction: column; align-items: flex-start; gap: var(--sp-3); padding: var(--sp-4); }
+    .hero-stat-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+  }
+</style>
+
+<script>
+  import { enter } from '../../scripts/motion-presets';
+  const root = document.querySelector<HTMLElement>('[data-slider]');
+  if (root) {
+    const slides = Array.from(root.querySelectorAll<HTMLElement>('[data-slide]'));
+    const media = Array.from(root.querySelectorAll<HTMLImageElement>('[data-media]'));
+    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-dot]'));
+    const MS = 7000;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    root.style.setProperty('--hero-ms', `${MS}ms`);
+    let current = 0;
+    let timer: number | undefined;
+    let userPaused = reduce; // explicit pause via the toggle (WCAG 2.2.2)
+    const toggle = root.querySelector<HTMLButtonElement>('[data-toggle]');
+
+    const go = (i: number) => {
+      current = (i + slides.length) % slides.length;
+      slides.forEach((s, j) => {
+        const on = j === current;
+        s.setAttribute('aria-hidden', String(!on));
+        s.querySelectorAll('a').forEach((a) => (a.tabIndex = on ? 0 : -1));
+      });
+      media.forEach((m, j) => m.classList.toggle('is-active', j === current));
+      enter(slides[current].children, { y: 18, gap: 0.08 });
+      dots.forEach((d, j) => {
+        d.setAttribute('aria-selected', String(j === current));
+        const bar = d.querySelector('span')!;
+        bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = '';
+      });
+    };
+    const play = () => {
+      if (userPaused) return;
+      window.clearInterval(timer);
+      root.classList.add('is-playing');
+      timer = window.setInterval(() => go(current + 1), MS);
+    };
+    const pause = () => { window.clearInterval(timer); root.classList.remove('is-playing'); };
+    const syncToggle = () => {
+      if (!toggle) return;
+      toggle.setAttribute('aria-pressed', String(userPaused));
+      toggle.setAttribute('aria-label', userPaused ? 'Otomatik geçişi başlat' : 'Otomatik geçişi durdur');
+      toggle.innerHTML = `<i class="fas ${userPaused ? 'fa-play' : 'fa-pause'}" aria-hidden="true"></i>`;
+    };
+    toggle?.addEventListener('click', () => {
+      userPaused = !userPaused;
+      syncToggle();
+      if (userPaused) pause(); else play();
+    });
+    syncToggle();
+    dots.forEach((d, i) => d.addEventListener('click', () => { go(i); play(); }));
+    root.querySelector('[data-prev]')?.addEventListener('click', () => { go(current - 1); play(); });
+    root.querySelector('[data-next]')?.addEventListener('click', () => { go(current + 1); play(); });
+    root.addEventListener('focusin', pause);
+    root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget as Node)) play(); });
+    document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+    play();
+  }
+</script>

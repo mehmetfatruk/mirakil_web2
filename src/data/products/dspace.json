@@ -1,0 +1,346 @@
+{
+  "slug": "dspace",
+  "color": "#44a340",
+  "meta": {
+    "title": "DSpace - Dijital Arşiv ve Kurumsal İçerik Yönetim Sistemi | MirAkıl",
+    "description": "DSpace dijital arşiv ve kurumsal depo yazılımı. Akademik kurumlar için açık erişim arşivi, Dublin Core metadata, OAI-PMH desteği. MirAkıl ile kurulum ve destek.",
+    "keywords": "DSpace, dijital arşiv yazılımı, kurumsal depo, akademik arşiv, açık erişim arşivi, Dublin Core, OAI-PMH, kurumsal içerik yönetimi, DSpace kurulumu, dijital kütüphane",
+    "ogTitle": "DSpace - Dijital Arşiv ve Kurumsal İçerik Yönetim Sistemi | MirAkıl",
+    "ogDescription": "DSpace dijital arşiv ve kurumsal içerik yönetim sistemi. Akademik kurumlar için açık erişim arşivi, Dublin Core metadata, OAI-PMH protokolü desteği."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-database",
+    "name": "DSpace",
+    "subtitle": "Dijital Arşiv ve Kurumsal İçerik Yönetim Sistemi",
+    "lead": "Akademik kurumlar ve araştırma merkezleri için tasarlanmış açık kaynak kodlu dijital arşiv platformudur. Tezler, makaleler ve kurumsal içeriklerinizi tek bir platformda toplayıp dünyaya açın.",
+    "ctas": [
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 3000,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Dünya Genelinde Kurum"
+    },
+    {
+      "target": 60,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "BSD",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "Java",
+      "label": "Backend Teknolojisi"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "DSpace'in temel modüllerini keşfedin. Akademik kurum arşivciliği, açık erişim ve uzun süreli koruma için bütünleşik çözüm.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-sitemap",
+        "label": "Topluluk & Koleksiyon"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-file-arrow-up",
+        "label": "Gönderim & İş Akışı"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-broadcast-tower",
+        "label": "OAI-PMH & Harvest"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-search",
+        "label": "Arama & Tarama"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-user-shield",
+        "label": "Yetki & Kullanıcı"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-sitemap",
+        "eyebrow": "Kütüphaneci için",
+        "title": "Topluluk & Koleksiyon",
+        "desc": "Hiyerarşik topluluk yapısı, koleksiyonlar ve alt koleksiyonlar ile kurum arşivinizi mantıksal olarak organize edin; yetki devri ile dağıtık yönetim.",
+        "features": [
+          {
+            "i": "fa-folder-tree",
+            "t": "Hiyerarşik topluluk yapısı"
+          },
+          {
+            "i": "fa-folder-open",
+            "t": "Koleksiyon ve alt koleksiyon"
+          },
+          {
+            "i": "fa-user-tag",
+            "t": "Yetki devri"
+          },
+          {
+            "i": "fa-link",
+            "t": "Çapraz koleksiyon bağıntıları"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-file-arrow-up",
+        "eyebrow": "Yazar / Editör için",
+        "title": "Gönderim & İş Akışı",
+        "desc": "Adım adım self-arşivleme gönderimi, hakem onay süreci, lisans seçimi ve embargo yönetimi ile şeffaf yayın iş akışı.",
+        "features": [
+          {
+            "i": "fa-list-ol",
+            "t": "Adım adım gönderim sihirbazı"
+          },
+          {
+            "i": "fa-user-check",
+            "t": "Hakem / editör onayı"
+          },
+          {
+            "i": "fa-scale-balanced",
+            "t": "Lisans seçimi (CC vb.)"
+          },
+          {
+            "i": "fa-hourglass-half",
+            "t": "Embargo yönetimi"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-broadcast-tower",
+        "eyebrow": "Sistemci için",
+        "title": "OAI-PMH & Harvest",
+        "desc": "OAI-PMH endpoint, OpenAIRE/DRIVER uyumlu metaveri profilleri ve harvester yapılandırması ile uluslararası arşiv ağlarına bağlanın.",
+        "features": [
+          {
+            "i": "fa-tower-broadcast",
+            "t": "OAI-PMH endpoint"
+          },
+          {
+            "i": "fa-globe",
+            "t": "OpenAIRE / DRIVER uyum"
+          },
+          {
+            "i": "fa-arrows-rotate",
+            "t": "Harvester yapılandırma"
+          },
+          {
+            "i": "fa-code",
+            "t": "Dublin Core / DRIVER profili"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-search",
+        "eyebrow": "Kullanıcı için",
+        "title": "Arama & Tarama",
+        "desc": "Tam metin arama, çok boyutlu facet filtreleme, browse-by ve RSS akışı ile araştırmacılara güçlü keşif araçları sunun.",
+        "features": [
+          {
+            "i": "fa-magnifying-glass",
+            "t": "Tam metin arama"
+          },
+          {
+            "i": "fa-filter",
+            "t": "Facet filtreleme"
+          },
+          {
+            "i": "fa-list",
+            "t": "Browse by tarama"
+          },
+          {
+            "i": "fa-rss",
+            "t": "RSS / Atom akışı"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-user-shield",
+        "eyebrow": "Yönetici için",
+        "title": "Yetki & Kullanıcı",
+        "desc": "LDAP, Shibboleth ve SAML SSO entegrasyonları, esnek grup yönetimi ve granül yetkilendirme ile kurumsal kimlik sistemiyle tam uyum.",
+        "features": [
+          {
+            "i": "fa-key",
+            "t": "LDAP / Shibboleth SSO"
+          },
+          {
+            "i": "fa-users",
+            "t": "Esnek grup yönetimi"
+          },
+          {
+            "i": "fa-lock",
+            "t": "Granül yetkilendirme"
+          },
+          {
+            "i": "fa-clipboard-list",
+            "t": "Denetim ve log"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "header": {
+      "title": "Genel Bakış",
+      "intro": "Akademik kurumlar için dijital arşiv ve kurumsal içerik yönetim sistemi sağlar."
+    },
+    "highlight": {
+      "title": "Neden DSpace?",
+      "text": "DSpace, kurumsal açık erişim arşivi oluşturmak isteyen akademik kuruluşlar için en güvenilir ve en yaygın kullanılan çözümdür. Uluslararası metadata standartlarına tam uyumluluk, güçlü arama altyapısı ve esnek yapılandırma seçenekleri sunar."
+    },
+    "paragraphs": [
+      "DSpace, dünya genelinde 3.000'den fazla kurum tarafından kullanılan, açık kaynaklı bir dijital arşiv ve kurumsal içerik yönetim platformudur. MIT ve Hewlett-Packard iş birliğiyle geliştirilen DSpace, üniversiteler, araştırma merkezleri ve kamu kurumları tarafından akademik çıktıların dijital ortamda korunması, düzenlenmesi ve erişime sunulması amacıyla tercih edilmektedir.",
+      "Tezler, makaleler, araştırma verileri, konferans bildirileri, teknik raporlar, görsel ve işitsel materyaller gibi her türlü dijital içerik DSpace ile arşivlenebilir. Sistem, Dublin Core metadata standardını temel alarak içeriklerin uluslararası düzeyde keşfedilebilir ve paylaşılabilir olmasını garanti eder.",
+      "DSpace, OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) protokolünü destekleyerek kurumunuzun dijital arşivini Google Scholar, BASE, OpenAIRE ve diğer akademik arama motorları tarafından taranabilir hale getirir. DOI (Digital Object Identifier) entegrasyonu sayesinde her dijital nesneye benzersiz ve kalıcı bir tanımlayıcı atanabilir.",
+      "MirAkıl olarak DSpace'in kurulumu, yapılandırması, özelleştirilmesi, veri göçü ve sürekli teknik desteği konularında kapsamlı hizmetler sunuyoruz. Kurumunuzun ihtiyaçlarına uygun olarak DSpace altyapısını en verimli şekilde yapılandırıyoruz."
+    ],
+    "cards": []
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "DSpace'in sunduğu güçlü özelliklerle dijital arşiv yönetimini en üst düzeye taşıyın.",
+    "items": [
+      {
+        "icon": "fas fa-unlock-alt",
+        "title": "Kurumsal Açık Erişim Arşivi",
+        "text": "Üniversite ve araştırma kurumlarının akademik çıktılarını açık erişime sunarak bilginin serbestçe paylaşılmasını sağlar."
+      },
+      {
+        "icon": "fas fa-tags",
+        "title": "Dublin Core Metadata",
+        "text": "Uluslararası Dublin Core metadata standardını destekleyerek dijital nesnelerin yapılandırılmış ve standart biçimde tanımlanmasını sağlar."
+      },
+      {
+        "icon": "fas fa-exchange-alt",
+        "title": "OAI-PMH Protokolü",
+        "text": "Açık Arşiv Girişimi protokolü ile metadata hasat desteği sunarak arşivinizin küresel akademik ağlarda keşfedilmesini sağlar."
+      },
+      {
+        "icon": "fas fa-fingerprint",
+        "title": "DOI Tanımlayıcılar",
+        "text": "Dijital Object Identifier entegrasyonu ile her dijital nesneye benzersiz, kalıcı ve uluslararası geçerlilikte tanımlayıcı atar."
+      },
+      {
+        "icon": "fas fa-search-plus",
+        "title": "Gelişmiş Arama",
+        "text": "Apache Solr tabanlı güçlü arama motoru ile tam metin arama, filtreleme ve fasetli navigasyon özellikleri sunar."
+      },
+      {
+        "icon": "fas fa-chart-bar",
+        "title": "İstatistik ve Raporlama",
+        "text": "İndirme sayıları, görüntülenme oranları ve kullanım analizleri ile arşivinizin etkisini detaylı olarak ölçümler."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "REST API",
+        "text": "Kapsamlı REST API desteği ile DSpace'i diğer kurumsal sistemler, portallar ve uygulamalarla entegre edebilirsiniz."
+      },
+      {
+        "icon": "fas fa-file-alt",
+        "title": "Çoklu Dosya Formatı Desteği",
+        "text": "PDF, Word, görüntü, video, ses dosyaları ve veri setleri dahil olmak üzere her türlü dijital formatı destekler."
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "title": "Neden DSpace?",
+    "intro": "DSpace'i tercih etmeniz için en önemli nedenler.",
+    "items": [
+      {
+        "icon": "fas fa-globe-americas",
+        "title": "Dünya Çapında Kabul Görmüş Platform",
+        "text": "3.000'den fazla kurumun güvendiği DSpace, dijital arşiv alanında dünyanın en yaygın kullanılan açık kaynaklı çözümüdür. Güçlü topluluk desteği ile sürekli geliştirilmektedir."
+      },
+      {
+        "icon": "fas fa-award",
+        "title": "Uluslararası Standart Uyumluluğu",
+        "text": "Dublin Core, OAI-PMH, SWORD, DOI ve ORCID gibi uluslararası standartlara tam uyum ile kurumunuzun dijital arşivini küresel akademik ekosisteme entegre eder."
+      },
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Açık Kaynak ve Ücretsiz",
+        "text": "Lisans maliyeti olmadan kurumunuz için tam özellikli bir dijital arşiv sistemi kurabilirsiniz. Açık kaynak yapısı sayesinde ihtiyaçlarınıza göre özelleştirilebilir."
+      },
+      {
+        "icon": "fas fa-shield-alt",
+        "title": "Uzun Vadeli Dijital Koruma",
+        "text": "Dijital içeriklerin uzun vadeli korunması ve erişilebilirliğinin sürdürülmesi için gelişmiş saklama stratejileri ve format dönüştürme özellikleri sunar."
+      },
+      {
+        "icon": "fas fa-cogs",
+        "title": "Esnek ve Ölçeklenebilir Mimari",
+        "text": "Küçük koleksiyonlardan milyonlarca dijital nesneye kadar ölçeklenebilen yapısı ile her büyüklükteki kurumun ihtiyacını karşılar. Topluluk, koleksiyon ve öğe hiyerarşisi ile içeriğinizi düzenleyin."
+      },
+      {
+        "icon": "fas fa-eye",
+        "title": "Akademik Görünürlük Artışı",
+        "text": "Google Scholar, BASE, OpenAIRE ve CORE gibi akademik arama motorları tarafından otomatik olarak taranarak kurumunuzun araştırma çıktılarının görünürlüğünü artırır."
+      }
+    ]
+  },
+  "cta": {
+    "title": "DSpace ile Dijital Arşivinizi Kurun",
+    "text": "Kurumunuzun akademik çıktılarını dijital ortamda koruyun, düzenleyin ve dünyayla paylaşın. Ücretsiz danışmanlık için bize ulaşın.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

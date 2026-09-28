@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSlider from '../components/home/HeroSlider.astro';
+import ContactForm from '../components/home/ContactForm.astro';
+import { url, products, services, company } from '../lib/site';
+import references from '../data/references.json';
+
+const whyUs = [
+  { icon: 'fas fa-user-tie', title: 'Uzman Kadro', text: 'Deneyimli mühendis ve kütüphaneci ekibimiz.' },
+  { icon: 'fas fa-lock-open', title: 'Açık Kaynak Güvencesi', text: 'Lisans maliyeti olmayan, sürekli gelişen çözümler.' },
+  { icon: 'fas fa-puzzle-piece', title: 'Kuruma Özel Çözümler', text: 'İhtiyaca göre özelleştirilen esnek yapılar.' },
+  { icon: 'fas fa-globe', title: 'Uluslararası Standartlar', text: 'MARC21, Dublin Core, OAI-PMH tam uyum.' },
+];
+
+const faqs = [
+  { q: 'Koha nedir ve neden tercih edilmelidir?', a: 'Koha, dünyanın en yaygın kullanılan açık kaynaklı entegre kütüphane yönetim sistemidir. 1999 yılından bu yana geliştirilen Koha, lisans maliyeti olmadan tam donanımlı bir kütüphane otomasyonu sunar.' },
+  { q: 'Açık kaynaklı yazılımlar güvenilir mi?', a: 'Evet, açık kaynaklı yazılımlar büyük bir topluluk tarafından geliştirilir ve denetlenir. Koha, DSpace ve Omeka dünya genelinde binlerce kurum tarafından güvenle kullanılmaktadır.' },
+  { q: 'Mevcut sistemimden geçiş yapabilir miyim?', a: 'Evet, mevcut sisteminizden veri göçünü profesyonel olarak gerçekleştiriyoruz. Katalog kayıtları, üye bilgileri ve tüm verileriniz güvenli bir şekilde aktarılır.' },
+  { q: 'Lisans maliyeti var mı?', a: 'Hayır, tüm ürünlerimiz açık kaynaklıdır ve lisans maliyeti yoktur. Yalnızca kurulum, özelleştirme, eğitim ve destek hizmetleri ücretlendirilir.' },
+  { q: 'Eğitim ve destek hizmeti sunuyor musunuz?', a: 'Evet, tüm ürünlerimiz için kapsamlı eğitim programları sunuyoruz. Kurulum sonrası sürekli teknik destek sağlıyoruz.' },
+];
+
+const logos = references.items;
+---
+<BaseLayout
+  title="MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Çözümleri"
+  description="MirAkıl Veri İşleme - Koha, DSpace, VuFind, Omeka, Moodle ve daha fazlası ile müze, arşiv ve kütüphane yönetim yazılımları. Kurulum, eğitim ve destek."
+  keywords="kütüphane yazılımı, müze yazılımı, arşiv yazılımı, kütüphane otomasyon sistemi, dijital arşiv, Koha, DSpace, VuFind, Omeka, Moodle, açık kaynak kütüphane, kültürel miras dijitalleştirme, koleksiyon yönetimi, MirAkıl"
+  ogTitle="MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Çözümleri"
+  ogDescription="MirAkıl Veri İşleme - Koha, DSpace, VuFind, Omeka, Moodle ve daha fazlası ile müze, arşiv ve kütüphane yönetim sistemleri."
+  path="index.html"
+  nav="home"
+  contactHref="#contact"
+>
+  <HeroSlider />
+
+  <!-- Products: real product logos (Theke / Orex pattern) -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <h2>Ürünlerimiz</h2>
+        <p>Mirakıl Veri İşleme, kütüphane, arşiv ve müze yönetimi alanlarında çeşitli açık kaynaklı yazılım çözümleri sunmaktadır.</p>
+      </div>
+      <ul role="list" class="tiles grid-4 products reveal-stagger">
+        {products.map((p) => (
+          <li>
+            <a href={url(`${p.slug}.html`)} class="product-card">
+              <span class="product-logo"><img src={url(p.logo)} alt={`${p.name} logosu`} loading="lazy" /></span>
+              <span class="product-name">{p.name}</span>
+              <span class="product-cat">{p.category}</span>
+              <span class="product-sum">{p.summary}</span>
+              <span class="link">Detaylı İncele <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services: bold brand-green cards (Orex pattern) -->
+  <section class="section section--surface" id="services">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <h2>Hizmetlerimiz</h2>
+        <p>Kurulum aşamasından bakım ve eğitim süreçlerine kadar tüm ihtiyaçlarınız için yanınızdayız.</p>
+      </div>
+      <div class="grid grid-3 services reveal-stagger">
+        {services.map((s) => (
+          <article class="service">
+            <span class="service-icon"><i class={s.icon} aria-hidden="true"></i></span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us: photo + list (Orex / Egy pattern) -->
+  <section class="section" id="why-us">
+    <div class="container why">
+      <div class="why-media reveal">
+        <img src="https://images.unsplash.com/photo-1762627105132-f6ed848a23bf?w=1200&q=80" alt="Arşiv kutuları dolu raflar" loading="lazy" width="1200" height="1100" />
+        <div class="why-badge">
+          <strong>12+</strong>
+          <span>Yıllık Tecrübe</span>
+        </div>
+      </div>
+      <div class="why-body">
+        <div class="section-head reveal">
+          <h2>Neden MirAkıl?</h2>
+          <p>Açık kaynak teknolojilerine hâkimiyetimiz ve sektördeki deneyimimizle güçlü çözümler sunuyoruz.</p>
+        </div>
+        <ul role="list" class="why-list reveal-stagger">
+          {whyUs.map((w) => (
+            <li>
+              <span class="icon-tile"><i class={w.icon} aria-hidden="true"></i></span>
+              <div>
+                <h3>{w.title}</h3>
+                <p>{w.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- References: colour client logos -->
+  <section class="section section--surface refs" aria-labelledby="refs-title">
+    <div class="container refs-head reveal">
+      <div>
+        <span class="eyebrow">Güvenilen Kurumlar</span>
+        <h2 id="refs-title">Türkiye'nin Lider Kurumları Bize Güveniyor</h2>
+        <p>Üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler MirAkıl çözümlerini tercih ediyor.</p>
+      </div>
+      <div class="refs-actions">
+        <button type="button" class="marquee-toggle" aria-pressed="false" aria-controls="refMarquee" data-marquee-toggle>
+          <i class="fas fa-pause" aria-hidden="true"></i><span>Durdur</span>
+        </button>
+        <a href={url('referanslar.html')} class="btn">Tüm Referansları Gör <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="marquee" id="refMarquee" aria-label="Referans kurum logoları" data-marquee>
+      <ul role="list" class="marquee-track">
+        {[...logos, ...logos].map((r, i) => (
+          <li aria-hidden={i >= logos.length ? 'true' : undefined}>
+            <img src={url(`assets/${r.logo}`)} alt={i >= logos.length ? '' : r.alt} loading="lazy" width="140" height="70" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div class="section-head section-head--center reveal">
+        <h2>Sıkça Sorulan Sorular</h2>
+      </div>
+      <div class="faq-list reveal">
+        {faqs.map((f, i) => (
+          <details name="faq" open={i === 0}>
+            <summary>{f.q}<span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
+            <div class="faq-a"><p>{f.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact: navy panel with form card (Lightwave pattern) -->
+  <section class="section section--tight" id="contact">
+    <div class="container">
+      <div class="contact reveal">
+        <div class="contact-info">
+          <h2>Bize Ulaşın</h2>
+          <p class="contact-lead">Müze, arşiv ve kütüphane yönetim ihtiyaçlarınız için ücretsiz danışmanlık alın.</p>
+          <h3 class="sr-only">İletişim Bilgileri</h3>
+          <dl>
+            <div><dt><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Adres</dt><dd>{company.address}</dd></div>
+            <div><dt><i class="fas fa-phone" aria-hidden="true"></i>Telefon</dt><dd><a href={company.phoneHref}>{company.phone}</a></dd></div>
+            <div><dt><i class="fas fa-fax" aria-hidden="true"></i>Faks</dt><dd>{company.fax}</dd></div>
+            <div><dt><i class="fas fa-envelope" aria-hidden="true"></i>E-posta</dt><dd><a href={company.emailHref}>{company.email}</a></dd></div>
+            <div><dt><i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp</dt><dd><a href={company.whatsappHref} target="_blank" rel="noopener">{company.whatsapp}</a></dd></div>
+          </dl>
+          <a href={url('destek.html')} class="btn btn--outline-light">Destek Talebi Oluştur <i class="fas fa-headset" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact-card">
+          <ContactForm />
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <iframe src={company.mapEmbed} allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MirAkıl Veri İşleme - Çukurambar Çankaya/Ankara"></iframe>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const mq = document.querySelector<HTMLElement>('[data-marquee]');
+  const mqBtn = document.querySelector<HTMLButtonElement>('[data-marquee-toggle]');
+  mqBtn?.addEventListener('click', () => {
+    const paused = mq!.classList.toggle('is-paused');
+    mqBtn.setAttribute('aria-pressed', String(paused));
+    mqBtn.innerHTML = paused
+      ? '<i class="fas fa-play" aria-hidden="true"></i><span>Oynat</span>'
+      : '<i class="fas fa-pause" aria-hidden="true"></i><span>Durdur</span>';
+  });
+</script>
+
+<style>
+  /* Products */
+  .products > li { overflow: hidden; transition: transform var(--dur) var(--ease-out), box-shadow var(--dur), border-color var(--dur); }
+  .products > li:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--brand-tint-2); }
+  .product-card { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: var(--sp-5) var(--sp-5) var(--sp-6); }
+  .product-logo { display: grid; place-items: center; height: 96px; margin: calc(var(--sp-5) * -1) calc(var(--sp-5) * -1) var(--sp-4); padding: var(--sp-4) var(--sp-5); background: var(--surface-1); border-bottom: 1px solid var(--hairline); transition: background-color var(--dur); }
+  .products > li:hover .product-logo { background: var(--brand-tint); }
+  .product-logo img { max-width: 170px; max-height: 58px; width: auto; height: auto; object-fit: contain; transition: transform var(--dur-slow) var(--ease-out); }
+  .products > li:hover .product-logo img { transform: scale(1.06); }
+  .product-name { font-family: var(--font-display); font-size: var(--fs-card-title); font-weight: 800; letter-spacing: -0.01em; }
+  .product-cat { font-size: var(--fs-caption); font-weight: 700; color: var(--brand); text-transform: none; }
+  .product-sum { font-size: var(--fs-body-sm); color: var(--ink-muted); line-height: 1.6; flex: 1; margin: 4px 0 var(--sp-4); }
+  .product-card .link { margin-top: auto; }
+  .products > li:hover .link :global(i) { transform: translateX(4px); }
+
+  /* Services */
+  .services { gap: var(--sp-5); }
+  .service {
+    position: relative; overflow: hidden;
+    padding: var(--sp-6); border-radius: var(--r-md);
+    background: var(--brand); color: #fff;
+    box-shadow: var(--shadow-brand);
+    transition: transform var(--dur) var(--ease-out), background-color var(--dur);
+  }
+  .service::after { content: ''; position: absolute; width: 180px; height: 180px; right: -60px; top: -60px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); transition: transform var(--dur-slow) var(--ease-out); }
+  .service:hover { transform: translateY(-6px); background: var(--brand-hover); }
+  .service:hover::after { transform: scale(1.35); }
+  .service-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; background: rgba(255, 255, 255, 0.16); font-size: 1.35rem; }
+  .service h3 { margin-top: var(--sp-5); font-size: var(--fs-card-title); font-weight: 700; }
+  .service p { margin-top: var(--sp-2); font-size: var(--fs-body-sm); line-height: 1.65; color: rgba(255, 255, 255, 0.88); }
+
+  /* Why us */
+  .why { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--sp-8); align-items: center; }
+  .why-media { position: relative; }
+  .why-media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--r-lg); box-shadow: var(--shadow-md); }
+  .why-badge { position: absolute; right: -20px; bottom: 32px; display: flex; flex-direction: column; padding: var(--sp-5) var(--sp-6); border-radius: var(--r-md); background: var(--brand); color: #fff; box-shadow: var(--shadow-brand); }
+  .why-badge strong { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; }
+  .why-badge span { margin-top: 4px; font-size: var(--fs-body-sm); font-weight: 600; opacity: 0.9; }
+  .why-body .section-head { margin-bottom: var(--sp-6); }
+  .why-list { display: grid; gap: var(--sp-4); }
+  .why-list li { display: flex; gap: var(--sp-4); align-items: flex-start; padding: var(--sp-4) var(--sp-5); border-radius: var(--r-md); background: var(--surface-1); transition: background-color var(--dur), transform var(--dur) var(--ease-out); }
+  .why-list li:hover { background: var(--brand-tint); transform: translateX(6px); }
+  .why-list li:hover .icon-tile { background: var(--brand); color: #fff; }
+  .why-list h3 { font-size: var(--fs-card-title); font-weight: 700; }
+  .why-list p { margin-top: 2px; color: var(--ink-muted); font-size: var(--fs-body-sm); }
+  @media (max-width: 959px) {
+    .why { grid-template-columns: 1fr; gap: var(--sp-7); }
+    .why-media img { aspect-ratio: 16 / 10; }
+    .why-badge { right: 16px; bottom: 16px; padding: var(--sp-4) var(--sp-5); }
+    .why-badge strong { font-size: 2rem; }
+  }
+
+  /* References */
+  .refs { overflow: hidden; }
+  .refs-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--sp-6); margin-bottom: var(--sp-7); }
+  .refs-head h2 { font-size: var(--fs-display-md); font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; }
+  .refs-head p { margin-top: var(--sp-4); color: var(--ink-muted); font-size: var(--fs-body-lg); max-width: 60ch; }
+  .refs-actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+  .marquee-toggle { display: inline-flex; align-items: center; gap: var(--sp-2); min-height: 50px; padding: 0 var(--sp-5); font-size: var(--fs-body-sm); font-weight: 600; color: var(--ink-muted); border: 1.5px solid var(--hairline-strong); border-radius: var(--r-sm); background: var(--canvas); transition: color var(--dur-fast), border-color var(--dur-fast); }
+  .marquee-toggle:hover { color: var(--brand); border-color: var(--brand); }
+  .marquee-toggle i { font-size: 0.75rem; }
+  .marquee { position: relative; padding-block: var(--sp-2); -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .marquee-track { display: flex; gap: var(--sp-4); width: max-content; animation: marquee 80s linear infinite; }
+  .marquee:hover .marquee-track, .marquee:focus-within .marquee-track, .marquee.is-paused .marquee-track { animation-play-state: paused; }
+  .marquee li { flex: 0 0 auto; display: grid; place-items: center; width: 190px; height: 110px; padding: var(--sp-4); background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-md); box-shadow: var(--shadow-sm); transition: transform var(--dur) var(--ease-out), box-shadow var(--dur); }
+  .marquee li:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .marquee img { max-width: 140px; max-height: 70px; width: auto; height: auto; object-fit: contain; }
+  @keyframes marquee { to { transform: translateX(calc(-50% - var(--sp-2))); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+    .marquee-track { animation: none; }
+    .marquee-toggle { display: none; }
+  }
+  @media (max-width: 767px) { .refs-head { flex-direction: column; align-items: flex-start; } }
+
+  /* FAQ */
+  .faq-list { max-width: 880px; margin-inline: auto; display: grid; gap: var(--sp-3); }
+  .faq-list details { border: 1px solid var(--hairline); border-radius: var(--r-md); background: var(--canvas); box-shadow: var(--shadow-sm); transition: border-color var(--dur), box-shadow var(--dur); }
+  .faq-list details[open] { border-color: var(--brand-tint-2); box-shadow: var(--shadow-md); }
+  .faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); min-height: 68px; padding: var(--sp-4) var(--sp-5); cursor: pointer; list-style: none; font-size: var(--fs-body-lg); font-weight: 700; transition: color var(--dur-fast); }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary:hover { color: var(--brand); }
+  .faq-toggle { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--brand-tint); color: var(--brand); transition: transform var(--dur) var(--ease-out), background-color var(--dur), color var(--dur); }
+  .faq-toggle i { font-size: 0.8rem; }
+  .faq-list details[open] .faq-toggle { transform: rotate(45deg); background: var(--brand); color: #fff; }
+  .faq-a p { padding: 0 var(--sp-5) var(--sp-5); color: var(--ink-muted); line-height: 1.75; }
+  .faq-list details::details-content { block-size: 0; overflow: hidden; transition: block-size var(--dur) var(--ease-out), content-visibility var(--dur) allow-discrete; }
+  .faq-list details[open]::details-content { block-size: auto; }
+  @supports (interpolate-size: allow-keywords) { :root { interpolate-size: allow-keywords; } }
+
+  /* Contact */
+  .contact { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--sp-7); padding: clamp(28px, 4vw, 56px); border-radius: var(--r-lg); background: var(--grad-brand); color: #fff; }
+  .contact::before { content: ''; position: absolute; width: 520px; height: 520px; left: -200px; top: -240px; border-radius: 50%; background: radial-gradient(closest-side, rgba(56, 182, 240, 0.45), transparent 70%); pointer-events: none; }
+  .contact > * { position: relative; }
+  .contact-info { display: flex; flex-direction: column; gap: var(--sp-5); }
+  .contact-info h2 { font-size: var(--fs-display-md); font-weight: 800; letter-spacing: -0.015em; }
+  .contact-lead { color: var(--on-navy-muted); font-size: var(--fs-body-lg); line-height: 1.6; margin-top: calc(var(--sp-3) * -1); }
+  .contact-info dl { display: grid; gap: var(--sp-4); }
+  .contact-info dt { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-caption); font-weight: 600; color: var(--on-navy-muted); }
+  .contact-info dt i { width: 18px; color: #8fd6fa; }
+  .contact-info dd { margin: 2px 0 0 26px; line-height: 1.5; color: #fff; }
+  .contact-info dd a { border-bottom: 1px solid rgba(255, 255, 255, 0.3); transition: border-color var(--dur-fast), color var(--dur-fast); }
+  .contact-info dd a:hover { color: #bfe8ff; border-color: #bfe8ff; }
+  .contact-info .btn { align-self: flex-start; margin-top: auto; }
+  .contact-card { background: var(--canvas); color: var(--ink); border-radius: var(--r-md); box-shadow: var(--shadow-md); }
+  .contact-map { margin-top: var(--sp-6); overflow: hidden; border-radius: var(--r-lg); border: 1px solid var(--hairline); }
+  .contact-map iframe { width: 100%; height: 380px; border: 0; }
+  @media (max-width: 959px) { .contact { grid-template-columns: 1fr; } }
+</style>

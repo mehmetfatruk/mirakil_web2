@@ -1,0 +1,22 @@
+---
+interface Item { icon: string | null; title: string; text: string | null }
+interface Props { title: string; intro: string; items: Item[] }
+const { title, intro, items } = Astro.props;
+---
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{title}</h2>
+      <p>{intro}</p>
+    </div>
+    <div class="tiles grid-4 reveal-stagger">
+      {items.map((f) => (
+        <article class="tile">
+          <span class="icon-tile"><i class={f.icon ?? 'fas fa-check'} aria-hidden="true"></i></span>
+          <h3>{f.title}</h3>
+          <p>{f.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

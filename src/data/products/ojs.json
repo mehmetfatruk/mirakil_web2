@@ -1,0 +1,387 @@
+{
+  "slug": "ojs",
+  "color": "#002B5C",
+  "meta": {
+    "title": "OJS - Open Journal Systems | MirAkıl Veri İşleme",
+    "description": "OJS (Open Journal Systems) akademik dergi yönetim ve yayıncılık sistemi. Hakem değerlendirme, açık erişim dergi yayıncılığı. MirAkıl ile OJS kurulum ve destek.",
+    "keywords": "OJS, Open Journal Systems, akademik dergi yönetimi, e-dergi yayıncılığı, hakem sistemi, açık erişim dergisi, dergi yayın sistemi, OJS kurulumu, akademik yayıncılık",
+    "ogTitle": "OJS - Open Journal Systems | MirAkıl Veri İşleme",
+    "ogDescription": "OJS (Open Journal Systems) - Akademik dergi yayıncılığı için tasarlanmış açık kaynaklı bir sistemdir. MirAkıl ile kurulum, yapılandırma ve destek hizmetleri."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-newspaper",
+    "name": "OJS",
+    "subtitle": "Open Journal Systems · Akademik Dergi Yayıncılık Sistemi",
+    "lead": "Akademik dergi yayıncılığı için tasarlanmış bir sistemdir. Makale gönderiminden hakem değerlendirmesine, yayınlamaya kadar tüm süreçleri yönetin.",
+    "ctas": [
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": 25000,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Aktif Akademik Dergi"
+    },
+    {
+      "target": 30,
+      "prefix": null,
+      "suffix": "+",
+      "text": null,
+      "label": "Desteklenen Dil"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "GPL",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "PKP",
+      "label": "Topluluk Desteği"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Open Journal Systems'in temel modüllerini keşfedin. Akademik dergi yayıncılığında gönderimden açık erişime tüm süreci uçtan uca yönetin.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-paper-plane",
+        "label": "Makale Gönderim"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-user-check",
+        "label": "Hakem Süreci"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-route",
+        "label": "Yayın Akışı"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-newspaper",
+        "label": "Sayı & Cilt"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-unlock",
+        "label": "Açık Erişim & DOI"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-paper-plane",
+        "eyebrow": "Yazar için",
+        "title": "Makale Gönderim",
+        "desc": "Online gönderim formu, çoklu yazar yönetimi, dosya yükleme ve taslak kaydetme ile yazarlara sürtünmesiz bir gönderim deneyimi.",
+        "features": [
+          {
+            "i": "fa-cloud-arrow-up",
+            "t": "Online gönderim formu"
+          },
+          {
+            "i": "fa-users",
+            "t": "Çoklu yazar yönetimi"
+          },
+          {
+            "i": "fa-file-arrow-up",
+            "t": "Dosya yükleme"
+          },
+          {
+            "i": "fa-floppy-disk",
+            "t": "Taslak kaydetme"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-user-check",
+        "eyebrow": "Editör için",
+        "title": "Hakem Süreci",
+        "desc": "Çift kör hakem desteği, otomatik hakem ataması, hatırlatma e-postaları ve yapılandırılmış hakem değerlendirme formları.",
+        "features": [
+          {
+            "i": "fa-mask",
+            "t": "Çift kör hakemlik"
+          },
+          {
+            "i": "fa-shuffle",
+            "t": "Otomatik hakem ataması"
+          },
+          {
+            "i": "fa-bell",
+            "t": "Hatırlatma bildirimleri"
+          },
+          {
+            "i": "fa-clipboard-check",
+            "t": "Değerlendirme formları"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-route",
+        "eyebrow": "Editör için",
+        "title": "Yayın Akışı",
+        "desc": "Düzenleme, dizgi (copyediting), son okuma (proofreading) ve yayınlama aşamaları için yapılandırılmış iş akışı yönetimi.",
+        "features": [
+          {
+            "i": "fa-pen-to-square",
+            "t": "Düzenleme aşaması"
+          },
+          {
+            "i": "fa-print",
+            "t": "Dizgi (copyediting)"
+          },
+          {
+            "i": "fa-eye",
+            "t": "Son okuma (proofreading)"
+          },
+          {
+            "i": "fa-rocket",
+            "t": "Yayınlama"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-newspaper",
+        "eyebrow": "Yayın için",
+        "title": "Sayı & Cilt",
+        "desc": "Sayı oluşturma, cilt arşivleme, yayın takvimi ve gelecek sayı planlaması ile dergi yayın programınızı düzenli yönetin.",
+        "features": [
+          {
+            "i": "fa-newspaper",
+            "t": "Sayı oluşturma"
+          },
+          {
+            "i": "fa-box-archive",
+            "t": "Cilt arşivleme"
+          },
+          {
+            "i": "fa-calendar-days",
+            "t": "Yayın takvimi"
+          },
+          {
+            "i": "fa-forward",
+            "t": "Gelecek sayı planlama"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-unlock",
+        "eyebrow": "Açık erişim için",
+        "title": "Açık Erişim & DOI",
+        "desc": "Otomatik DOI üretimi, OAI-PMH endpoint, Crossref entegrasyonu ve DOAJ uyumluluğu ile makaleleriniz uluslararası akademik ağlara erişir.",
+        "features": [
+          {
+            "i": "fa-link",
+            "t": "DOI üretimi"
+          },
+          {
+            "i": "fa-tower-broadcast",
+            "t": "OAI-PMH endpoint"
+          },
+          {
+            "i": "fa-handshake",
+            "t": "Crossref entegrasyonu"
+          },
+          {
+            "i": "fa-globe",
+            "t": "DOAJ uyumu"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "title": "Genel Bakış",
+    "stats": [
+      {
+        "value": "25.000+",
+        "label": "Aktif Dergi"
+      },
+      {
+        "value": "60+",
+        "label": "Desteklenen Dil"
+      },
+      {
+        "value": "20+",
+        "label": "Yıllık Geliştirme"
+      },
+      {
+        "value": "%100",
+        "label": "Açık Kaynak"
+      }
+    ],
+    "paragraphs": [
+      "<strong>OJS (Open Journal Systems)</strong>, Public Knowledge Project (PKP) tarafından geliştirilen, akademik dergi yayıncılığının tüm aşamalarını kapsayan açık kaynaklı bir platformdur. Dünya genelinde binlerce akademik dergi tarafından tercih edilen OJS, makale gönderiminden hakem değerlendirmesine, editöryal süreçlerden nihai yayına kadar eksiksiz bir iş akışı sunar.",
+      "OJS, akademik yayıncılık standartlarına tam uyumlu olarak tasarlanmıştır. <strong>DOI atama</strong>, <strong>OAI-PMH protokolü</strong>, <strong>COUNTER istatistikleri</strong> ve <strong>LOCKSS arşivleme</strong> gibi uluslararası standartları destekleyerek dergilerinizin küresel akademik ağlarda görünürlüğünü en üst düzeye çıkarır. Çok dilli arayüz desteği sayesinde farklı dillerde yayıncılık yapabilir, uluslararası bir yazar ve okuyucu kitlesine ulaşabilirsiniz.",
+      "Sistem, <strong>çift kör hakem değerlendirmesi</strong>, <strong>açık erişim yayıncılık</strong> ve <strong>abonelik tabanlı modeller</strong> dahil olmak üzere farklı yayıncılık modellerini destekler. Esnek eklenti mimarisi sayesinde kurumunuzun özel gereksinimlerine göre genişletilebilir ve özelleştirilebilir."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-file-upload",
+        "title": "Makale Gönderimi",
+        "text": "Yazarlar çevrimiçi olarak makalelerini kolayca gönderir"
+      },
+      {
+        "icon": "fas fa-user-check",
+        "title": "Hakem Değerlendirmesi",
+        "text": "Editörler hakemleri atar, süreç otomatik yönetilir"
+      },
+      {
+        "icon": "fas fa-edit",
+        "title": "Editöryal Süreç",
+        "text": "Kopya düzenleme, mizanpaj ve son düzeltmeler yapılır"
+      },
+      {
+        "icon": "fas fa-globe-americas",
+        "title": "Yayınlama",
+        "text": "Makaleler çevrimiçi olarak yayınlanır ve indekslenir"
+      },
+      {
+        "icon": "fas fa-chart-bar",
+        "title": "İstatistikler ve Raporlama",
+        "text": "Okuyucu ve indirme istatistikleri gerçek zamanlı izlenir"
+      },
+      {
+        "icon": "fas fa-search-plus",
+        "title": "Keşfedilebilirlik",
+        "text": "OAI-PMH ile küresel indekslere otomatik entegrasyon"
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "OJS, akademik dergi yayıncılığının her aşamasını kapsayan güçlü özellikler sunar.",
+    "items": [
+      {
+        "icon": "fas fa-file-upload",
+        "title": "Makale Gönderim Süreci",
+        "text": "Yazarlar makalelerini çevrimiçi olarak kolayca gönderebilir. Çok adımlı gönderim formu, dosya yükleme, üst veri girişi ve yazar bilgileri yönetimi ile eksiksiz bir gönderim deneyimi sunar."
+      },
+      {
+        "icon": "fas fa-user-shield",
+        "title": "Hakem Değerlendirmesi",
+        "text": "Tek kör, çift kör ve açık hakem değerlendirmesi modelleri desteklenir. Hakem davetleri, hatırlatmalar ve değerlendirme formları otomatik olarak yönetilir, süreç şeffaf bir şekilde takip edilir."
+      },
+      {
+        "icon": "fas fa-fingerprint",
+        "title": "DOI Atama Desteği",
+        "text": "Crossref ve DataCite entegrasyonu ile makalelere otomatik DOI (Digital Object Identifier) atanır. Kalıcı tanımlayıcılar sayesinde makalelerin bulunabilirliği ve atıf izlenebilirliği sağlanır."
+      },
+      {
+        "icon": "fas fa-language",
+        "title": "Çok Dilli Yayıncılık",
+        "text": "60'tan fazla dilde arayüz desteği ile uluslararası yayıncılık yapılabilir. Makaleler birden fazla dilde yayınlanabilir, çok dilli üst veri girişi ve arama özellikleri kullanılabilir."
+      },
+      {
+        "icon": "fas fa-exchange-alt",
+        "title": "OAI-PMH Uyumluluğu",
+        "text": "Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) desteği ile derginizdeki içerikler küresel akademik arama motorları ve indeksler tarafından otomatik olarak keşfedilir."
+      },
+      {
+        "icon": "fas fa-credit-card",
+        "title": "Abonelik Yönetimi",
+        "text": "Açık erişim, abonelik tabanlı ve hibrit yayıncılık modelleri desteklenir. Kurumsal ve bireysel abonelikler, ödeme takibi ve erişim kontrolü tek bir panel üzerinden yönetilir."
+      },
+      {
+        "icon": "fas fa-list-check",
+        "title": "İndeksleme Desteği",
+        "text": "Google Scholar, DOAJ, Scopus, Web of Science ve diğer akademik indekslerle uyumlu üst veri yapısı sunar. SEO optimizasyonu ile derginizin görünürlüğünü artırır."
+      },
+      {
+        "icon": "fas fa-user-pen",
+        "title": "Yazar Paneli",
+        "text": "Yazarlar kendi panelleri üzerinden makale gönderebilir, gönderim durumlarını takip edebilir, hakem yorumlarını inceleyebilir ve revize edilmiş sürümlerini yükleyebilir."
+      }
+    ]
+  },
+  "why": {
+    "id": "why-ojs",
+    "title": "Neden OJS?",
+    "intro": "OJS'nin akademik dergi yayıncılığında tercih edilmesinin temel nedenleri.",
+    "items": [
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Açık Kaynak ve Ücretsiz",
+        "text": "OJS tamamen açık kaynaklıdır ve lisans ücreti gerektirmez. Kaynak koduna erişim sayesinde kurumunuzun ihtiyaçlarına göre özgürce özelleştirilebilir. PKP topluluğunun sürekli desteği ile geliştirilmeye devam eder."
+      },
+      {
+        "icon": "fas fa-globe",
+        "title": "Küresel Standartlara Uyum",
+        "text": "DOI, OAI-PMH, COUNTER, LOCKSS ve JATS XML gibi uluslararası akademik yayıncılık standartlarına tam uyum sağlar. Dergileriniz küresel indekslerde sorunsuz bir şekilde yer alır."
+      },
+      {
+        "icon": "fas fa-users-cog",
+        "title": "Kapsamlı Rol Yönetimi",
+        "text": "Editör, yazar, hakem, kopya editörü, mizanpajcı ve yönetici gibi farklı roller için ayrı paneller sunar. Her rol için özelleştirilmiş iş akışları ve izin yapıları tanımlanabilir."
+      },
+      {
+        "icon": "fas fa-chart-line",
+        "title": "Detaylı İstatistikler",
+        "text": "Makale görüntülenme, indirme ve atıf istatistikleri ile derginin performansını ölçün. COUNTER uyumlu raporlama sayesinde kurumsal değerlendirmelerde güvenilir veriler sunun."
+      },
+      {
+        "icon": "fas fa-puzzle-piece",
+        "title": "Esnek Eklenti Mimarisi",
+        "text": "Zengin eklenti ekosistemi sayesinde OJS'nin yeteneklerini genişletin. Tema eklentileri, ödeme modülleri, istatistik araçları ve daha fazlası ile sisteminizi kişiselleştirin."
+      },
+      {
+        "icon": "fas fa-headset",
+        "title": "MirAkıl Uzman Desteği",
+        "text": "MirAkıl ekibi olarak OJS kurulumu, yapılandırması, özelleştirmesi ve eğitimi konusunda kapsamlı hizmet sunuyoruz. Teknik destek ve danışmanlık ile derginizin kesintisiz yayın yapmasını sağlıyoruz."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Akademik Dergilerinizi OJS ile Yönetin",
+    "text": "OJS kurulumu, yapılandırması ve özelleştirmesi için MirAkıl'ın uzman ekibinden ücretsiz danışmanlık alın.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

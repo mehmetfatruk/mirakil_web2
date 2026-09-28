@@ -1,0 +1,89 @@
+---
+interface Card { icon: string | null; title: string; text?: string | null }
+interface Props {
+  header?: { title: string; intro: string };
+  title?: string;
+  titleAccent?: string;
+  highlight?: { title: string; text: string };
+  stats?: { value: string; label: string }[];
+  paragraphs: string[];
+  cards: Card[];
+}
+const { header, title, titleAccent, highlight, stats, paragraphs, cards } = Astro.props;
+
+// Wrap the accented word (legacy <span>) so it renders in brand green.
+const titleHtml = title && titleAccent
+  ? title.replace(titleAccent, `<span class="accent">${titleAccent}</span>`)
+  : title;
+const hasCards = cards.length > 0;
+---
+<section class="section section--surface" id="overview">
+  <div class="container">
+    {header && (
+      <div class="section-head reveal">
+        <h2>{header.title}</h2>
+        <p>{header.intro}</p>
+      </div>
+    )}
+    <div class:list={['ov', { 'ov--solo': !hasCards }]}>
+      <div class="ov-text reveal">
+        {title && (header ? <h3 class="ov-title" set:html={titleHtml} /> : <h2 class="ov-title" set:html={titleHtml} />)}
+        {paragraphs.map((p) => <p set:html={p} />)}
+        {highlight && (
+          <aside class="ov-highlight">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <strong>{highlight.title}</strong>
+              <p>{highlight.text}</p>
+            </div>
+          </aside>
+        )}
+        {stats && (
+          <dl class="ov-stats">
+            {stats.map((s) => (
+              <div><dt>{s.label}</dt><dd class="num">{s.value}</dd></div>
+            ))}
+          </dl>
+        )}
+      </div>
+      {hasCards && (
+        <ul role="list" class="ov-cards reveal-stagger">
+          {cards.map((c) => (
+            <li class="ov-card">
+              <span class="icon-tile"><i class={c.icon ?? 'fas fa-check'} aria-hidden="true"></i></span>
+              <div>
+                {header ? <h4>{c.title}</h4> : <h3>{c.title}</h3>}
+                {c.text && <p>{c.text}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ov { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--sp-8); align-items: start; }
+  .ov--solo { grid-template-columns: minmax(0, 1fr); max-width: 860px; }
+  .ov-title { font-size: var(--fs-display-md); font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: var(--sp-5); }
+  .ov-text > p { color: var(--ink-muted); line-height: 1.7; max-width: 66ch; }
+  .ov-text > p + p { margin-top: var(--sp-4); }
+  .ov-text :global(strong) { color: var(--ink); font-weight: 600; }
+  .ov-highlight { display: flex; gap: var(--sp-4); margin-top: var(--sp-6); padding: var(--sp-5); background: var(--canvas); border-left: 4px solid var(--brand); border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
+  .ov-highlight i { color: var(--brand); margin-top: 4px; }
+  .ov-highlight strong { display: block; margin-bottom: var(--sp-2); }
+  .ov-highlight p { color: var(--ink-muted); font-size: var(--fs-body-sm); line-height: 1.6; }
+  .ov-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--sp-3); margin-top: var(--sp-6); }
+  .ov-stats div { display: flex; flex-direction: column-reverse; padding: var(--sp-4); border-radius: var(--r-md); background: var(--canvas); box-shadow: var(--shadow-sm); }
+  .ov-stats dd { margin: 0; font-family: var(--font-display); font-size: var(--fs-headline); font-weight: 800; color: var(--brand); }
+  .ov-stats dt { font-size: var(--fs-caption); color: var(--ink-muted); letter-spacing: 0.32px; }
+  .ov-cards { display: grid; gap: var(--sp-3); }
+  .ov-card { display: flex; gap: var(--sp-4); align-items: flex-start; padding: var(--sp-5); background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-md); box-shadow: var(--shadow-sm); transition: transform var(--dur) var(--ease-out), box-shadow var(--dur); }
+  .ov-card:hover { transform: translateX(6px); box-shadow: var(--shadow-md); }
+  .ov-card:hover :global(.icon-tile) { background: var(--brand); color: #fff; }
+  .ov-card h3, .ov-card h4 { font-size: var(--fs-body); font-weight: 700; }
+  .ov-card p { margin-top: var(--sp-1); font-size: var(--fs-body-sm); color: var(--ink-muted); line-height: 1.55; }
+  .ov-card:not(:has(p)) { align-items: center; }
+  @media (max-width: 959px) { .ov { grid-template-columns: 1fr; gap: var(--sp-7); } }
+</style>
