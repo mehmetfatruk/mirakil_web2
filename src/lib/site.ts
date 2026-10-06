@@ -72,3 +72,10 @@ export const services = [
 ];
 
 export type NavKey = 'home' | 'products' | 'references' | 'support' | 'none';
+
+/** Company-wide numbers: change them here only, every page reads from this. */
+export const facts = {
+  yearsExperience: 10,
+  /** total institutional customers; the public reference list is a subset of these */
+  customers: 50,
+};

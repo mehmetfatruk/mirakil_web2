@@ -1,5 +1,6 @@
 ---
 import StatValue from '../StatValue.astro';
+import { facts, products } from '../../lib/site';
 
 const slides = [
   {
@@ -26,9 +27,9 @@ const slides = [
 ];
 
 const stats = [
-  { target: 12, suffix: '+', label: 'Yıllık Tecrübe', icon: 'fas fa-award' },
-  { target: 50, suffix: '+', label: 'Kurumsal Müşteri', icon: 'fas fa-building-columns' },
-  { target: 8, label: 'Açık Kaynak Platform', icon: 'fas fa-layer-group' },
+  { target: facts.yearsExperience, suffix: '+', label: 'Yıllık Tecrübe', icon: 'fas fa-award' },
+  { target: facts.customers, suffix: '+', label: 'Kurumsal Müşteri', icon: 'fas fa-building-columns' },
+  { target: products.length, label: 'Açık Kaynak Platform', icon: 'fas fa-layer-group' },
   { target: null, text: '7/24', label: 'Teknik Destek', icon: 'fas fa-headset' },
 ];
 ---
