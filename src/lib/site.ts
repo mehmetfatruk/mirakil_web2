@@ -49,9 +49,9 @@ export interface ProductSummary {
 // Order and copy follow the legacy home page product grid.
 export const products: ProductSummary[] = [
   { slug: 'koha', logo: 'assets/products/koha.svg', name: 'Koha', icon: 'fas fa-book-open', color: '#408540', category: 'Kütüphane Otomasyon Sistemi', summary: 'Kütüphaneler için entegre bir kütüphane otomasyon sistemidir.' },
-  { slug: 'vufind', logo: 'assets/products/vufind.png', name: 'VuFind', icon: 'fas fa-search', color: '#619144', category: 'Kütüphane Arama Arayüzü', summary: 'Kütüphane katalogları için kullanıcı dostu bir arama arayüzü sunar.' },
-  { slug: 'dspace', logo: 'assets/products/dspace.png', name: 'DSpace', icon: 'fas fa-database', color: '#44a340', category: 'Dijital Arşiv Sistemi', summary: 'Akademik kurumlar için dijital arşiv ve kurumsal içerik yönetim sistemi sağlar.' },
-  { slug: 'omeka', logo: 'assets/products/omeka.png', name: 'Omeka', icon: 'fas fa-landmark', color: '#CD5C28', category: 'Dijital Sergi Platformu', summary: 'Dijital sergiler ve kültürel miras projeleri için içerik yönetim platformudur.' },
+  { slug: 'vufind', logo: 'assets/products/vufind.webp', name: 'VuFind', icon: 'fas fa-search', color: '#619144', category: 'Kütüphane Arama Arayüzü', summary: 'Kütüphane katalogları için kullanıcı dostu bir arama arayüzü sunar.' },
+  { slug: 'dspace', logo: 'assets/products/dspace.webp', name: 'DSpace', icon: 'fas fa-database', color: '#44a340', category: 'Dijital Arşiv Sistemi', summary: 'Akademik kurumlar için dijital arşiv ve kurumsal içerik yönetim sistemi sağlar.' },
+  { slug: 'omeka', logo: 'assets/products/omeka.webp', name: 'Omeka', icon: 'fas fa-landmark', color: '#CD5C28', category: 'Dijital Sergi Platformu', summary: 'Dijital sergiler ve kültürel miras projeleri için içerik yönetim platformudur.' },
   { slug: 'moodle', logo: 'assets/products/moodle.svg', name: 'Moodle', icon: 'fas fa-graduation-cap', color: '#F98012', category: 'Öğrenme Yönetim Sistemi', summary: 'Uzaktan eğitim ve e-öğrenme için açık kaynaklı bir öğrenme yönetim sistemidir.' },
   { slug: 'ojs', logo: 'assets/products/ojs.svg', name: 'OJS', icon: 'fas fa-newspaper', color: '#002B5C', category: 'Akademik Dergi Yayıncılığı', summary: 'Akademik dergi yayıncılığı için tasarlanmış bir sistemdir.' },
   { slug: 'indico', logo: 'assets/products/indico.svg', name: 'Indico', icon: 'fas fa-calendar-alt', color: '#29ABE2', category: 'Konferans Yönetim Sistemi', summary: 'Akademik konferansların yönetimi ve organizasyonu için kullanılır.' },
