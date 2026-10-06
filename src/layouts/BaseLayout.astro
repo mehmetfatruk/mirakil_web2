@@ -82,6 +82,7 @@ const orgLd = {
   </head>
   <body>
     <a class="skip-link" href="#main">İçeriğe atla</a>
+    {chrome && <div class="scroll-progress" aria-hidden="true" data-scroll-progress></div>}
     {chrome && <Header active={nav} contactHref={contactHref} />}
     <main id="main">
       <slot />
@@ -94,6 +95,7 @@ const orgLd = {
     )}
     <script>
       import '../scripts/site';
+      import '../scripts/effects';
     </script>
     <slot name="scripts" />
   </body>
