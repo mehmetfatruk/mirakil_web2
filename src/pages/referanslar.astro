@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import StatValue from '../components/StatValue.astro';
-import { url } from '../lib/site';
+import { url, facts } from '../lib/site';
+import { referenceCount, migrations } from '../lib/proof';
 import refs from '../data/references.json';
 
 const counts: Record<string, number> = { all: refs.items.length };
@@ -10,8 +11,8 @@ for (const r of refs.items) counts[r.category] = (counts[r.category] ?? 0) + 1;
 ---
 <BaseLayout
   title="Referanslar - Güvenilen Kurumlar | MirAkıl"
-  description="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler. Türkiye'nin önde gelen kurumları MirAkıl çözümlerini tercih ediyor."
-  ogDescription="MirAkıl Veri İşleme'ye güvenen üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler."
+  description="MirAkıl Veri İşleme'nin referansları: TBMM, Milli Kütüphane, Tapu ve Kadastro, üniversiteler, bakanlıklar ve belediyeler. Her kurum için yapılan iş: kurulum, sistem göçü, bakım ve dijitalleştirme."
+  ogDescription="TBMM, Milli Kütüphane, Tapu ve Kadastro, üniversiteler ve belediyeler: MirAkıl'ın referansları ve her kurumda yapılan iş."
   path="referanslar.html"
   nav="references"
 >
@@ -27,11 +28,11 @@ for (const r of refs.items) counts[r.category] = (counts[r.category] ?? 0) + 1;
         </nav>
         <h1>Referanslar</h1>
         <p class="ref-sub">Bize Güvenen Kurumlar</p>
-        <p class="lead">Türkiye'nin önde gelen üniversite, kütüphane, arşiv ve müzeleri MirAkıl Veri İşleme çözümlerini güvenle tercih ediyor. Her bir kurumun yanında, ihtiyaçlarına özel uçtan uca destek sağlıyoruz.</p>
+        <p class="lead">Üniversiteler, bakanlıklar, kamu kütüphaneleri, belediyeler ve kültür kuruluşları. Her kurumun yanında orada ne yaptığımızı yazdık: kurulum, sistem göçü, bakım ya da dijitalleştirme.</p>
       </div>
       <dl class="ref-stats reveal-stagger" data-count aria-label="Referans istatistikleri">
-        <div><dd class="stat-num"><StatValue target={50} suffix="+" /></dd><dt class="stat-label">Güvenilen Kurum</dt></div>
-        <div><dd class="stat-num"><StatValue target={10} suffix="+" /></dd><dt class="stat-label">Yıllık Tecrübe</dt></div>
+        <div><dd class="stat-num"><StatValue target={facts.customers} suffix="+" /></dd><dt class="stat-label">Kurumsal Müşteri</dt></div>
+        <div><dd class="stat-num"><StatValue target={facts.yearsExperience} suffix="+" /></dd><dt class="stat-label">Yıllık Tecrübe</dt></div>
       </dl>
     </div>
   </section>
@@ -41,7 +42,7 @@ for (const r of refs.items) counts[r.category] = (counts[r.category] ?? 0) + 1;
       <div class="section-head reveal">
         <span class="eyebrow">Referans listesi</span>
         <h2>Çözüm Ortağımız Olan Kurumlar</h2>
-        <p>Üniversitelerden milli kütüphanelere, devlet arşivlerinden müzelere kadar geniş bir kurumsal müşteri ağıyla çalışıyoruz.</p>
+        <p>{facts.customers}+ kurumsal müşterimizden {referenceCount}'sı bu listede. {migrations.length} tanesi eski sisteminden taşınan kurumlar.</p>
       </div>
 
       <div class="ref-tabs reveal" role="tablist" aria-label="Referans kategorileri">

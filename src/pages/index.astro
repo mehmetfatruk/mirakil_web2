@@ -2,14 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSlider from '../components/home/HeroSlider.astro';
 import ContactForm from '../components/home/ContactForm.astro';
-import { url, products, services, company } from '../lib/site';
+import { url, products, services, company, facts } from '../lib/site';
+import { referenceCount, migrations, migratedFrom, caseStudies } from '../lib/proof';
 import references from '../data/references.json';
 
 const whyUs = [
-  { icon: 'fas fa-user-tie', title: 'Uzman Kadro', text: 'Deneyimli mühendis ve kütüphaneci ekibimiz.' },
-  { icon: 'fas fa-lock-open', title: 'Açık Kaynak Güvencesi', text: 'Lisans maliyeti olmayan, sürekli gelişen çözümler.' },
-  { icon: 'fas fa-puzzle-piece', title: 'Kuruma Özel Çözümler', text: 'İhtiyaca göre özelleştirilen esnek yapılar.' },
-  { icon: 'fas fa-globe', title: 'Uluslararası Standartlar', text: 'MARC21, Dublin Core, OAI-PMH tam uyum.' },
+  { icon: 'fas fa-right-left', title: 'Eski sistemden kayıpsız geçiş', text: `${migrations.length} kurumun verisini eski sisteminden açık kaynağa taşıdık. Aralarında ${migratedFrom.join(', ')} var.` },
+  { icon: 'fas fa-book', title: 'Yazılımcı ve kütüphaneci aynı ekipte', text: 'Kurulumla kalmıyoruz. Kataloglama ve sınıflama da yapıyoruz: bir projede 160.000 materyali Dewey\'den LC\'ye geçirdik.' },
+  { icon: 'fas fa-lock-open', title: 'Lisans yok, bağımlılık yok', text: 'Yazılım açık kaynak, veriler sizin. MARC21, Dublin Core ve OAI-PMH gibi açık standartlar sayesinde hizmet sağlayıcınızı dilediğiniz zaman değiştirebilirsiniz.' },
+  { icon: 'fas fa-handshake', title: 'Tek muhatap', text: 'Kurulum, veri aktarımı, dijitalleştirme, eğitim ve bakım. Hepsi aynı ekipten.' },
 ];
 
 const faqs = [
@@ -17,6 +18,8 @@ const faqs = [
   { q: 'Açık kaynaklı yazılımlar güvenilir mi?', a: 'Evet, açık kaynaklı yazılımlar büyük bir topluluk tarafından geliştirilir ve denetlenir. Koha, DSpace ve Omeka dünya genelinde binlerce kurum tarafından güvenle kullanılmaktadır.' },
   { q: 'Mevcut sistemimden geçiş yapabilir miyim?', a: 'Evet, mevcut sisteminizden veri göçünü profesyonel olarak gerçekleştiriyoruz. Katalog kayıtları, üye bilgileri ve tüm verileriniz güvenli bir şekilde aktarılır.' },
   { q: 'Lisans maliyeti var mı?', a: 'Hayır, tüm ürünlerimiz açık kaynaklıdır ve lisans maliyeti yoktur. Yalnızca kurulum, özelleştirme, eğitim ve destek hizmetleri ücretlendirilir.' },
+  { q: 'Hangi sistemlerden geçiş yaptınız?', a: `Bugüne kadar ${migrations.length} kurumun verisini eski sisteminden aktardık. Kaynak sistemler arasında ${migratedFrom.join(', ')} var. Katalog kayıtları ve üye bilgileri yeni sisteme aktarılır. Kurumların tam listesi Referanslar sayfasında.` },
+  { q: 'Sözleşme bittiğinde verilerimize ne olur?', a: 'Verileriniz sizde kalır. Koha, DSpace ve diğer sistemler kayıtları MARC21, Dublin Core gibi açık standartlarda dışa aktarır. Böylece sistemi başka bir firmaya ya da kendi ekibinize kolayca devredebilirsiniz.' },
   { q: 'Eğitim ve destek hizmeti sunuyor musunuz?', a: 'Evet, tüm ürünlerimiz için kapsamlı eğitim programları sunuyoruz. Kurulum sonrası sürekli teknik destek sağlıyoruz.' },
 ];
 
@@ -86,20 +89,49 @@ const faqLd = {
     </div>
   </section>
 
+  <!-- Proof: measurable results from the reference list -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Öne Çıkan Projeler</span>
+        <h2 id="projects-title">Sözle Değil, Sonuçla</h2>
+        <p>Kurulumdan dijitalleştirmeye, gerçekleştirdiğimiz işlerden birkaçı. Hepsi Referanslar sayfasında kurum adıyla listeli.</p>
+      </div>
+      <ul role="list" class="tiles grid-4 cases reveal-stagger">
+        {caseStudies.map((c) => (
+          <li class="case fx-card" data-fx-card>
+            <span class="icon-tile"><i class={c.icon} aria-hidden="true"></i></span>
+            <p class="case-figure"><strong>{c.figure}</strong> <span>{c.unit}</span></p>
+            <h3>{c.name}</h3>
+            <p class="case-desc">{c.desc}</p>
+            <span class="case-tag">{c.tag}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="migrations reveal">
+        <p><strong>{migrations.length} kurumu eski sisteminden taşıdık.</strong> Geçiş yaptığımız sistemlerden bazıları:</p>
+        <ul role="list">
+          {migratedFrom.map((s) => <li>{s}</li>)}
+        </ul>
+        <a href={url('referanslar.html')} class="link">Tüm referanslar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- Why us: photo + list (Orex / Egy pattern) -->
   <section class="section" id="why-us">
     <div class="container why">
       <div class="why-media reveal">
         <img src="https://images.unsplash.com/photo-1762627105132-f6ed848a23bf?w=1200&q=80" alt="Arşiv kutuları dolu raflar" data-parallax="28" loading="lazy" width="1200" height="1100" />
         <div class="why-badge">
-          <strong>12+</strong>
+          <strong>{facts.yearsExperience}+</strong>
           <span>Yıllık Tecrübe</span>
         </div>
       </div>
       <div class="why-body">
         <div class="section-head reveal">
           <h2>Neden MirAkıl?</h2>
-          <p>Açık kaynak teknolojilerine hâkimiyetimiz ve sektördeki deneyimimizle güçlü çözümler sunuyoruz.</p>
+          <p>Eski sisteminizden açık kaynağa geçişi tek ekip olarak yürütüyoruz. Veri aktarımı, eğitim ve sürekli destek bu işin parçası.</p>
         </div>
         <ul role="list" class="why-list reveal-stagger">
           {whyUs.map((w) => (
@@ -121,8 +153,8 @@ const faqLd = {
     <div class="container refs-head reveal">
       <div>
         <span class="eyebrow">Güvenilen Kurumlar</span>
-        <h2 id="refs-title">Türkiye'nin Lider Kurumları Bize Güveniyor</h2>
-        <p>Üniversiteler, milli kütüphaneler, devlet arşivleri ve müzeler MirAkıl çözümlerini tercih ediyor.</p>
+        <h2 id="refs-title">TBMM'den Belediyelere, Bize Güvenen Kurumlar</h2>
+        <p>Üniversiteler, bakanlıklar, kamu kütüphaneleri, belediyeler ve kültür kuruluşları. {facts.customers}+ kurumsal müşterimizden {referenceCount}'sı, yapılan işle birlikte Referanslar sayfasında.</p>
       </div>
       <div class="refs-actions">
         <button type="button" class="marquee-toggle" aria-pressed="false" aria-controls="refMarquee" data-marquee-toggle>
@@ -166,6 +198,11 @@ const faqLd = {
         <div class="contact-info">
           <h2>Bize Ulaşın</h2>
           <p class="contact-lead">Müze, arşiv ve kütüphane yönetim ihtiyaçlarınız için ücretsiz danışmanlık alın.</p>
+          <ol class="contact-steps" aria-label="Formu gönderdikten sonra">
+            <li><strong>İhtiyaç görüşmesi.</strong> Mevcut sisteminizi, kayıt sayınızı ve hedeflerinizi konuşuruz.</li>
+            <li><strong>Canlı demo.</strong> Size uygun sistemi kendi senaryolarınızla gösteririz. Koha'yı <a href="https://kohademo.tr/" target="_blank" rel="noopener">kohademo.tr</a> adresinde hemen de deneyebilirsiniz.</li>
+            <li><strong>Proje planı ve teklif.</strong> Kurulum, veri aktarımı, eğitim ve bakım adımlarını içeren yazılı bir plan hazırlarız.</li>
+          </ol>
           <h3 class="sr-only">İletişim Bilgileri</h3>
           <dl>
             <div><dt><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Adres</dt><dd>{company.address}</dd></div>
@@ -229,6 +266,26 @@ const faqLd = {
   .service-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; background: rgba(255, 255, 255, 0.16); font-size: 1.35rem; }
   .service h3 { margin-top: var(--sp-5); font-size: var(--fs-card-title); font-weight: 700; }
   .service p { margin-top: var(--sp-2); font-size: var(--fs-body-sm); line-height: 1.65; color: rgba(255, 255, 255, 0.88); }
+
+  /* Projects / proof */
+  .case { display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-6) var(--sp-5); transition: transform var(--dur) var(--ease-out), box-shadow var(--dur), border-color var(--dur); }
+  .case:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--brand-tint-2); }
+  .case-figure { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; margin-top: var(--sp-2); }
+  .case-figure strong { font-family: var(--font-display); font-size: clamp(1.5rem, 1.2rem + 0.9vw, 2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.01em; color: var(--brand); }
+  .case-figure span { font-size: var(--fs-body-sm); font-weight: 600; color: var(--ink-muted); }
+  .case h3 { font-size: var(--fs-card-title); font-weight: 700; line-height: 1.3; }
+  .case-desc { font-size: var(--fs-body-sm); line-height: 1.65; color: var(--ink-muted); flex: 1; }
+  .case-tag { align-self: flex-start; padding: 4px 12px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 700; color: var(--brand-pressed); background: var(--brand-tint); }
+  .migrations { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--sp-3) var(--sp-4); margin-top: var(--sp-7); text-align: center; }
+  .migrations ul { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2); }
+  .migrations li { padding: 6px 14px; border: 1px solid var(--hairline); border-radius: var(--r-pill); background: var(--canvas); font-weight: 600; font-size: var(--fs-body-sm); }
+
+  /* Contact steps */
+  .contact-steps { counter-reset: step; display: grid; gap: var(--sp-3); padding: 0; margin: 0; list-style: none; }
+  .contact-steps li { counter-increment: step; position: relative; padding-left: 40px; line-height: 1.55; color: var(--on-navy-muted); font-size: var(--fs-body-sm); }
+  .contact-steps li::before { content: counter(step); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(255, 255, 255, 0.16); color: #fff; font-weight: 700; font-size: 0.85rem; }
+  .contact-steps strong { color: #fff; }
+  .contact-steps a { color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 
   /* Why us */
   .why { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--sp-8); align-items: center; }
