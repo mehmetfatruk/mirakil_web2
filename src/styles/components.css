@@ -177,3 +177,27 @@
   .cta-banner .btn-row { justify-content: flex-start; }
 }
 @media (max-width: 479px) { .cta-banner .btn { width: 100%; } }
+
+/* ---------- Premium effects (driven by src/scripts/effects.ts) ---------- */
+.scroll-progress {
+  position: fixed; inset: 0 0 auto; z-index: calc(var(--z-nav) + 1);
+  height: 3px; transform: scaleX(0); transform-origin: left; pointer-events: none;
+  background: linear-gradient(90deg, var(--brand), var(--brand-bright));
+}
+
+/* Cursor spotlight on cards: ::before follows --mx/--my, fades in on hover. */
+.fx-card { position: relative; }
+.fx-card::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(10, 143, 214, 0.11), transparent 45%);
+  opacity: 0; transition: opacity var(--dur) var(--ease-standard);
+}
+.fx-card--on-brand::before { background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.16), transparent 45%); }
+.fx-card:hover::before { opacity: 1; }
+/* Cards tilt with `rotate`; give their grid depth so the tilt reads as 3D. */
+.products, .services, .tiles:has(> .fx-card) { perspective: 1400px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+  .fx-card::before { display: none; }
+}

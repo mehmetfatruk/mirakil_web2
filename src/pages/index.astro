@@ -53,7 +53,7 @@ const faqLd = {
       </div>
       <ul role="list" class="tiles grid-4 products reveal-stagger">
         {products.map((p) => (
-          <li>
+          <li class="fx-card" data-fx-card>
             <a href={url(`${p.slug}.html`)} class="product-card">
               <span class="product-logo"><img src={url(p.logo)} alt={`${p.name} logosu`} loading="lazy" /></span>
               <span class="product-name">{p.name}</span>
@@ -76,7 +76,7 @@ const faqLd = {
       </div>
       <div class="grid grid-3 services reveal-stagger">
         {services.map((s) => (
-          <article class="service">
+          <article class="service fx-card fx-card--on-brand" data-fx-card>
             <span class="service-icon"><i class={s.icon} aria-hidden="true"></i></span>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
@@ -90,7 +90,7 @@ const faqLd = {
   <section class="section" id="why-us">
     <div class="container why">
       <div class="why-media reveal">
-        <img src="https://images.unsplash.com/photo-1762627105132-f6ed848a23bf?w=1200&q=80" alt="Arşiv kutuları dolu raflar" loading="lazy" width="1200" height="1100" />
+        <img src="https://images.unsplash.com/photo-1762627105132-f6ed848a23bf?w=1200&q=80" alt="Arşiv kutuları dolu raflar" data-parallax="28" loading="lazy" width="1200" height="1100" />
         <div class="why-badge">
           <strong>12+</strong>
           <span>Yıllık Tecrübe</span>

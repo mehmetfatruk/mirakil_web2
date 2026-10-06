@@ -32,7 +32,7 @@ imagery:
   - "Ürünler: resmi ürün logoları (public/assets/products)"
   - "Neden MirAkıl: arşiv rafları fotoğrafı"
 
-motion: "Motion (motion.dev) ile yaylı giriş animasyonları, sayaçlar, hero slider, modül sekmeleri, referans logo bandı (durdur düğmeli), hover lift; prefers-reduced-motion'a uyar"
+motion: "Motion (motion.dev) ile yaylı giriş animasyonları, sayaçlar, hero slider (başlık kelime kelime bulanıklıktan açılır), modül sekmeleri, referans logo bandı (durdur düğmeli), hover lift, kartlarda imleci izleyen ışık + hafif 3B eğim (data-fx-card), kaydırma ilerleme çubuğu, fotoğraf paralaksı (data-parallax), çizilerek gelen başlık çizgisi; prefers-reduced-motion'a uyar"
 ---
 
 ## Kurallar

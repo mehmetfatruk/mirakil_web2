@@ -313,3 +313,11 @@ p { text-wrap: pretty; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+/* Section heading underline draws in when its block is revealed. */
+.section-head h2::after { transform-origin: left; transition: transform 900ms var(--ease-out) 250ms; }
+.section-head--center h2::after { transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .section-head.reveal:not(.in) h2::after,
+  .js .reveal:not(.in) .section-head h2::after { transform: scaleX(0); }
+}

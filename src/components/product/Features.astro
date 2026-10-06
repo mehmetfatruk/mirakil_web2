@@ -11,7 +11,7 @@ const { title, intro, items } = Astro.props;
     </div>
     <div class="tiles grid-4 reveal-stagger">
       {items.map((f) => (
-        <article class="tile">
+        <article class="tile fx-card" data-fx-card>
           <span class="icon-tile"><i class={f.icon ?? 'fas fa-check'} aria-hidden="true"></i></span>
           <h3>{f.title}</h3>
           <p>{f.text}</p>

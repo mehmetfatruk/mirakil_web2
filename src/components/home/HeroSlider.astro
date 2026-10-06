@@ -46,7 +46,7 @@ const stats = [
       {slides.map((s, i) => (
         <div class="hero-slide" role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${slides.length}: ${s.alt}`} data-slide aria-hidden={i === 0 ? 'false' : 'true'}>
           <span class="hero-kicker">Müze, Arşiv ve Kütüphane Yönetim Çözümleri</span>
-          <h2>{s.title}</h2>
+          <h2 data-words>{s.title.split(' ').map((w, i) => <>{i > 0 && ' '}<span class="hw">{w}</span></>)}</h2>
           <p>{s.text}</p>
           <div class="btn-row">
             <a href={s.ctas[0].href} class="btn" tabindex={i === 0 ? 0 : -1}>{s.ctas[0].label} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
@@ -104,6 +104,10 @@ const stats = [
   .hero-slide[aria-hidden='false'] { visibility: visible; opacity: 1; }
   .hero-kicker { display: inline-flex; align-items: center; gap: var(--sp-2); padding: 6px 14px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 700; letter-spacing: 0.02em; color: #fff; background: rgba(10, 143, 214, 0.35); border: 1px solid rgba(120, 200, 245, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
   .hero-slide h2 { text-shadow: 0 2px 24px rgba(4, 30, 60, 0.35); margin-top: var(--sp-5); font-size: var(--fs-display-xl); font-weight: 800; line-height: 1.07; letter-spacing: -0.02em; color: #fff; }
+  .hw { display: inline-block; }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js) .hero-slide[aria-hidden='false'] h2:not(.in) .hw { opacity: 0; }
+  }
   .hero-slide p { margin-top: var(--sp-5); font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); line-height: 1.6; color: rgba(255, 255, 255, 0.86); max-width: 56ch; }
   .hero-slide .btn-row { margin-top: var(--sp-6); }
 
@@ -140,7 +144,20 @@ const stats = [
 </style>
 
 <script>
-  import { enter } from '../../scripts/motion-presets';
+  import { animate } from 'motion';
+  import { enter, reduceMotion } from '../../scripts/motion-presets';
+
+  // Headline words rise out of a soft blur one after another.
+  const revealWords = (h: HTMLElement | null) => {
+    if (!h) return;
+    h.classList.add('in');
+    if (reduceMotion) return;
+    h.querySelectorAll<HTMLElement>('.hw').forEach((w, i) => {
+      animate(w, { opacity: [0, 1], y: ['0.35em', '0em'], filter: ['blur(10px)', 'blur(0px)'] },
+        { duration: 0.7, delay: 0.1 + i * 0.055, ease: [0.16, 1, 0.3, 1] })
+        .then(() => { w.style.transform = ''; w.style.filter = ''; });
+    });
+  };
   const root = document.querySelector<HTMLElement>('[data-slider]');
   if (root) {
     const slides = Array.from(root.querySelectorAll<HTMLElement>('[data-slide]'));
@@ -162,7 +179,9 @@ const stats = [
         s.querySelectorAll('a').forEach((a) => (a.tabIndex = on ? 0 : -1));
       });
       media.forEach((m, j) => m.classList.toggle('is-active', j === current));
-      enter(slides[current].children, { y: 18, gap: 0.08 });
+      const kids = Array.from(slides[current].children);
+      enter(kids.filter((k) => k.tagName !== 'H2'), { y: 18, gap: 0.08 });
+      revealWords(slides[current].querySelector<HTMLElement>('[data-words]'));
       dots.forEach((d, j) => {
         d.setAttribute('aria-selected', String(j === current));
         const bar = d.querySelector('span')!;
@@ -188,6 +207,7 @@ const stats = [
       if (userPaused) pause(); else play();
     });
     syncToggle();
+    revealWords(slides[0].querySelector<HTMLElement>('[data-words]'));
     dots.forEach((d, i) => d.addEventListener('click', () => { go(i); play(); }));
     root.querySelector('[data-prev]')?.addEventListener('click', () => { go(current - 1); play(); });
     root.querySelector('[data-next]')?.addEventListener('click', () => { go(current + 1); play(); });
