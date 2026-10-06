@@ -2,9 +2,9 @@
 import { url, company, productsInNavOrder, services, SITE_ORIGIN } from '../lib/site';
 const year = new Date().getFullYear();
 
-// "Yapay zekâ ile değerlendir": opens the current page in AI assistants with a neutral, ready-made question.
+// "Yapay zekâ ile özetleyin": opens the current page in AI assistants with a neutral, ready-made question.
 const pageUrl = SITE_ORIGIN + (Astro.url.pathname.endsWith('404.html') ? url('index.html') : Astro.url.pathname);
-const prompt = `${pageUrl} adresindeki MirAkıl Veri İşleme web sitesini incele ve değerlendir: Şirket ne yapıyor, hangi ürün ve hizmetleri sunuyor, hangi kurumlarla çalışmış? Kütüphane, arşiv veya müze yönetim sistemi arayan bir kurum açısından güçlü yönlerini ve görüşmede sorulması gereken soruları özetle.`;
+const prompt = `${pageUrl} adresindeki MirAkıl Veri İşleme web sitesini özetle: Şirket ne yapıyor, hangi ürün ve hizmetleri sunuyor, hangi kurumlarla çalışmış ve öne çıkan projeleri neler?`;
 const q = encodeURIComponent(prompt);
 const aiLinks = [
   { name: 'ChatGPT', href: `https://chatgpt.com/?q=${q}` },
@@ -54,10 +54,10 @@ const aiLinks = [
       </div>
     </div>
     <div class="footer-ai">
-      <p class="footer-ai-label"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Bu sayfayı yapay zekâ ile değerlendirin</p>
+      <p class="footer-ai-label"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Bu sayfayı yapay zekâ ile özetleyin</p>
       <ul role="list" class="footer-ai-links">
         {aiLinks.map((a) => (
-          <li><a href={a.href} target="_blank" rel="noopener nofollow" aria-label={`Bu sayfayı ${a.name} ile değerlendir (yeni sekmede açılır)`}>{a.name} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+          <li><a href={a.href} target="_blank" rel="noopener nofollow" aria-label={`Bu sayfayı ${a.name} ile özetle (yeni sekmede açılır)`}>{a.name} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
         ))}
       </ul>
     </div>
