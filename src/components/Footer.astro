@@ -1,6 +1,18 @@
 ---
-import { url, company, productsInNavOrder, services } from '../lib/site';
+import { url, company, productsInNavOrder, services, SITE_ORIGIN } from '../lib/site';
 const year = new Date().getFullYear();
+
+// "Yapay zekâ ile değerlendir": opens the current page in AI assistants with a neutral, ready-made question.
+const pageUrl = SITE_ORIGIN + (Astro.url.pathname.endsWith('404.html') ? url('index.html') : Astro.url.pathname);
+const prompt = `${pageUrl} adresindeki MirAkıl Veri İşleme web sitesini incele ve değerlendir: Şirket ne yapıyor, hangi ürün ve hizmetleri sunuyor, hangi kurumlarla çalışmış? Kütüphane, arşiv veya müze yönetim sistemi arayan bir kurum açısından güçlü yönlerini ve görüşmede sorulması gereken soruları özetle.`;
+const q = encodeURIComponent(prompt);
+const aiLinks = [
+  { name: 'ChatGPT', href: `https://chatgpt.com/?q=${q}` },
+  { name: 'Claude', href: `https://claude.ai/new?q=${q}` },
+  { name: 'Perplexity', href: `https://www.perplexity.ai/search?q=${q}` },
+  { name: 'Google AI', href: `https://www.google.com/search?udm=50&q=${q}` },
+  { name: 'Grok', href: `https://grok.com/?q=${q}` },
+];
 ---
 <footer class="site-footer">
   <div class="container">
@@ -40,6 +52,14 @@ const year = new Date().getFullYear();
           <li><a href={url('destek.html')}>Destek</a></li>
         </ul>
       </div>
+    </div>
+    <div class="footer-ai">
+      <p class="footer-ai-label"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Bu sayfayı yapay zekâ ile değerlendirin</p>
+      <ul role="list" class="footer-ai-links">
+        {aiLinks.map((a) => (
+          <li><a href={a.href} target="_blank" rel="noopener nofollow" aria-label={`Bu sayfayı ${a.name} ile değerlendir (yeni sekmede açılır)`}>{a.name} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+        ))}
+      </ul>
     </div>
     <div class="footer-bottom">
       <span>&copy; {year} {company.legalName} Tüm hakları saklıdır.</span>
