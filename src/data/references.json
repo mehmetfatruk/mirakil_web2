@@ -24,7 +24,7 @@
   "items": [
     {
       "name": "Gazi Üniversitesi",
-      "logo": "logos/gazi-universitesi.png",
+      "logo": "logos/gazi-universitesi.webp",
       "alt": "Gazi Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -33,7 +33,7 @@
     },
     {
       "name": "Bilecik Şeyh Edebali Üniversitesi",
-      "logo": "logos/bilecik-universitesi.gif",
+      "logo": "logos/bilecik-universitesi.webp",
       "alt": "Bilecik Şeyh Edebali Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -42,7 +42,7 @@
     },
     {
       "name": "MEF Üniversitesi",
-      "logo": "logos/mef-universitesi.jpg",
+      "logo": "logos/mef-universitesi.webp",
       "alt": "MEF Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Mudanya Üniversitesi",
-      "logo": "logos/mudanya-universitesi.jpg",
+      "logo": "logos/mudanya-universitesi.webp",
       "alt": "Mudanya Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -60,7 +60,7 @@
     },
     {
       "name": "Lokman Hekim Üniversitesi",
-      "logo": "logos/lokman-hekim-universitesi.png",
+      "logo": "logos/lokman-hekim-universitesi.webp",
       "alt": "Lokman Hekim Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -69,7 +69,7 @@
     },
     {
       "name": "Beykoz Üniversitesi",
-      "logo": "logos/beykoz-universitesi.jpg",
+      "logo": "logos/beykoz-universitesi.webp",
       "alt": "Beykoz Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Bursa Teknik Üniversitesi",
-      "logo": "logos/bursa-teknik-universitesi.jpg",
+      "logo": "logos/bursa-teknik-universitesi.webp",
       "alt": "Bursa Teknik Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -87,7 +87,7 @@
     },
     {
       "name": "Uluslararası Kıbrıs Üniversitesi",
-      "logo": "logos/uluslararasi-kibris-universitesi.png",
+      "logo": "logos/uluslararasi-kibris-universitesi.webp",
       "alt": "Uluslararası Kıbrıs Üniversitesi logosu",
       "category": "universite",
       "meta": "Üniversite",
@@ -96,7 +96,7 @@
     },
     {
       "name": "Milli Savunma Üniversitesi",
-      "logo": "logos/kara-harp-okulu.jpg",
+      "logo": "logos/kara-harp-okulu.webp",
       "alt": "Milli Savunma Üniversitesi - Kara Harp Okulu logosu",
       "category": "universite",
       "meta": "Kara Harp Okulu",
@@ -105,7 +105,7 @@
     },
     {
       "name": "TBMM Kütüphanesi",
-      "logo": "logos/tbmm-kutuphanesi.png",
+      "logo": "logos/tbmm-kutuphanesi.webp",
       "alt": "TBMM Kütüphanesi logosu",
       "category": "milli",
       "meta": "Türkiye Büyük Millet Meclisi",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Milli Kütüphane Başkanlığı",
-      "logo": "logos/milli-kutuphane.jpg",
+      "logo": "logos/milli-kutuphane.webp",
       "alt": "Cumhurbaşkanlığı Milli Kütüphane Başkanlığı logosu",
       "category": "milli",
       "meta": "Cumhurbaşkanlığı",
@@ -123,7 +123,7 @@
     },
     {
       "name": "Kütüphaneler ve Yayımlar Genel Müdürlüğü",
-      "logo": "logos/kygm.png",
+      "logo": "logos/kygm.webp",
       "alt": "Kütüphaneler ve Yayımlar Genel Müdürlüğü logosu",
       "category": "milli",
       "meta": "Kültür ve Turizm Bakanlığı",
@@ -132,7 +132,7 @@
     },
     {
       "name": "Tapu ve Kadastro Genel Müdürlüğü",
-      "logo": "logos/tapu-kadastro.png",
+      "logo": "logos/tapu-kadastro.webp",
       "alt": "Tapu ve Kadastro Genel Müdürlüğü logosu",
       "category": "milli",
       "meta": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
@@ -141,7 +141,7 @@
     },
     {
       "name": "DSİ Jeoteknik Hizmetler Dairesi",
-      "logo": "logos/dsi-jeoteknik.jpg",
+      "logo": "logos/dsi-jeoteknik.webp",
       "alt": "DSİ Jeoteknik Hizmetler ve Yeraltısuları Dairesi logosu",
       "category": "milli",
       "meta": "Devlet Su İşleri",
@@ -150,7 +150,7 @@
     },
     {
       "name": "Eti Maden İşletmeleri",
-      "logo": "logos/etimaden.png",
+      "logo": "logos/etimaden.svg",
       "alt": "Eti Maden İşletmeleri Genel Müdürlüğü logosu",
       "category": "milli",
       "meta": "Genel Müdürlük",
@@ -159,7 +159,7 @@
     },
     {
       "name": "Sosyal Bilimler Lisesi",
-      "logo": "logos/sosyal-bilimler-lisesi.jpg",
+      "logo": "logos/sosyal-bilimler-lisesi.webp",
       "alt": "Ankara Sosyal Bilimler Lisesi logosu",
       "category": "milli",
       "meta": "Millî Eğitim Bakanlığı",
@@ -168,7 +168,7 @@
     },
     {
       "name": "Strateji ve Bütçe Başkanlığı",
-      "logo": "logos/strateji-butce-baskanligi.png",
+      "logo": "logos/strateji-butce-baskanligi.webp",
       "alt": "Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı logosu",
       "category": "milli",
       "meta": "Cumhurbaşkanlığı",
@@ -177,7 +177,7 @@
     },
     {
       "name": "Tarım ve Orman Bakanlığı",
-      "logo": "logos/tarim-bakanligi.png",
+      "logo": "logos/tarim-bakanligi.webp",
       "alt": "Tarım ve Orman Bakanlığı logosu",
       "category": "milli",
       "meta": "Eğitim ve Yayım Dairesi",
@@ -186,7 +186,7 @@
     },
     {
       "name": "MEB Z-Kütüphaneler",
-      "logo": "logos/meb-z-kutuphaneler.png",
+      "logo": "logos/meb-z-kutuphaneler.webp",
       "alt": "MEB Z-Kütüphaneler logosu",
       "category": "milli",
       "meta": "Millî Eğitim Bakanlığı",
@@ -195,7 +195,7 @@
     },
     {
       "name": "Telif Hakları Genel Müdürlüğü",
-      "logo": "logos/telif-haklari.jpg",
+      "logo": "logos/telif-haklari.webp",
       "alt": "Telif Hakları Genel Müdürlüğü logosu",
       "category": "milli",
       "meta": "Kültür ve Turizm Bakanlığı",
@@ -204,7 +204,7 @@
     },
     {
       "name": "SPK Kütüphanesi",
-      "logo": "logos/spk-kutuphanesi.png",
+      "logo": "logos/spk-kutuphanesi.webp",
       "alt": "SPK Kütüphanesi logosu",
       "category": "milli",
       "meta": "Sermaye Piyasası Kurulu",
@@ -213,7 +213,7 @@
     },
     {
       "name": "YTB Kütüphanesi",
-      "logo": "logos/ytb-kutuphanesi.jpg",
+      "logo": "logos/ytb-kutuphanesi.webp",
       "alt": "YTB Kütüphanesi logosu",
       "category": "milli",
       "meta": "Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı",
@@ -222,7 +222,7 @@
     },
     {
       "name": "Türkiye Barolar Birliği",
-      "logo": "logos/tbb-kutuphanesi.png",
+      "logo": "logos/tbb-kutuphanesi.webp",
       "alt": "Türkiye Barolar Birliği Kütüphanesi logosu",
       "category": "milli",
       "meta": "TBB Kütüphanesi",
@@ -231,7 +231,7 @@
     },
     {
       "name": "Türkiye Belediyeler Birliği",
-      "logo": "logos/belediyeler-birligi.png",
+      "logo": "logos/belediyeler-birligi.webp",
       "alt": "Türkiye Belediyeler Birliği Kütüphanesi logosu",
       "category": "milli",
       "meta": "Kütüphane",
@@ -240,7 +240,7 @@
     },
     {
       "name": "Ankara Büyükşehir Belediyesi",
-      "logo": "logos/ankara-buyuksehir.jpg",
+      "logo": "logos/ankara-buyuksehir.webp",
       "alt": "Ankara Büyükşehir Belediyesi logosu",
       "category": "milli",
       "meta": "Yerel Yönetim",
@@ -249,7 +249,7 @@
     },
     {
       "name": "Konyaaltı Belediyesi",
-      "logo": "logos/konyaalti-belediyesi.jpg",
+      "logo": "logos/konyaalti-belediyesi.webp",
       "alt": "Konyaaltı Belediyesi logosu",
       "category": "milli",
       "meta": "Antalya · Yerel Yönetim",
@@ -258,7 +258,7 @@
     },
     {
       "name": "Karşıyaka Belediyesi",
-      "logo": "logos/karsiyaka-belediyesi.jpg",
+      "logo": "logos/karsiyaka-belediyesi.webp",
       "alt": "Karşıyaka Belediyesi logosu",
       "category": "milli",
       "meta": "İzmir · Yerel Yönetim",
@@ -267,7 +267,7 @@
     },
     {
       "name": "Sancaktepe Belediyesi",
-      "logo": "logos/sancaktepe-belediyesi.png",
+      "logo": "logos/sancaktepe-belediyesi.webp",
       "alt": "Sancaktepe Belediyesi logosu",
       "category": "milli",
       "meta": "İstanbul · Yerel Yönetim",
@@ -276,7 +276,7 @@
     },
     {
       "name": "Safranbolu Belediyesi",
-      "logo": "logos/safranbolu-belediyesi.jpg",
+      "logo": "logos/safranbolu-belediyesi.webp",
       "alt": "Safranbolu Belediyesi logosu",
       "category": "milli",
       "meta": "Karabük · Yerel Yönetim",
@@ -294,7 +294,7 @@
     },
     {
       "name": "Türkiye Maarif Vakfı",
-      "logo": "logos/maarif-vakfi.jpg",
+      "logo": "logos/maarif-vakfi.webp",
       "alt": "Türkiye Maarif Vakfı Kütüphanesi logosu",
       "category": "milli",
       "meta": "Eğitim Kuruluşu",
@@ -303,7 +303,7 @@
     },
     {
       "name": "TRT Kütüphanesi",
-      "logo": "logos/trt-kutuphanesi.jpg",
+      "logo": "logos/trt-kutuphanesi.webp",
       "alt": "TRT Kütüphanesi logosu",
       "category": "kultur",
       "meta": "Türkiye Radyo ve Televizyon Kurumu",
@@ -312,7 +312,7 @@
     },
     {
       "name": "SOCAR Türkiye",
-      "logo": "logos/socar.png",
+      "logo": "logos/socar.webp",
       "alt": "SOCAR Türkiye logosu",
       "category": "kultur",
       "meta": "Enerji Şirketi",
@@ -321,7 +321,7 @@
     },
     {
       "name": "Vakko Vitali Hakko Kütüphanesi",
-      "logo": "logos/vakko-vitali-hakko-kutuphanesi.jpg",
+      "logo": "logos/vakko-vitali-hakko-kutuphanesi.webp",
       "alt": "Vakko Vitali Hakko Kütüphanesi logosu",
       "category": "kultur",
       "meta": "Vakko",
@@ -330,7 +330,7 @@
     },
     {
       "name": "Bibliopera",
-      "logo": "logos/bibliopera.png",
+      "logo": "logos/bibliopera.webp",
       "alt": "Bibliopera logosu",
       "category": "kultur",
       "meta": "Beyoğlu Araştırma Kütüphaneleri Platformu",
@@ -339,7 +339,7 @@
     },
     {
       "name": "TÜRK-İŞ Konfederasyonu",
-      "logo": "logos/turkis-kutuphanesi.png",
+      "logo": "logos/turkis-kutuphanesi.webp",
       "alt": "TÜRK-İŞ Konfederasyonu Kütüphanesi logosu",
       "category": "kultur",
       "meta": "İşçi Sendikaları",
@@ -348,7 +348,7 @@
     },
     {
       "name": "Türkşeker",
-      "logo": "logos/turk-seker.jpg",
+      "logo": "logos/turk-seker.webp",
       "alt": "Türkşeker Kütüphanesi logosu",
       "category": "kultur",
       "meta": "Türkiye Şeker Fabrikaları A.Ş.",
@@ -357,7 +357,7 @@
     },
     {
       "name": "İSTEK Okulları",
-      "logo": "logos/istek-okullari.jpg",
+      "logo": "logos/istek-okullari.webp",
       "alt": "İSTEK Okulları logosu",
       "category": "kultur",
       "meta": "Eğitim Kuruluşu",
@@ -366,7 +366,7 @@
     },
     {
       "name": "Folklor Kurumu Derneği",
-      "logo": "logos/folklor-kurumu.jpg",
+      "logo": "logos/folklor-kurumu.webp",
       "alt": "Folklor Kurumu Derneği logosu",
       "category": "kultur",
       "meta": "Sivil Toplum Kuruluşu",
@@ -375,7 +375,7 @@
     },
     {
       "name": "TMMOB Mimarlar Odası",
-      "logo": "logos/tmmob-mimarlar-odasi.png",
+      "logo": "logos/tmmob-mimarlar-odasi.webp",
       "alt": "TMMOB Mimarlar Odası logosu",
       "category": "kultur",
       "meta": "Meslek Kuruluşu",
@@ -384,7 +384,7 @@
     },
     {
       "name": "Erler Film",
-      "logo": "logos/erler-film.jpg",
+      "logo": "logos/erler-film.webp",
       "alt": "Erler Film logosu",
       "category": "kultur",
       "meta": "Yapım Şirketi",
@@ -393,7 +393,7 @@
     },
     {
       "name": "Çiğdem Eğitim Derneği",
-      "logo": "logos/cigdem-egitim-dernegi.jpg",
+      "logo": "logos/cigdem-egitim-dernegi.webp",
       "alt": "Çiğdem Eğitim Derneği logosu",
       "category": "kultur",
       "meta": "Sivil Toplum Kuruluşu",
@@ -402,7 +402,7 @@
     },
     {
       "name": "Türkiye Diyetisyenler Derneği",
-      "logo": "logos/beslenme-diyetisyenler-dernegi.jpg",
+      "logo": "logos/beslenme-diyetisyenler-dernegi.webp",
       "alt": "Türkiye Diyetisyenler Derneği logosu",
       "category": "kultur",
       "meta": "Meslek Derneği",
@@ -411,7 +411,7 @@
     },
     {
       "name": "Cin Ali Eğitim ve Kültür Vakfı",
-      "logo": "logos/cin-ali.jpg",
+      "logo": "logos/cin-ali.webp",
       "alt": "Cin Ali Eğitim ve Kültür Vakfı logosu",
       "category": "kultur",
       "meta": "Eğitim Vakfı",
@@ -420,7 +420,7 @@
     },
     {
       "name": "KÜRK Derneği",
-      "logo": "logos/kurk.jpg",
+      "logo": "logos/kurk.webp",
       "alt": "Kürk Sanayicileri Derneği logosu",
       "category": "kultur",
       "meta": "Sektörel Dernek",
@@ -429,7 +429,7 @@
     },
     {
       "name": "Pekin Hukuk Bürosu",
-      "logo": "logos/pekin-hukuk-burosu.jpg",
+      "logo": "logos/pekin-hukuk-burosu.webp",
       "alt": "Pekin Hukuk Bürosu logosu",
       "category": "kultur",
       "meta": "Hukuk Ofisi",

@@ -21,6 +21,12 @@ const faqs = [
 ];
 
 const logos = references.items;
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
 ---
 <BaseLayout
   title="MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Çözümleri"
@@ -32,6 +38,10 @@ const logos = references.items;
   nav="home"
   contactHref="#contact"
 >
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
   <HeroSlider />
 
   <!-- Products: real product logos (Theke / Orex pattern) -->

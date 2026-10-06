@@ -30,3 +30,13 @@ npm run preview
 | `supabase/functions/` | E-posta bildirimi Edge Function |
 
 İçerik güncellemek için genellikle yalnızca `src/data/` altındaki JSON dosyalarını veya `src/lib/site.ts` dosyasını düzenlemek yeterlidir.
+
+## Görseller
+
+Raster görseller `public/assets/` altında **WebP** olarak tutulur (logolar en fazla 640 px, ekran görüntüleri en fazla 1280 px genişlik). Yeni logo eklerken WebP'ye çevirip `src/data/references.json` içinde `.webp` uzantısıyla referans verin. `og:image` için `assets/logo.png` PNG olarak kalır.
+
+`public/assets/logos/etimaden.svg` geçici bir yazı logosudur; kurumun resmi logosu temin edildiğinde değiştirilmelidir.
+
+## Yedek
+
+Modernizasyon öncesi v2 sürümü `backup/v2-2026-10-06` dalında saklanır (commit `43fe033`).

@@ -105,7 +105,7 @@
     ],
     "data": {
       "mod-1": {
-        "image": "assets/koha-modules/cataloging.png",
+        "image": "assets/koha-modules/cataloging.webp",
         "url": "koha.local/cgi-bin/koha/cataloguing/addbooks.pl",
         "eyebrow": "Katalogcu için",
         "title": "Bibliyografik İşlemler",
@@ -130,7 +130,7 @@
         ]
       },
       "mod-2": {
-        "image": "assets/koha-modules/circulation.png",
+        "image": "assets/koha-modules/circulation.webp",
         "url": "koha.local/cgi-bin/koha/circ/circulation-home.pl",
         "eyebrow": "Dolaşım personeli için",
         "title": "Dolaşım & Üye Yönetimi",
@@ -155,7 +155,7 @@
         ]
       },
       "mod-3": {
-        "image": "assets/koha-modules/opac.png",
+        "image": "assets/koha-modules/opac.webp",
         "url": "opac.koha.local",
         "eyebrow": "Son kullanıcı için",
         "title": "OPAC & Halk Erişimi",
@@ -180,7 +180,7 @@
         ]
       },
       "mod-4": {
-        "image": "assets/koha-modules/acquisitions.png",
+        "image": "assets/koha-modules/acquisitions.webp",
         "url": "koha.local/cgi-bin/koha/acqui/acqui-home.pl",
         "eyebrow": "Edinme bölümü için",
         "title": "Süreli Yayın & Edinme",
@@ -205,7 +205,7 @@
         ]
       },
       "mod-5": {
-        "image": "assets/koha-modules/reports.png",
+        "image": "assets/koha-modules/reports.webp",
         "url": "koha.local/cgi-bin/koha/reports/reports-home.pl",
         "eyebrow": "Yönetici için",
         "title": "Yönetim & Raporlama",

@@ -304,6 +304,11 @@ p { text-wrap: pretty; }
   .js .reveal:not(.in) { opacity: 0; }
   .js .reveal-stagger:not(.in) > * { opacity: 0; }
 }
+/* Cross-document view transitions: smooth cross-fade between pages (no JS; ignored by older browsers). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  .site-nav { view-transition-name: site-nav; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
