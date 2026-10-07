@@ -1,0 +1,392 @@
+{
+  "slug": "alfresco",
+  "color": "#0b5ea8",
+  "meta": {
+    "title": "Alfresco - Belge Yönetimi ve E-Arşiv Platformu | MirAkıl",
+    "description": "Alfresco açık kaynak belge yönetim sistemi: sürüm takibi, tam metin arama, iş akışı, yetkilendirme ve CMIS/REST entegrasyonu. MirAkıl ile kurulum, veri aktarımı, eğitim ve destek.",
+    "keywords": "Alfresco, belge yönetim sistemi, doküman yönetimi, e-arşiv, kurumsal içerik yönetimi, ECM, EBYS altyapısı, açık kaynak belge yönetimi, CMIS, Alfresco kurulumu",
+    "ogTitle": "Alfresco - Belge Yönetimi ve E-Arşiv Platformu | MirAkıl",
+    "ogDescription": "Kurumsal belgeleriniz için açık kaynak belge yönetimi ve e-arşiv. MirAkıl ile Alfresco kurulumu, veri aktarımı ve destek."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-folder-open",
+    "name": "Alfresco",
+    "subtitle": "Belge Yönetimi ve E-Arşiv Platformu",
+    "lead": "Kurumsal belgeleri sürümlü, yetkili ve aranabilir biçimde saklayan açık kaynak içerik yönetim platformudur. Kâğıttan dijitale geçen arşivler ve belge yoğun birimler için güçlü bir altyapı sunar.",
+    "ctas": [
+      {
+        "href": "https://docs.alfresco.com/",
+        "label": "Dokümantasyonu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "2005",
+      "label": "Yılından Bu Yana"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "LGPL",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "CMIS",
+      "label": "Açık Standart"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "Java",
+      "label": "Backend Teknolojisi"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Alfresco'nun temel yeteneklerini keşfedin. Belgeleri saklamaktan iş akışına ve entegrasyona kadar her adım tek platformda.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-folder-tree",
+        "label": "Belge Deposu"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-magnifying-glass",
+        "label": "Arama"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-diagram-project",
+        "label": "İş Akışı ve Kurallar"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-user-shield",
+        "label": "Yetki ve Güvenlik"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-plug",
+        "label": "Entegrasyon"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-folder-tree",
+        "eyebrow": "Arşivci için",
+        "title": "Belge Deposu",
+        "desc": "Kurumsal belgeleri klasör, site ve içerik modelleriyle düzenleyin. Her belge sürüm geçmişi ve meta verisiyle birlikte saklanır.",
+        "features": [
+          {
+            "i": "fa-code-branch",
+            "t": "Ana ve ara sürüm takibi"
+          },
+          {
+            "i": "fa-lock",
+            "t": "Check-in / check-out ile kilitleme"
+          },
+          {
+            "i": "fa-tags",
+            "t": "Özel içerik modelleri ve meta veri"
+          },
+          {
+            "i": "fa-eye",
+            "t": "Tarayıcıda PDF ve Office önizleme"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-magnifying-glass",
+        "eyebrow": "Kullanıcı için",
+        "title": "Arama",
+        "desc": "Belge içeriğinde ve meta verilerinde tam metin arama yapın. Arama altyapısı Apache Solr üzerine kuruludur.",
+        "features": [
+          {
+            "i": "fa-file-lines",
+            "t": "Belge içinde tam metin arama"
+          },
+          {
+            "i": "fa-filter",
+            "t": "Faset (filtre) ile sonuç daraltma"
+          },
+          {
+            "i": "fa-sliders",
+            "t": "Gelişmiş arama formu"
+          },
+          {
+            "i": "fa-tags",
+            "t": "Meta veri alanlarında arama"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-diagram-project",
+        "eyebrow": "Süreç sahibi için",
+        "title": "İş Akışı ve Kurallar",
+        "desc": "Onay, inceleme ve görev akışlarını tanımlayın. Klasör kurallarıyla tekrarlayan işleri otomatikleştirin.",
+        "features": [
+          {
+            "i": "fa-check-double",
+            "t": "Onay ve inceleme akışları"
+          },
+          {
+            "i": "fa-list-check",
+            "t": "Görev atama ve takip"
+          },
+          {
+            "i": "fa-wand-magic-sparkles",
+            "t": "Klasör kuralları ile otomasyon"
+          },
+          {
+            "i": "fa-bell",
+            "t": "E-posta bildirimleri"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-user-shield",
+        "eyebrow": "BT yöneticisi için",
+        "title": "Yetki ve Güvenlik",
+        "desc": "Kimin neyi görüp değiştirebileceğini klasör ve belge düzeyinde belirleyin. Kullanıcıları kurumsal dizinden eşitleyin.",
+        "features": [
+          {
+            "i": "fa-users",
+            "t": "Rol ve grup tabanlı yetkiler"
+          },
+          {
+            "i": "fa-sitemap",
+            "t": "LDAP / Active Directory eşitleme"
+          },
+          {
+            "i": "fa-clock-rotate-left",
+            "t": "Denetim kayıtları"
+          },
+          {
+            "i": "fa-list-check",
+            "t": "Belge ve klasör bazında erişim listeleri"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-plug",
+        "eyebrow": "Geliştirici için",
+        "title": "Entegrasyon",
+        "desc": "Açık standartlar ve REST API ile Alfresco'yu mevcut sistemlerinize bağlayın.",
+        "features": [
+          {
+            "i": "fa-cubes",
+            "t": "CMIS 1.1 standardı"
+          },
+          {
+            "i": "fa-code",
+            "t": "REST API"
+          },
+          {
+            "i": "fa-network-wired",
+            "t": "WebDAV ile ağ sürücüsü erişimi"
+          },
+          {
+            "i": "fa-puzzle-piece",
+            "t": "Eklenti ve uzantı geliştirme"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "header": {
+      "title": "Genel Bakış",
+      "intro": "Alfresco, belgeleri ve dijital içerikleri tek bir depoda toplayıp yönetmek için geliştirilmiş açık kaynak bir platformdur."
+    },
+    "title": "Alfresco ile Belgeleriniz Düzenli, Güvenli ve Erişilebilir",
+    "titleAccent": "Alfresco",
+    "stats": [
+      {
+        "value": "2005",
+        "label": "Yılından Bu Yana"
+      },
+      {
+        "value": "LGPLv3",
+        "label": "Community Lisansı"
+      },
+      {
+        "value": "CMIS 1.1",
+        "label": "Standart Uyum"
+      },
+      {
+        "value": "REST",
+        "label": "API Desteği"
+      }
+    ],
+    "paragraphs": [
+      "Alfresco, 2005'ten bu yana geliştirilen açık kaynak bir kurumsal içerik yönetim platformudur. Community sürümü LGPLv3 lisansıyla ücretsiz kullanılır.",
+      "Belgeler sürüm geçmişi, meta verisi ve erişim yetkileriyle birlikte saklanır. Tam metin arama sayesinde aranan belge, içeriğindeki bir kelimeyle bile bulunur.",
+      "Taranmış evrak arşivleri, sözleşmeler, proje dosyaları ve birim yazışmaları için uygundur. CMIS ve REST API ile mevcut sistemlerinize bağlanabilir."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-box-archive",
+        "title": "Merkezi Belge Deposu",
+        "text": "Dağınık ağ klasörleri ve e-posta eklerindeki belgeleri tek, düzenli bir depoda toplayın."
+      },
+      {
+        "icon": "fas fa-code-branch",
+        "title": "Sürüm Takibi",
+        "text": "Her değişiklik yeni bir sürüm olarak saklanır. Eski sürümleri görüntüleyin ya da geri yükleyin."
+      },
+      {
+        "icon": "fas fa-diagram-project",
+        "title": "İş Akışları",
+        "text": "Onay ve inceleme süreçlerini platform üzerinde tanımlayıp takip edin."
+      },
+      {
+        "icon": "fas fa-user-shield",
+        "title": "Ayrıntılı Yetkilendirme",
+        "text": "Klasör ve belge düzeyinde okuma, düzenleme ve yönetim yetkileri verin."
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "Alfresco'nun belge yönetimi ve e-arşiv süreçleriniz için sunduğu temel özellikler.",
+    "items": [
+      {
+        "icon": "fas fa-code-branch",
+        "title": "Sürüm Yönetimi",
+        "text": "Ana ve ara sürümlerle belgelerin tüm geçmişini koruyun; gerektiğinde önceki sürüme dönün."
+      },
+      {
+        "icon": "fas fa-magnifying-glass",
+        "title": "Tam Metin Arama",
+        "text": "Belge içeriğinde ve meta verilerde Solr tabanlı hızlı arama yapın."
+      },
+      {
+        "icon": "fas fa-tags",
+        "title": "Meta Veri ve İçerik Modelleri",
+        "text": "Kurumunuza özel belge türleri ve alanlar tanımlayarak tutarlı kayıt oluşturun."
+      },
+      {
+        "icon": "fas fa-diagram-project",
+        "title": "İş Akışı",
+        "text": "Onay, inceleme ve görev akışlarıyla belge süreçlerini dijitalleştirin."
+      },
+      {
+        "icon": "fas fa-users-gear",
+        "title": "Ekip Alanları",
+        "text": "Birimler ve projeler için ayrı çalışma alanları açarak belgeleri birlikte yönetin."
+      },
+      {
+        "icon": "fas fa-eye",
+        "title": "Önizleme",
+        "text": "PDF, Office ve görsel dosyaları indirmeden tarayıcıda görüntüleyin."
+      },
+      {
+        "icon": "fas fa-sitemap",
+        "title": "Dizin Entegrasyonu",
+        "text": "Kullanıcı ve grupları LDAP veya Active Directory'den otomatik eşitleyin."
+      },
+      {
+        "icon": "fas fa-cubes",
+        "title": "Açık Standartlar",
+        "text": "CMIS, WebDAV ve REST API ile diğer uygulamalara bağlanın."
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "title": "Neden Alfresco?",
+    "intro": "Belge yönetimi ve e-arşiv projeleriniz için Alfresco'yu öne çıkaran nedenler.",
+    "items": [
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Lisans Maliyeti Yok",
+        "text": "Community sürümü ücretsizdir. Bütçeniz lisansa değil, kurulum ve kurumunuza uyarlamaya gider."
+      },
+      {
+        "icon": "fas fa-database",
+        "title": "Veriler Sizde",
+        "text": "Belgeler kendi sunucunuzda veya seçtiğiniz altyapıda durur. Açık standartlar sayesinde başka sisteme taşınabilir."
+      },
+      {
+        "icon": "fas fa-building-columns",
+        "title": "Olgun Platform",
+        "text": "2005'ten bu yana geliştirilen, dünya genelinde kurumlarda kullanılan bir altyapı."
+      },
+      {
+        "icon": "fas fa-plug",
+        "title": "Kolay Entegrasyon",
+        "text": "CMIS ve REST API ile kütüphane, arşiv ve kurumsal uygulamalarınıza bağlanır."
+      },
+      {
+        "icon": "fas fa-arrows-up-to-line",
+        "title": "Ölçeklenebilir",
+        "text": "Küçük bir birimden kurum geneline kadar büyüyebilen bir mimari."
+      },
+      {
+        "icon": "fas fa-headset",
+        "title": "MirAkıl Desteği",
+        "text": "Kurulum, mevcut belgelerin aktarımı, eğitim ve bakım tek ekipten."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Belgelerinizi Düzenli Bir E-Arşive Taşıyın",
+    "text": "Alfresco ile belge yönetimi ve e-arşiv ihtiyaçlarınız için ücretsiz danışmanlık alın.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}
