@@ -1,0 +1,392 @@
+{
+  "slug": "immich",
+  "color": "#4250AF",
+  "meta": {
+    "title": "Immich - Fotoğraf ve Video Arşivi Platformu | MirAkıl",
+    "description": "Immich açık kaynak fotoğraf ve video arşivi: mobil yedekleme, yapay zekâ destekli arama, yüz tanıma, albümler ve paylaşım. Kurumunuzun sunucusunda, MirAkıl kurulumu ve desteğiyle.",
+    "keywords": "Immich, fotoğraf arşivi, video arşivi, kurumsal fotoğraf arşivi, medya arşivi, açık kaynak fotoğraf yönetimi, yüz tanıma, Immich kurulumu",
+    "ogTitle": "Immich - Fotoğraf ve Video Arşivi Platformu | MirAkıl",
+    "ogDescription": "Kurumsal fotoğraf ve video arşiviniz için yapay zekâ destekli, kendi sunucunuzda çalışan açık kaynak platform."
+  },
+  "order": [
+    "stats",
+    "modules",
+    "overview",
+    "features",
+    "why"
+  ],
+  "hero": {
+    "icon": "fas fa-images",
+    "name": "Immich",
+    "subtitle": "Fotoğraf ve Video Arşivi Platformu",
+    "lead": "Kurumların fotoğraf ve video arşivleri için yapay zekâ destekli arama sunan açık kaynak medya yönetim platformudur. Verileriniz kendi sunucunuzda kalır.",
+    "ctas": [
+      {
+        "href": "https://demo.immich.app/",
+        "label": "Canlı Demoyu İncele",
+        "icon": "fas fa-external-link-alt",
+        "class": [
+          "btn",
+          "btn-demo"
+        ],
+        "external": true
+      },
+      {
+        "href": "#contact",
+        "label": "İletişime Geç",
+        "icon": "fas fa-paper-plane",
+        "class": [
+          "btn",
+          "btn-ghost"
+        ],
+        "external": false
+      }
+    ]
+  },
+  "stats": [
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "2022",
+      "label": "Yılından Bu Yana"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "AGPL",
+      "label": "Açık Kaynak Lisansı"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "iOS + Android",
+      "label": "Mobil Uygulama"
+    },
+    {
+      "target": null,
+      "prefix": null,
+      "suffix": null,
+      "text": "Yapay Zekâ",
+      "label": "Akıllı Arama"
+    }
+  ],
+  "modules": {
+    "title": "Modüller Bir Bakışta",
+    "intro": "Immich'in temel yeteneklerini keşfedin. Yüklemeden aramaya ve paylaşıma kadar medya arşivinizin tamamı tek platformda.",
+    "tabs": [
+      {
+        "id": "mod-1",
+        "icon": "fas fa-cloud-arrow-up",
+        "label": "Yükleme ve Yedekleme"
+      },
+      {
+        "id": "mod-2",
+        "icon": "fas fa-wand-magic-sparkles",
+        "label": "Akıllı Arama"
+      },
+      {
+        "id": "mod-3",
+        "icon": "fas fa-images",
+        "label": "Albüm ve Zaman Çizelgesi"
+      },
+      {
+        "id": "mod-4",
+        "icon": "fas fa-share-nodes",
+        "label": "Paylaşım"
+      },
+      {
+        "id": "mod-5",
+        "icon": "fas fa-server",
+        "label": "Yönetim"
+      }
+    ],
+    "data": {
+      "mod-1": {
+        "icon": "fa-cloud-arrow-up",
+        "eyebrow": "Fotoğrafçı için",
+        "title": "Yükleme ve Yedekleme",
+        "desc": "Mobil uygulama, telefonla çekilen fotoğraf ve videoları otomatik yükler. Web arayüzünden toplu yükleme yapılabilir.",
+        "features": [
+          {
+            "i": "fa-mobile-screen",
+            "t": "iOS ve Android uygulaması"
+          },
+          {
+            "i": "fa-rotate",
+            "t": "Otomatik arka plan yedekleme"
+          },
+          {
+            "i": "fa-upload",
+            "t": "Web üzerinden toplu yükleme"
+          },
+          {
+            "i": "fa-folder-plus",
+            "t": "Mevcut klasörleri dış kütüphane olarak bağlama"
+          }
+        ]
+      },
+      "mod-2": {
+        "icon": "fa-wand-magic-sparkles",
+        "eyebrow": "Arşiv kullanıcısı için",
+        "title": "Akıllı Arama",
+        "desc": "Fotoğrafları içerdikleri nesne ve sahneye göre doğal dille arayın. Yüz tanıma ile kişileri gruplayın.",
+        "features": [
+          {
+            "i": "fa-magnifying-glass",
+            "t": "\"Kalabalık salon\" gibi doğal dil araması"
+          },
+          {
+            "i": "fa-user",
+            "t": "Yüz tanıma ve kişi gruplama"
+          },
+          {
+            "i": "fa-camera",
+            "t": "Kamera, tarih ve konuma göre arama"
+          },
+          {
+            "i": "fa-clone",
+            "t": "Yinelenen fotoğrafları bulma"
+          }
+        ]
+      },
+      "mod-3": {
+        "icon": "fa-images",
+        "eyebrow": "Editör için",
+        "title": "Albüm ve Zaman Çizelgesi",
+        "desc": "Tüm arşivi tarihe göre zaman çizelgesinde gezin. Etkinlik ve projeler için albümler oluşturun.",
+        "features": [
+          {
+            "i": "fa-timeline",
+            "t": "Tarih sıralı zaman çizelgesi"
+          },
+          {
+            "i": "fa-book-open",
+            "t": "Albümler ve etiketler"
+          },
+          {
+            "i": "fa-map-location-dot",
+            "t": "Harita görünümü"
+          },
+          {
+            "i": "fa-circle-info",
+            "t": "EXIF meta verilerini görüntüleme"
+          }
+        ]
+      },
+      "mod-4": {
+        "icon": "fa-share-nodes",
+        "eyebrow": "Kurumsal iletişim için",
+        "title": "Paylaşım",
+        "desc": "Albümleri birimler arasında paylaşın ya da dışarıyla bağlantı üzerinden güvenle paylaşın.",
+        "features": [
+          {
+            "i": "fa-users",
+            "t": "Ortak albümler"
+          },
+          {
+            "i": "fa-link",
+            "t": "Paylaşım bağlantıları"
+          },
+          {
+            "i": "fa-key",
+            "t": "Bağlantılara parola ve süre sınırı"
+          },
+          {
+            "i": "fa-download",
+            "t": "Toplu indirme"
+          }
+        ]
+      },
+      "mod-5": {
+        "icon": "fa-server",
+        "eyebrow": "BT yöneticisi için",
+        "title": "Yönetim",
+        "desc": "Çok kullanıcılı yapıyı, depolama kotalarını ve arka plan işlerini tek panelden yönetin.",
+        "features": [
+          {
+            "i": "fa-users-gear",
+            "t": "Çok kullanıcı ve depolama kotası"
+          },
+          {
+            "i": "fa-right-to-bracket",
+            "t": "OAuth ile tek oturum açma"
+          },
+          {
+            "i": "fa-film",
+            "t": "Video dönüştürme ve küçük resimler"
+          },
+          {
+            "i": "fa-hard-drive",
+            "t": "Kendi sunucunuzda çalışır"
+          }
+        ]
+      }
+    },
+    "altTpl": null
+  },
+  "overview": {
+    "header": {
+      "title": "Genel Bakış",
+      "intro": "Immich, fotoğraf ve video arşivlerini kendi sunucunuzda yönetmeniz için geliştirilmiş açık kaynak bir platformdur."
+    },
+    "title": "Immich ile Görsel Arşiviniz Aranabilir Hâle Gelsin",
+    "titleAccent": "Immich",
+    "stats": [
+      {
+        "value": "2022",
+        "label": "Yılından Bu Yana"
+      },
+      {
+        "value": "AGPLv3",
+        "label": "Açık Kaynak Lisansı"
+      },
+      {
+        "value": "Web + Mobil",
+        "label": "Erişim"
+      },
+      {
+        "value": "Kendi Sunucunuz",
+        "label": "Barındırma"
+      }
+    ],
+    "paragraphs": [
+      "Immich, 2022'de başlayan ve hızla büyüyen açık kaynak bir fotoğraf ve video yönetim platformudur. AGPLv3 lisanslıdır ve kurumun kendi sunucusunda çalışır.",
+      "Yapay zekâ destekli arama, fotoğrafları içeriklerine göre bulmanızı sağlar. Yüz tanıma kişileri gruplar; tarih, konum ve kamera bilgileriyle filtreleme yapılabilir.",
+      "Basın ve halkla ilişkiler birimleri, etkinlik arşivleri ve kurum tarihine ait fotoğraf koleksiyonları için uygundur. Arşivi kamuya sergilemek için Omeka, iç kullanım ve hızlı erişim için Immich doğru tercihtir."
+    ],
+    "cards": [
+      {
+        "icon": "fas fa-cloud-arrow-up",
+        "title": "Otomatik Yedekleme",
+        "text": "Mobil cihazlarla çekilen fotoğraf ve videolar arşive kendiliğinden yüklenir."
+      },
+      {
+        "icon": "fas fa-wand-magic-sparkles",
+        "title": "Yapay Zekâ ile Arama",
+        "text": "Fotoğrafları içerdikleri nesne ve sahneye göre doğal dille arayın."
+      },
+      {
+        "icon": "fas fa-user",
+        "title": "Yüz Tanıma",
+        "text": "Arşivdeki kişileri otomatik gruplayın, isim verin ve tek tıkla bulun."
+      },
+      {
+        "icon": "fas fa-share-nodes",
+        "title": "Güvenli Paylaşım",
+        "text": "Albümleri ekiplerle ya da süreli ve parolalı bağlantılarla paylaşın."
+      }
+    ]
+  },
+  "features": {
+    "title": "Özellikler",
+    "intro": "Immich'in kurumsal fotoğraf ve video arşivleri için sunduğu temel özellikler.",
+    "items": [
+      {
+        "icon": "fas fa-mobile-screen",
+        "title": "Mobil Uygulamalar",
+        "text": "iOS ve Android uygulamalarıyla arşive her yerden erişin, otomatik yedekleme yapın."
+      },
+      {
+        "icon": "fas fa-wand-magic-sparkles",
+        "title": "Akıllı Arama",
+        "text": "Yapay zekâ ile fotoğrafları içeriklerine göre arayın."
+      },
+      {
+        "icon": "fas fa-user",
+        "title": "Yüz Tanıma",
+        "text": "Kişileri otomatik gruplayın ve fotoğraflarını tek ekranda görün."
+      },
+      {
+        "icon": "fas fa-folder-plus",
+        "title": "Dış Kütüphaneler",
+        "text": "Sunucudaki mevcut fotoğraf klasörlerini taşımadan arşive dahil edin."
+      },
+      {
+        "icon": "fas fa-map-location-dot",
+        "title": "Harita ve Konum",
+        "text": "Konum bilgisi olan fotoğrafları harita üzerinde keşfedin."
+      },
+      {
+        "icon": "fas fa-circle-info",
+        "title": "Meta Veri",
+        "text": "Kamera, tarih ve konum gibi EXIF bilgilerini görüntüleyin ve arayın."
+      },
+      {
+        "icon": "fas fa-film",
+        "title": "Video Desteği",
+        "text": "Videolar web ve mobilde oynatılabilir biçime otomatik dönüştürülür."
+      },
+      {
+        "icon": "fas fa-users-gear",
+        "title": "Çok Kullanıcı",
+        "text": "Birimlere ayrı hesaplar ve depolama kotaları tanımlayın; OAuth ile oturum açın."
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "title": "Neden Immich?",
+    "intro": "Kurumsal fotoğraf ve video arşiviniz için Immich'i öne çıkaran nedenler.",
+    "items": [
+      {
+        "icon": "fas fa-lock-open",
+        "title": "Lisans Maliyeti Yok",
+        "text": "Açık kaynaktır. Kullanıcı ya da fotoğraf sayısına göre ücret ödemezsiniz."
+      },
+      {
+        "icon": "fas fa-server",
+        "title": "Veriler Kurumda",
+        "text": "Fotoğraflar ticari bulut servislerine değil, kendi sunucunuza kaydedilir."
+      },
+      {
+        "icon": "fas fa-wand-magic-sparkles",
+        "title": "Yapay Zekâ Sunucunuzda",
+        "text": "Akıllı arama ve yüz tanıma kurumunuzun sunucusunda çalışır; görseller dışarı gönderilmez."
+      },
+      {
+        "icon": "fas fa-mobile-screen",
+        "title": "Kolay Kullanım",
+        "text": "Tanıdık, telefon galerisi benzeri arayüz sayesinde eğitim ihtiyacı azdır."
+      },
+      {
+        "icon": "fas fa-rocket",
+        "title": "Hızla Gelişiyor",
+        "text": "Geniş bir topluluk ve sık sürüm yayınlarıyla sürekli gelişen bir proje."
+      },
+      {
+        "icon": "fas fa-headset",
+        "title": "MirAkıl Desteği",
+        "text": "Sunucu kurulumu, mevcut arşivin aktarımı, yedekleme ve bakım tek ekipten."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Görsel Arşivinizi Aranabilir Hâle Getirin",
+    "text": "Immich ile fotoğraf ve video arşivi ihtiyaçlarınız için ücretsiz danışmanlık alın.",
+    "buttons": [
+      {
+        "href": "tel:+903122586457",
+        "label": "Hemen Arayın: 0312 258 64 57",
+        "icon": "fas fa-phone",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      },
+      {
+        "href": "mailto:info@mirakil.com",
+        "label": "E-posta Gönderin",
+        "icon": "fas fa-envelope",
+        "class": [
+          "btn",
+          "btn-white"
+        ],
+        "external": false
+      }
+    ]
+  }
+}

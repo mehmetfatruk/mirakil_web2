@@ -56,10 +56,12 @@ export const products: ProductSummary[] = [
   { slug: 'ojs', logo: 'assets/products/ojs.svg', name: 'OJS', icon: 'fas fa-newspaper', color: '#002B5C', category: 'Akademik Dergi Yayıncılığı', summary: 'Akademik dergi yayıncılığı için tasarlanmış bir sistemdir.' },
   { slug: 'indico', logo: 'assets/products/indico.svg', name: 'Indico', icon: 'fas fa-calendar-alt', color: '#29ABE2', category: 'Konferans Yönetim Sistemi', summary: 'Akademik konferansların yönetimi ve organizasyonu için kullanılır.' },
   { slug: 'collectiveaccess', logo: 'assets/products/collectiveaccess.svg', name: 'CollectiveAccess', short: 'CA', icon: 'fas fa-archive', color: '#5b7e3d', category: 'Müze ve Arşiv Yönetimi', summary: 'Müze ve arşiv koleksiyonlarının kataloglanması ve yönetilmesi için kullanılır.' },
+  { slug: 'alfresco', logo: 'assets/products/alfresco.svg', name: 'Alfresco', icon: 'fas fa-folder-open', color: '#0b5ea8', category: 'Belge Yönetimi ve E-Arşiv', summary: 'Kurumsal belgelerin sürümlü, yetkili ve aranabilir biçimde saklandığı içerik yönetim platformudur.' },
+  { slug: 'immich', logo: 'assets/products/immich.svg', name: 'Immich', icon: 'fas fa-images', color: '#4250AF', category: 'Fotoğraf ve Video Arşivi', summary: 'Kurumsal fotoğraf ve video arşivleri için yapay zekâ destekli arama sunan medya yönetim platformudur.' },
 ];
 
 // Nav dropdown / footer order (legacy nav order).
-export const navProductOrder = ['koha', 'vufind', 'dspace', 'omeka', 'moodle', 'collectiveaccess', 'ojs', 'indico'];
+export const navProductOrder = ['koha', 'vufind', 'dspace', 'omeka', 'moodle', 'collectiveaccess', 'alfresco', 'immich', 'ojs', 'indico'];
 export const productsInNavOrder = navProductOrder.map((s) => products.find((p) => p.slug === s)!);
 
 export const services = [

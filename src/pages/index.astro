@@ -34,7 +34,7 @@ const faqLd = {
 <BaseLayout
   title="MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Çözümleri"
   description="MirAkıl Veri İşleme - Koha, DSpace, VuFind, Omeka, Moodle ve daha fazlası ile müze, arşiv ve kütüphane yönetim yazılımları. Kurulum, eğitim ve destek."
-  keywords="kütüphane yazılımı, müze yazılımı, arşiv yazılımı, kütüphane otomasyon sistemi, dijital arşiv, Koha, DSpace, VuFind, Omeka, Moodle, açık kaynak kütüphane, kültürel miras dijitalleştirme, koleksiyon yönetimi, MirAkıl"
+  keywords="kütüphane yazılımı, müze yazılımı, arşiv yazılımı, kütüphane otomasyon sistemi, dijital arşiv, Koha, DSpace, VuFind, Omeka, Moodle, Alfresco, Immich, açık kaynak kütüphane, belge yönetim sistemi, e-arşiv, fotoğraf arşivi, kültürel miras dijitalleştirme, koleksiyon yönetimi, MirAkıl"
   ogTitle="MirAkıl - Müze, Arşiv ve Kütüphane Yönetim Çözümleri"
   ogDescription="MirAkıl Veri İşleme - Koha, DSpace, VuFind, Omeka, Moodle ve daha fazlası ile müze, arşiv ve kütüphane yönetim sistemleri."
   path="index.html"
@@ -237,7 +237,12 @@ const faqLd = {
 </script>
 
 <style>
-  /* Products */
+  /* Products: flex so an incomplete last row stays centred (10 products: 5+5 on wide screens). */
+  .products { display: flex; flex-wrap: wrap; justify-content: center; }
+  .products > li { flex: 0 0 calc((100% - 4 * var(--sp-5)) / 5); }
+  @media (max-width: 1199px) { .products > li { flex-basis: calc((100% - 3 * var(--sp-5)) / 4); } }
+  @media (max-width: 1055px) { .products > li { flex-basis: calc((100% - var(--sp-5)) / 2); } }
+  @media (max-width: 671px) { .products > li { flex-basis: 100%; } }
   .products > li { overflow: hidden; transition: transform var(--dur) var(--ease-out), box-shadow var(--dur), border-color var(--dur); }
   .products > li:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--brand-tint-2); }
   .product-card { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: var(--sp-5) var(--sp-5) var(--sp-6); }
